@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BudgetArk — the offline-first, privacy-focused budgeting app. Track debt, budget monthly, project your future. Free, no subscription, your data never leaves your device.">
+  <title>BudgetArk — Build Your Ark. Weather Any Storm.</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply saved theme before first paint to avoid a flash of the default
+    try {
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("budgetark-site-theme") || "ark_parchment"
+      );
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="assets/favicon.png" alt="" class="logo-img">
+        Budget<span class="logo-accent">Ark</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#themes">Themes</a></li>
+        <li><a href="index.html#mission">Mission</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="index.html#download" class="btn btn-small">Get the App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <img src="assets/arklogo.png" alt="BudgetArk — hand-drawn ark with sunburst" class="hero-logo">
+          <h1>Build your ark.<br>Weather any <span class="highlight">storm</span>.</h1>
+          <p class="hero-sub">
+            BudgetArk is a free, offline-first personal finance app for debt payoff,
+            monthly budgeting, and investment projections. No subscription, no cloud,
+            no tracking — your data stays on your device and goes nowhere else.
+          </p>
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary">Get BudgetArk</a>
+            <a href="#features" class="btn btn-ghost">Explore Features</a>
+          </div>
+          <ul class="hero-badges">
+            <li>🔒 100% offline &amp; private</li>
+            <li>⛵ Free forever</li>
+            <li>🚫 No subscription</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame mock" role="img" aria-label="BudgetArk Budget screen showing monthly stats, a debt due reminder, the bill calendar, and category spending">
+            <div class="mock-screen">
+              <div class="mock-app">BUDGETARK</div>
+              <div class="mock-h1">Budget</div>
+              <div class="mock-month">‹ &nbsp;June 2026&nbsp; ›</div>
+              <div class="mock-stats">
+                <div><small>Income</small><strong>$3,400</strong></div>
+                <div><small>Spent</small><strong class="warn">$1,860</strong></div>
+                <div><small>Net</small><strong class="good">+$1,540</strong></div>
+              </div>
+              <div class="mock-banner">⚓ Car loan due in 3 days — $250 minimum</div>
+              <div class="mock-chip">📅 6 bills · $1,310 scheduled · next Jun 12</div>
+              <div class="mock-card">
+                <div class="mock-card-title">Spending</div>
+                <div class="mock-row"><span>🛒 Groceries</span><span>$412 / $600</span></div>
+                <div class="mock-bar"><div class="mock-fill" style="width: 69%"></div></div>
+                <div class="mock-row"><span>🏠 Rent</span><span>$1,200 / $1,200</span></div>
+                <div class="mock-bar"><div class="mock-fill full" style="width: 100%"></div></div>
+                <div class="mock-row"><span>🎮 Fun</span><span>$85 / $200</span></div>
+                <div class="mock-bar"><div class="mock-fill" style="width: 42%"></div></div>
+                <div class="mock-row"><span>⛵ Emergency Fund</span><span>$3,150 / $5,000</span></div>
+                <div class="mock-bar"><div class="mock-fill goal" style="width: 63%"></div></div>
+              </div>
+              <div class="mock-tabs">
+                <span>⚓<small>Debts</small></span>
+                <span class="on">💰<small>Budget</small></span>
+                <span>🧭<small>Bridge</small></span>
+                <span>🛠️<small>Utilities</small></span>
+                <span>👤<small>Profile</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features section" id="features">
+      <div class="container">
+        <p class="eyebrow">WHAT'S ON BOARD</p>
+        <h2 class="section-title">Everything you need for the voyage</h2>
+        <p class="section-sub">Debt payoff, budgeting, and planning for the future — all in one vessel.</p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚓</div>
+            <h3>Debt Tracker</h3>
+            <p>Track every debt and crush it with Snowball, Avalanche, or your own custom payoff order. Due-date reminders keep payments on schedule.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Monthly Budget</h3>
+            <p>Track income, expenses, and category limits. A bill calendar shows what's due, what's paid, and what's coming next.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Investment Projections</h3>
+            <p>See where compound growth takes you over 10, 20, or 30 years — plus loan, mortgage, and refinance break-even calculators.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🛶</div>
+            <h3>Build Your Ark</h3>
+            <p>A milestone journey for your finances: lay the keel, patch the hull, stock the galley. Watch your ark take shape as your money does.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧭</div>
+            <h3>Captain's Course</h3>
+            <p>Built-in lessons on debt, interest, emergency funds, and payoff strategy — plus a Ship's Log of achievements to earn along the way.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Partner Sync</h3>
+            <p>Budget together. Pair with your partner's device and sync encrypted, directly over your own Wi-Fi — no server in the middle.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>Everything is stored encrypted on your device and never sent to any server. Anonymous account — no email, no sign-up.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📤</div>
+            <h3>Backups &amp; Spreadsheets</h3>
+            <p>Export encrypted backups or a full Excel workbook with live formulas. Your data is yours — take it anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themes -->
+    <section class="themes section" id="themes">
+      <div class="container">
+        <p class="eyebrow">MAKE IT YOURS</p>
+        <h2 class="section-title">Nine themes. Your colors.</h2>
+        <p class="section-sub">
+          From warm parchment to deep space, pick the look that fits you — then mix it
+          with Solid or Glass design styles, ambient backgrounds, and three layout
+          density presets. <strong>Tap a theme below to try it on this page.</strong>
+        </p>
+        <div class="theme-grid">
+
+          <div class="theme-card" data-theme="forest_gold" role="button" tabindex="0" style="--t-bg:#111410; --t-card:#1a1e18; --t-border:#3a4a2a; --t-accent:#d4a020; --t-text:#d4c8a0; --t-dim:#8a9a6a; --t-good:#5cb85c;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Forest Gold <em>· default</em></span>
+          </div>
+
+          <div class="theme-card" data-theme="neon_purple" role="button" tabindex="0" style="--t-bg:#0a0e1a; --t-card:#131829; --t-border:#1e2642; --t-accent:#6c5ce7; --t-text:#e8eaf6; --t-dim:#7986cb; --t-good:#00e676;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Neon Purple</span>
+          </div>
+
+          <div class="theme-card" data-theme="slate_dark" role="button" tabindex="0" style="--t-bg:#1a1915; --t-card:#2b2a26; --t-border:#3d3b34; --t-accent:#da7756; --t-text:#e8e4dd; --t-dim:#a39e93; --t-good:#7dac65;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Easy</span>
+          </div>
+
+          <div class="theme-card" data-theme="rose_light" role="button" tabindex="0" style="--t-bg:#faf5f7; --t-card:#fff9f6; --t-border:#e9d3c8; --t-accent:#d29a80; --t-text:#4a3040; --t-dim:#9a7088; --t-good:#6abf8a;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Rose</span>
+          </div>
+
+          <div class="theme-card" data-theme="synthwave" role="button" tabindex="0" style="--t-bg:#0e0e20; --t-card:#161633; --t-border:#2a2050; --t-accent:#c44a90; --t-text:#e8e0f0; --t-dim:#8878a8; --t-good:#4ac9a0;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Synthwave</span>
+          </div>
+
+          <div class="theme-card" data-theme="deepforest" role="button" tabindex="0" style="--t-bg:#06100d; --t-card:#0c1914; --t-border:#26483a; --t-accent:#67b8a2; --t-text:#e2ece2; --t-dim:#8aa79a; --t-good:#a6d98d;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Deep Forest</span>
+          </div>
+
+          <div class="theme-card" data-theme="ark_parchment" role="button" tabindex="0" style="--t-bg:#F2E6D0; --t-card:#FAF3E8; --t-border:#D4B896; --t-accent:#7C4A2E; --t-text:#3E2010; --t-dim:#8A6A50; --t-good:#5A7A3A;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">The Ark</span>
+          </div>
+
+          <div class="theme-card" data-theme="ocean_coral" role="button" tabindex="0" style="--t-bg:#0b1e24; --t-card:#112e35; --t-border:#1a4450; --t-accent:#f08a65; --t-text:#e0d4bc; --t-dim:#7a9a8a; --t-good:#8abb6a;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Coral</span>
+          </div>
+
+          <div class="theme-card starfield" data-theme="deep_space" role="button" tabindex="0" style="--t-bg:#04060f; --t-card:#0a1020; --t-border:#24477f; --t-accent:#5b9ef0; --t-text:#e4ecf8; --t-dim:#8fa6c8; --t-good:#34d399;">
+            <div class="theme-screen">
+              <div class="t-title"></div>
+              <div class="t-card">
+                <div class="t-line"></div>
+                <div class="t-line short good"></div>
+                <div class="t-bar"><div class="t-fill"></div></div>
+              </div>
+              <div class="t-btn"></div>
+              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <span class="theme-name">Deep Space</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission section" id="mission">
+      <div class="container mission-inner">
+        <p class="eyebrow">OUR MISSION</p>
+        <h2 class="section-title">Why BudgetArk exists</h2>
+        <blockquote>
+          "I wanted to be proactive with my finances, get them under control and start
+          preparing for the future, without giving up my privacy or paying for another
+          subscription. I needed debt payoff, monthly budgeting, and a clear view of the
+          road ahead in one offline app that stays on your device and goes nowhere else.
+          I built BudgetArk to help you do the same, at no cost to you."
+        </blockquote>
+        <div class="mission-pillars">
+          <div class="pillar">
+            <span class="pillar-number">$0</span>
+            <span class="pillar-label">free, no subscription, ever</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-number">0 servers</span>
+            <span class="pillar-label">your data never leaves your device</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-number">0 sign-ups</span>
+            <span class="pillar-label">no email, no account, no tracking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="cta section" id="download">
+      <div class="container cta-inner">
+        <h2>Ready to come aboard?</h2>
+        <p>BudgetArk is setting sail soon on iOS and Android. Watch the <a href="news.html">news page</a> for launch updates.</p>
+        <div class="store-buttons">
+          <a href="#" class="store-btn" title="Coming soon">
+            <span class="store-icon"></span>
+            <span class="store-text"><small>Coming soon to the</small>App Store</span>
+          </a>
+          <a href="#" class="store-btn" title="Coming soon">
+            <span class="store-icon">▶</span>
+            <span class="store-text"><small>Coming soon to</small>Google Play</span>
+          </a>
+        </div>
+        <p class="cta-support">Questions? Reach us at <a href="mailto:budgetark.support@gmail.com">budgetark.support@gmail.com</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><img src="assets/favicon.png" alt="" class="logo-img"> Budget<span class="logo-accent">Ark</span></span>
+        <p>Offline-first budgeting. Built for the storm.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="https://rickeynet.github.io/BudgetArk/PRIVACY_POLICY">Privacy Policy</a></li>
+        <li><a href="mailto:budgetark.support@gmail.com">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The latest news and updates from BudgetArk — release notes, announcements, and what's coming next.">
+  <title>News — BudgetArk</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply saved theme before first paint to avoid a flash of the default
+    try {
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("budgetark-site-theme") || "ark_parchment"
+      );
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="assets/favicon.png" alt="" class="logo-img">
+        Budget<span class="logo-accent">Ark</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#themes">Themes</a></li>
+        <li><a href="index.html#mission">Mission</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="index.html#download" class="btn btn-small">Get the App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">CAPTAIN'S LOG</p>
+        <h1>News &amp; Updates</h1>
+        <p class="page-hero-sub">What's happening aboard the Ark — releases, announcements, and what's next.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container news-list">
+
+        <!--
+          To add a news post: copy an <article> block below, paste it at the TOP
+          of this list, and edit the date, title, tag, and text.
+        -->
+
+        <article class="news-card">
+          <div class="news-meta">
+            <time datetime="2026-06-09">June 9, 2026</time>
+            <span class="news-tag">Announcement</span>
+          </div>
+          <h2>Welcome aboard — the BudgetArk website is live</h2>
+          <p>
+            The official BudgetArk site has set sail. This is the home port for everything
+            about the app — what it does, why it's free, and every update along the way.
+            Launch news for the App Store and Google Play will land here first.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <time datetime="2026-06-02">June 2, 2026</time>
+            <span class="news-tag">Release v1.7.1</span>
+          </div>
+          <h2>Debt due-date reminders + Captain's Course Chapter 2</h2>
+          <p>
+            Never miss a payment again: every debt can now carry its own payment due day,
+            and a reminder banner on the Budget and Debts tabs shows what's coming up — with
+            a one-tap prompt to log the payment when the day arrives. Captain's Course
+            Chapter 2, <em>Patching the Hull</em>, ships with six new lessons covering good
+            vs. bad debt, how interest works, starter emergency funds, snowball vs.
+            avalanche, refinancing, and debt snowflakes. Plus: batch-add multiple budget
+            entries at once, and the budget now reflects planned debt minimums from the
+            first of the month.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <time datetime="2026-05-25">May 25, 2026</time>
+            <span class="news-tag">Release v1.6.5</span>
+          </div>
+          <h2>Ship's Log progress rings + Refinance calculator</h2>
+          <p>
+            Achievement badges in the Ship's Log now show live progress — a partial ring
+            and an "X / Y" caption tell you how close you are to each one, across a dozen
+            badges. A new legendary badge, <em>Galleon's Hold</em>, awaits anyone who
+            reaches a $1,000,000 net worth. Utilities gained a Refinance Break-Even
+            calculator that pulls straight from your debt tracker, so you can see in
+            seconds whether a refi actually saves you money.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <time datetime="2026-05-22">May 22, 2026</time>
+            <span class="news-tag">Release v1.6.0</span>
+          </div>
+          <h2>Appearance controls + full amortization schedules</h2>
+          <p>
+            Theme and design style are now separate choices — mix Solid or Glass looks
+            with any color theme. Deep Forest gets a misty night-forest ambient background,
+            and a new toggle lets you switch decorative backgrounds off for maximum
+            readability. The Loan / Mortgage calculator now produces a full month-by-month
+            amortization schedule with yearly summaries and CSV export.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <time datetime="2026-05-15">May 15, 2026</time>
+            <span class="news-tag">Release v1.5.0</span>
+          </div>
+          <h2>Bill Calendar, custom categories, and a fresh look</h2>
+          <p>
+            The Budget tab gained a Bill Calendar — a monthly grid of every recurring bill,
+            color-coded by category, with paid vs. remaining totals and your next bill at
+            a glance. Custom budget categories with emoji icons, flexible recurring entries
+            (monthly, quarterly, every 6 months, yearly), a 6-month cash-flow chart on the
+            Bridge, and the opt-in Deep Space theme round out the release.
+          </p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><img src="assets/favicon.png" alt="" class="logo-img"> Budget<span class="logo-accent">Ark</span></span>
+        <p>Offline-first budgeting. Built for the storm.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="https://rickeynet.github.io/BudgetArk/PRIVACY_POLICY">Privacy Policy</a></li>
+        <li><a href="mailto:budgetark.support@gmail.com">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
