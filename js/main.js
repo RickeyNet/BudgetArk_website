@@ -18,7 +18,7 @@ links.addEventListener('click', (e) => {
 });
 
 // ---------------------------------------------------------------------------
-// Ambient backdrops — ported from the app's SpaceBackground, ForestBackground,
+// Ambient backdrops - ported from the app's SpaceBackground, ForestBackground,
 // and SynthwaveGrid components. Same mulberry32 PRNG and seeds as the app, so
 // the starfield/firefly layouts match the real thing.
 // ---------------------------------------------------------------------------
@@ -139,7 +139,7 @@ function renderAmbient(themeId) {
 }
 
 // ---------------------------------------------------------------------------
-// Theme switcher — clicking a theme card re-skins the whole site.
+// Theme switcher - clicking a theme card re-skins the whole site.
 // The <head> inline script already applied the saved theme before paint.
 // ---------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-/* ============ BudgetArk site — Noah's Ark theme ============
+/* ============ BudgetArk site - Noah's Ark theme ============
    Palette matches the app's "The Ark" theme: warm parchment,
    wood browns, deep umber text, olive-green money accents. */
 
@@ -264,7 +264,7 @@ body {
     linear-gradient(180deg, #0c1714 0%, #07100d 42%, #020503 100%);
 }
 
-/* Glass cards over ambient backdrops — matches the app's Glass design style */
+/* Glass cards over ambient backdrops - matches the app's Glass design style */
 [data-theme="deep_space"] .feature-card,
 [data-theme="deep_space"] .news-card,
 [data-theme="deep_space"] .pillar,

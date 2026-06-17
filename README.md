@@ -1,6 +1,6 @@
 # BudgetArk Website
 
-Static marketing site for the BudgetArk budgeting app. No build tools, no dependencies — just HTML, CSS, and a little JavaScript.
+Static marketing site for the BudgetArk budgeting app. No build tools, no dependencies - just HTML, CSS, and a little JavaScript.
 
 ## Structure
 
@@ -32,5 +32,5 @@ Open `news.html` and copy one of the `<article class="news-card">` blocks. Paste
 
 Any static host works:
 
-- **GitHub Pages** — push the repo to GitHub, then Settings → Pages → deploy from branch.
-- **Netlify / Vercel / Cloudflare Pages** — drag-and-drop the folder or connect the repo. No build command needed; publish directory is the repo root.
+- **GitHub Pages** - push the repo to GitHub, then Settings → Pages → deploy from branch.
+- **Netlify / Vercel / Cloudflare Pages** - drag-and-drop the folder or connect the repo. No build command needed; publish directory is the repo root.
