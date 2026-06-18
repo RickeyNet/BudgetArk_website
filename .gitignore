@@ -1,0 +1,6 @@
+# Local-only notes (not for the public repo)
+TODO.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
