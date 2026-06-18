@@ -1008,6 +1008,31 @@ a:hover { text-decoration: underline; }
 }
 .news-card p { color: var(--ink-soft); font-size: 0.97rem; }
 
+/* ---------- Legal / prose pages ---------- */
+
+.legal {
+  max-width: 780px;
+  margin: 0 auto;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.legal-meta {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.92rem;
+}
+.legal-meta strong { color: var(--wood-deep); }
+.legal h2 {
+  font-size: 1.3rem;
+  margin: 2rem 0 0.6rem;
+  color: var(--wood-deep);
+}
+.legal p { margin-bottom: 1rem; font-size: 0.97rem; }
+.legal ul { margin: 0 0 1rem 1.2rem; }
+.legal li { margin-bottom: 0.4rem; font-size: 0.97rem; }
+.legal a { color: var(--wood-deep); font-weight: 600; }
+
 /* ---------- Footer ---------- */
 
 .site-footer {
