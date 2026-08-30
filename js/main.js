@@ -181,7 +181,7 @@ function renderAmbient(themeId) {
 // ---------------------------------------------------------------------------
 
 const THEME_KEY = 'budgetark-site-theme';
-const DEFAULT_THEME = 'ark_parchment';
+const DEFAULT_THEME = 'forest_gold';
 const themeCards = document.querySelectorAll('.theme-card[data-theme]');
 
 function currentTheme() {

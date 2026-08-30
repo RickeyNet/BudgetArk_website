@@ -1,8 +1,42 @@
-/* ============ BudgetArk site - Noah's Ark theme ============
-   Palette matches the app's "The Ark" theme: warm parchment,
-   wood browns, deep umber text, olive-green money accents. */
+/* ============ BudgetArk site ============
+   Variable names are historical (parchment/wood/ink) - they come from the
+   original "The Ark" skin. The :root values below are the site DEFAULT,
+   Forest Gold, matching the app's DEFAULT_THEME_ID; every other theme
+   overrides them via html[data-theme="..."] further down. */
 
 :root {
+  --parchment: #111410;
+  --parchment-deep: #161a14;
+  --card: #1a1e18;
+  --card-warm: #20251c;
+  --border: #3a4a2a;
+  --border-strong: #4a5e36;
+  --ink: #d4c8a0;
+  --ink-soft: #8a9a6a;
+  --wood: #d4a020;
+  --wood-dark: #b8881a;
+  --wood-deep: #e8e0c8;
+  --green: #5cb85c;
+  --green-dark: #4a9a4a;
+  --gold: #e8b84a;
+  --radius: 16px;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --header-bg: rgba(17, 20, 16, 0.92);
+  --accent-text: #111410;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Background indirection: themes with an ambient backdrop set --bg to
+     transparent so the fixed .ambient layer shows through page sections,
+     while --parchment keeps its solid value for text/menu uses. */
+  --bg: var(--parchment);
+  --bg-deep: var(--parchment-deep);
+}
+
+/* ---------- Page themes (palettes from the app's themes.ts) ----------
+   Clicking a theme card sets data-theme on <html>; saved to localStorage. */
+
+html[data-theme="ark_parchment"] {
   --parchment: #f7eedd;
   --parchment-deep: #f2e6d0;
   --card: #fbf5e9;
@@ -17,22 +51,10 @@
   --green: #4f6f46;
   --green-dark: #3e5837;
   --gold: #b98a2f;
-  --radius: 16px;
   --shadow: 0 12px 32px rgba(67, 41, 28, 0.14);
   --header-bg: rgba(247, 238, 221, 0.92);
   --accent-text: #f7eedd;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-
-  /* Background indirection: themes with an ambient backdrop set --bg to
-     transparent so the fixed .ambient layer shows through page sections,
-     while --parchment keeps its solid value for text/menu uses. */
-  --bg: var(--parchment);
-  --bg-deep: var(--parchment-deep);
 }
-
-/* ---------- Page themes (palettes from the app's themes.ts) ----------
-   Clicking a theme card sets data-theme on <html>; saved to localStorage. */
 
 html[data-theme="forest_gold"] {
   --parchment: #111410;
