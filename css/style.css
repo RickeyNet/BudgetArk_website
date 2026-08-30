@@ -34,7 +34,7 @@
 /* ---------- Page themes (palettes from the app's themes.ts) ----------
    Clicking a theme card sets data-theme on <html>; saved to localStorage. */
 
-[data-theme="forest_gold"] {
+html[data-theme="forest_gold"] {
   --parchment: #111410;
   --parchment-deep: #161a14;
   --card: #1a1e18;
@@ -54,7 +54,7 @@
   --accent-text: #111410;
 }
 
-[data-theme="neon_purple"] {
+html[data-theme="neon_purple"] {
   --parchment: #0a0e1a;
   --parchment-deep: #0e1322;
   --card: #131829;
@@ -74,7 +74,7 @@
   --accent-text: #ffffff;
 }
 
-[data-theme="slate_dark"] {
+html[data-theme="slate_dark"] {
   --parchment: #1a1915;
   --parchment-deep: #211f1a;
   --card: #2b2a26;
@@ -94,7 +94,7 @@
   --accent-text: #1a1915;
 }
 
-[data-theme="rose_light"] {
+html[data-theme="rose_light"] {
   --parchment: #faf5f7;
   --parchment-deep: #f4eaee;
   --card: #fff9f6;
@@ -114,7 +114,7 @@
   --accent-text: #4a3040;
 }
 
-[data-theme="synthwave"] {
+html[data-theme="synthwave"] {
   --parchment: #0e0e20;
   --parchment-deep: #131329;
   --card: #161633;
@@ -134,7 +134,7 @@
   --accent-text: #ffffff;
 }
 
-[data-theme="deepforest"] {
+html[data-theme="deepforest"] {
   --parchment: #06100d;
   --parchment-deep: #0a1511;
   --card: rgba(12, 25, 20, 0.8);
@@ -156,7 +156,7 @@
   --accent-text: #06100d;
 }
 
-[data-theme="ocean_coral"] {
+html[data-theme="ocean_coral"] {
   --parchment: #0b1e24;
   --parchment-deep: #0e252c;
   --card: #112e35;
@@ -176,7 +176,7 @@
   --accent-text: #0b1e24;
 }
 
-[data-theme="deep_space"] {
+html[data-theme="deep_space"] {
   --parchment: #04060f;
   --parchment-deep: #070b18;
   --card: rgba(10, 16, 32, 0.78);
@@ -196,6 +196,153 @@
   --shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
   --header-bg: rgba(4, 6, 15, 0.92);
   --accent-text: #ffffff;
+}
+
+html[data-theme="deep_sea"] {
+  --parchment: #030b11;
+  --parchment-deep: #06131b;
+  --card: rgba(10, 27, 36, 0.78);
+  --card-warm: rgba(14, 34, 45, 0.78);
+  --bg: transparent;
+  --bg-deep: rgba(6, 19, 27, 0.55);
+  --border: #164a58;
+  --border-strong: #1f6676;
+  --ink: #dcedf1;
+  --ink-soft: #82a9b6;
+  --wood: #3fd9c0;
+  --wood-dark: #2fbfa8;
+  --wood-deep: #f0fafc;
+  --green: #4fd98a;
+  --green-dark: #3dbf76;
+  --gold: #e0b45c;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --header-bg: rgba(3, 11, 17, 0.92);
+  --accent-text: #030b11;
+}
+
+html[data-theme="slate"] {
+  --parchment: #323437;
+  --parchment-deep: #37393c;
+  --card: #3d3f43;
+  --card-warm: #44464a;
+  --border: #515458;
+  --border-strong: #64676c;
+  --ink: #d1d0c5;
+  --ink-soft: #9a9ca0;
+  --wood: #e2b714;
+  --wood-dark: #c9a211;
+  --wood-deep: #f0efe8;
+  --green: #7cbf6b;
+  --green-dark: #68a858;
+  --gold: #e59435;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --header-bg: rgba(50, 52, 55, 0.92);
+  --accent-text: #000000;
+}
+
+/* Classic - the Windows 98 palette verbatim: teal desktop, silver cards,
+   navy accent. Square corners everywhere, like the app's squareCorners flag. */
+html[data-theme="classic"] {
+  --parchment: #008080;
+  --parchment-deep: #007070;
+  --card: #c0c0c0;
+  --card-warm: #d4d0c8;
+  --border: #808080;
+  --border-strong: #404040;
+  --ink: #000000;
+  --ink-soft: #222222;
+  --wood: #000080;
+  --wood-dark: #000060;
+  --wood-deep: #000000;
+  --green: #008000;
+  --green-dark: #006600;
+  --gold: #b8860b;
+  --radius: 0;
+  --shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+  --header-bg: rgba(0, 128, 128, 0.96);
+  --accent-text: #ffffff;
+}
+
+/* Lighthouse - high-contrast accessibility theme (every text slot audited
+   >= 7:1 in the app). */
+html[data-theme="lighthouse"] {
+  --parchment: #050505;
+  --parchment-deep: #0c0c0c;
+  --card: #141414;
+  --card-warm: #1c1c1c;
+  --border: #767676;
+  --border-strong: #9a9a9a;
+  --ink: #ffffff;
+  --ink-soft: #d6d6d6;
+  --wood: #ffd75e;
+  --wood-dark: #f0c640;
+  --wood-deep: #ffffff;
+  --green: #7ee787;
+  --green-dark: #66d070;
+  --gold: #ffbe4d;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --header-bg: rgba(5, 5, 5, 0.94);
+  --accent-text: #000000;
+}
+
+html[data-theme="chart_room"] {
+  --parchment: #c5d6d3;
+  --parchment-deep: #b9cdc9;
+  --card: #eee2c0;
+  --card-warm: #e6d8b0;
+  --border: #a08a5e;
+  --border-strong: #86724a;
+  --ink: #123a44;
+  --ink-soft: #3f6167;
+  --wood: #75561f;
+  --wood-dark: #5e4418;
+  --wood-deep: #123a44;
+  --green: #3d6634;
+  --green-dark: #2f5228;
+  --gold: #8a5a10;
+  --shadow: 0 12px 32px rgba(18, 58, 68, 0.16);
+  --header-bg: rgba(197, 214, 211, 0.92);
+  --accent-text: #f2e4c4;
+}
+
+html[data-theme="harbor_dawn"] {
+  --parchment: #fadfc9;
+  --parchment-deep: #f6d3b8;
+  --card: #eef6f2;
+  --card-warm: #e3efe9;
+  --border: #c3d8d0;
+  --border-strong: #a6c4b8;
+  --ink: #3a4550;
+  --ink-soft: #61707d;
+  --wood: #8a6a14;
+  --wood-dark: #715610;
+  --wood-deep: #3a4550;
+  --green: #297a58;
+  --green-dark: #206448;
+  --gold: #96620f;
+  --shadow: 0 12px 32px rgba(58, 69, 80, 0.14);
+  --header-bg: rgba(250, 223, 201, 0.92);
+  --accent-text: #ffffff;
+}
+
+html[data-theme="ledger"] {
+  --parchment: #dde9d8;
+  --parchment-deep: #d2e1cc;
+  --card: #f8faf2;
+  --card-warm: #eef4e8;
+  --border: #a9c19f;
+  --border-strong: #8fab84;
+  --ink: #232a20;
+  --ink-soft: #5c6b54;
+  --wood: #1e6f47;
+  --wood-dark: #175a39;
+  --wood-deep: #232a20;
+  --green: #277a4c;
+  --green-dark: #1f6640;
+  --gold: #97701c;
+  --shadow: 0 12px 32px rgba(35, 42, 32, 0.14);
+  --header-bg: rgba(221, 233, 216, 0.92);
+  --accent-text: #eaf4ea;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -248,7 +395,7 @@ body {
   height: 100%;
 }
 
-[data-theme="deep_space"] .ambient {
+html[data-theme="deep_space"] .ambient {
   background:
     radial-gradient(ellipse 70% 32% at 12% 8%, rgba(26, 58, 106, 0.22), transparent 70%),
     radial-gradient(ellipse 60% 38% at 95% 92%, rgba(42, 26, 74, 0.18), transparent 70%),
@@ -256,7 +403,7 @@ body {
     radial-gradient(ellipse 90% 90% at 30% 18%, #0a0e24, #020408 50%, #000000 100%);
 }
 
-[data-theme="deepforest"] .ambient {
+html[data-theme="deepforest"] .ambient {
   background:
     radial-gradient(ellipse 72% 28% at 22% 10%, rgba(51, 84, 73, 0.22), rgba(23, 49, 38, 0.12) 50%, transparent 100%),
     radial-gradient(ellipse 58% 22% at 82% 20%, rgba(30, 106, 93, 0.18), transparent 100%),
@@ -264,18 +411,51 @@ body {
     linear-gradient(180deg, #0c1714 0%, #07100d 42%, #020503 100%);
 }
 
+/* Deep Sea: surface glow, bioluminescent bloom and abyss floor from the
+   app's DeepSeaBackground; the light shafts + plankton are drawn in JS. */
+html[data-theme="deep_sea"] .ambient {
+  background:
+    radial-gradient(ellipse 82% 40% at 42% 0%, rgba(46, 122, 128, 0.26), rgba(22, 74, 82, 0.12) 55%, transparent 100%),
+    radial-gradient(ellipse 52% 30% at 80% 78%, rgba(26, 106, 86, 0.16), transparent 100%),
+    radial-gradient(ellipse 95% 34% at 50% 100%, rgba(0, 3, 5, 0.55), transparent 100%),
+    linear-gradient(180deg, #0d2e36 0%, #06181f 45%, #010609 100%);
+}
+
 /* Glass cards over ambient backdrops - matches the app's Glass design style */
-[data-theme="deep_space"] .feature-card,
-[data-theme="deep_space"] .news-card,
-[data-theme="deep_space"] .pillar,
-[data-theme="deep_space"] .mission blockquote,
-[data-theme="deepforest"] .feature-card,
-[data-theme="deepforest"] .news-card,
-[data-theme="deepforest"] .pillar,
-[data-theme="deepforest"] .mission blockquote {
+html[data-theme="deep_space"] .feature-card,
+html[data-theme="deep_space"] .news-card,
+html[data-theme="deep_space"] .pillar,
+html[data-theme="deep_space"] .mission blockquote,
+html[data-theme="deepforest"] .feature-card,
+html[data-theme="deepforest"] .news-card,
+html[data-theme="deepforest"] .pillar,
+html[data-theme="deepforest"] .mission blockquote,
+html[data-theme="deep_sea"] .feature-card,
+html[data-theme="deep_sea"] .news-card,
+html[data-theme="deep_sea"] .pillar,
+html[data-theme="deep_sea"] .mission blockquote {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+
+/* Classic: square corners on every surface + readable text on the
+   mid-teal desktop (the app uses black on #008080 for the same reason). */
+html[data-theme="classic"] .btn,
+html[data-theme="classic"] .btn-small,
+html[data-theme="classic"] .feature-icon,
+html[data-theme="classic"] .store-btn,
+html[data-theme="classic"] .news-tag,
+html[data-theme="classic"] .hero-logo,
+html[data-theme="classic"] .logo-img,
+html[data-theme="classic"] .theme-screen,
+html[data-theme="classic"] .phone-frame,
+html[data-theme="classic"] .mock-screen {
+  border-radius: 0;
+}
+html[data-theme="classic"] .btn-small { color: #ffffff !important; }
+html[data-theme="classic"] .store-btn { background: #000080; color: #ffffff; }
+html[data-theme="classic"] .store-btn:hover { color: #ffffff; }
+html[data-theme="classic"] .phone-frame { border-color: #808080; background: #808080; }
 
 h1, h2, h3, .logo {
   font-family: var(--font-display);
@@ -677,7 +857,7 @@ a:hover { text-decoration: underline; }
 
 .theme-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
@@ -765,6 +945,63 @@ a:hover { text-decoration: underline; }
     radial-gradient(1.5px 1.5px at 25% 85%, #fff, transparent);
   opacity: 0.7;
   pointer-events: none;
+}
+
+/* Deep Sea preview: light shafts from the surface + plankton motes */
+.theme-card[data-theme="deep_sea"] .theme-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 22% 40%, rgba(110, 232, 216, 0.55), transparent),
+    radial-gradient(1.5px 1.5px at 68% 28%, rgba(93, 184, 232, 0.5), transparent),
+    radial-gradient(2px 2px at 82% 62%, rgba(142, 232, 168, 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 40% 78%, rgba(110, 232, 216, 0.4), transparent),
+    linear-gradient(100deg, transparent 14%, rgba(127, 216, 208, 0.12) 18%, rgba(127, 216, 208, 0.12) 24%, transparent 30%),
+    linear-gradient(100deg, transparent 52%, rgba(127, 216, 208, 0.09) 56%, rgba(127, 216, 208, 0.09) 64%, transparent 70%),
+    radial-gradient(ellipse 90% 45% at 42% 0%, rgba(46, 122, 128, 0.35), transparent);
+  pointer-events: none;
+}
+
+/* Ledger preview: ruled green-bar lines */
+.theme-card[data-theme="ledger"] .theme-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(180deg, transparent 0 14px, rgba(30, 111, 71, 0.08) 14px 15px);
+  pointer-events: none;
+}
+
+/* Chart Room preview: faint depth contours on the water */
+.theme-card[data-theme="chart_room"] .theme-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 80% 90%, transparent 60%, rgba(39, 95, 107, 0.12) 61%, transparent 63%),
+    radial-gradient(ellipse 80% 55% at 80% 90%, transparent 60%, rgba(39, 95, 107, 0.1) 61%, transparent 63%),
+    radial-gradient(ellipse 100% 70% at 80% 90%, transparent 60%, rgba(39, 95, 107, 0.08) 61%, transparent 63%);
+  pointer-events: none;
+}
+
+/* Harbor Dawn preview: a low sun on the horizon */
+.theme-card[data-theme="harbor_dawn"] .theme-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle 26px at 78% 14%, rgba(255, 214, 140, 0.55), rgba(255, 214, 140, 0) 70%);
+  pointer-events: none;
+}
+
+/* Classic preview: square corners, like the real thing */
+.theme-card[data-theme="classic"] .theme-screen,
+.theme-card[data-theme="classic"] .t-card,
+.theme-card[data-theme="classic"] .t-btn,
+.theme-card[data-theme="classic"] .t-title,
+.theme-card[data-theme="classic"] .t-line,
+.theme-card[data-theme="classic"] .t-bar,
+.theme-card[data-theme="classic"] .t-bar .t-fill {
+  border-radius: 0;
 }
 
 .t-title {
@@ -1032,6 +1269,36 @@ a:hover { text-decoration: underline; }
 .legal ul { margin: 0 0 1rem 1.2rem; }
 .legal li { margin-bottom: 0.4rem; font-size: 0.97rem; }
 .legal a { color: var(--wood-deep); font-weight: 600; }
+.legal h3 {
+  font-size: 1.05rem;
+  margin: 1.3rem 0 0.4rem;
+  color: var(--wood-deep);
+}
+.legal code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--card-warm);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05em 0.35em;
+}
+.table-wrap { overflow-x: auto; margin: 0 0 1rem; }
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+}
+.legal-table th, .legal-table td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.legal-table th { color: var(--wood-deep); background: var(--card-warm); font-weight: 700; }
+.legal-table tr:last-child td { border-bottom: none; }
 
 /* ---------- Footer ---------- */
 
@@ -1067,6 +1334,7 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 980px) {
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .theme-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 860px) {

@@ -19,8 +19,9 @@ links.addEventListener('click', (e) => {
 
 // ---------------------------------------------------------------------------
 // Ambient backdrops - ported from the app's SpaceBackground, ForestBackground,
-// and SynthwaveGrid components. Same mulberry32 PRNG and seeds as the app, so
-// the starfield/firefly layouts match the real thing.
+// DeepSeaBackground, and SynthwaveGrid components. Same mulberry32 PRNG and
+// seeds as the app, so the starfield/firefly/plankton layouts match the real
+// thing.
 // ---------------------------------------------------------------------------
 
 const ambientHost = document.querySelector('.ambient');
@@ -48,6 +49,13 @@ const FIREFLY_TINTS = [
   'rgb(164, 214, 161)',
   'rgb(120, 196, 178)',
   'rgb(212, 188, 112)',
+];
+
+// Bioluminescent plankton tints: cyan, blue, green (DeepSeaBackground)
+const MOTE_TINTS = [
+  'rgb(110, 232, 216)',
+  'rgb(93, 184, 232)',
+  'rgb(142, 232, 168)',
 ];
 
 function starfieldSvg(w, h) {
@@ -91,6 +99,33 @@ function forestSvg(w, h) {
   return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${mist}${dots}</svg>`;
 }
 
+function deepSeaSvg(w, h) {
+  const rng = makeRng(0x0cea11);
+  const count = Math.min(80, Math.round((w * h) / 16000));
+  let dots = '';
+  for (let i = 0; i < count; i++) {
+    const depth = rng();
+    const x = (rng() * w).toFixed(1);
+    // Slight bias toward the upper two-thirds, where the light reaches
+    const y = (Math.pow(rng(), 1.25) * h).toFixed(1);
+    const r = (0.7 + depth * 2.2).toFixed(2);
+    const o = (0.06 + depth * 0.26).toFixed(2);
+    const tint = MOTE_TINTS[Math.floor(rng() * MOTE_TINTS.length)];
+    dots += `<circle cx="${x}" cy="${y}" r="${r}" fill="${tint}" opacity="${o}"/>`;
+  }
+  // Light rays angling down from the surface, same placement as the app
+  const shaft =
+    `<defs><linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">` +
+    `<stop offset="0" stop-color="#7fd8d0" stop-opacity="0.13"/>` +
+    `<stop offset="0.6" stop-color="#5db8b8" stop-opacity="0.045"/>` +
+    `<stop offset="1" stop-color="#5db8b8" stop-opacity="0"/>` +
+    `</linearGradient></defs>` +
+    `<polygon points="${w * 0.16},0 ${w * 0.27},0 ${w * 0.14},${h * 0.62} ${w * 0.02},${h * 0.62}" fill="url(#shaft)"/>` +
+    `<polygon points="${w * 0.44},0 ${w * 0.52},0 ${w * 0.4},${h * 0.5} ${w * 0.31},${h * 0.5}" fill="url(#shaft)" opacity="0.8"/>` +
+    `<polygon points="${w * 0.72},0 ${w * 0.86},0 ${w * 0.76},${h * 0.56} ${w * 0.6},${h * 0.56}" fill="url(#shaft)" opacity="0.6"/>`;
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${shaft}${dots}</svg>`;
+}
+
 function synthwaveGridSvg() {
   const W = 600;
   const H = 350;
@@ -132,6 +167,8 @@ function renderAmbient(themeId) {
     ambientHost.innerHTML = starfieldSvg(w, h);
   } else if (themeId === 'deepforest') {
     ambientHost.innerHTML = forestSvg(w, h);
+  } else if (themeId === 'deep_sea') {
+    ambientHost.innerHTML = deepSeaSvg(w, h);
   } else {
     ambientHost.innerHTML = '';
   }
@@ -178,7 +215,7 @@ themeCards.forEach((card) => {
 });
 renderAmbient(currentTheme());
 
-// Regenerate star/firefly fields when the window is resized
+// Regenerate star/firefly/plankton fields when the window is resized
 let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);

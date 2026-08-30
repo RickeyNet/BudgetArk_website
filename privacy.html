@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BudgetArk Privacy Policy - BudgetArk collects no personal data. Everything stays on your device.">
+  <meta name="description" content="BudgetArk Privacy Policy - BudgetArk collects no personal data. Everything stays encrypted on your device; optional online features explain exactly what they send.">
   <title>Privacy Policy - BudgetArk</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
       <div class="container">
         <p class="eyebrow">YOUR DATA, YOUR DEVICE</p>
         <h1>Privacy Policy</h1>
-        <p class="page-hero-sub">BudgetArk collects nothing. Everything you enter stays on your device.</p>
+        <p class="page-hero-sub">BudgetArk collects nothing. Everything you enter stays encrypted on your device - and the optional online features tell you exactly what they send.</p>
       </div>
     </section>
 
@@ -59,15 +59,23 @@
 
           <div class="legal-meta">
             <strong>BudgetArk</strong><br>
-            <strong>Effective Date:</strong> March 8, 2026<br>
+            <strong>Effective Date:</strong> August 29, 2026 (replaces the March 8, 2026 version)<br>
             <strong>Developer:</strong> Rickey Cornett
           </div>
 
           <h2>Overview</h2>
           <p>
             BudgetArk is a personal finance app designed with privacy as a core principle.
-            The app operates entirely offline and does not collect, transmit, or store any
-            user data on external servers.
+            Everything you enter is stored encrypted on your device. There is no BudgetArk
+            account, no BudgetArk server that holds your data, and no analytics or
+            advertising of any kind.
+          </p>
+          <p>
+            The app works fully offline. A few optional features - bank connections, live
+            investment prices, currency conversion, partner sync, and the Tip Jar - use the
+            internet or your local network <strong>only when you turn them on</strong>, and
+            each one explains exactly what leaves your device before it runs for the first
+            time. This policy describes those features in detail below.
           </p>
 
           <h2>Data Collection</h2>
@@ -75,18 +83,30 @@
           <ul>
             <li>No email addresses, phone numbers, or real names are collected</li>
             <li>No location data is accessed or recorded</li>
-            <li>No usage analytics or tracking is performed</li>
+            <li>No usage analytics, crash reporting, or tracking is performed</li>
             <li>No advertising identifiers are used</li>
             <li>No cookies or web tracking technologies are employed</li>
-            <li>No data is sent to any server, API, or third-party service</li>
+            <li>Your financial data is never sent to a BudgetArk server - there isn't one</li>
           </ul>
 
           <h2>Data Storage</h2>
           <p>
-            All data you enter into BudgetArk (including debts, payments, budget entries,
-            and preferences) is stored <strong>locally on your device only</strong> using
-            on-device storage. This data never leaves your device unless you explicitly
-            choose to export it using the "Export My Data" feature.
+            All data you enter into BudgetArk (debts, payments, budget entries, accounts,
+            holdings, receipt photos, and preferences) is stored <strong>locally on your
+            device only</strong>, encrypted with AES-256 and authenticated with HMAC-SHA256.
+            The encryption key is kept in your device's secure keystore (iOS Keychain /
+            Android Keystore) and is marked device-only, so it is never included in device
+            backups or migrated to another phone.
+          </p>
+          <ul>
+            <li><strong>App Lock.</strong> If you enable App Lock, your PIN is stored as a salted hash on this device only. It is never synced, exported, or backed up.</li>
+            <li><strong>Receipt photos</strong> are downscaled and encrypted before they touch storage. They are excluded from partner sync and from backups, and can only be exported by an explicit, per-action confirmation.</li>
+            <li><strong>Automatic backups</strong> (if enabled) are encrypted copies of your data written to the app's private storage on this device. They are not uploaded anywhere and are deleted when the app is uninstalled.</li>
+            <li><strong>Privacy Mode</strong> (optional) blocks screenshots and screen recording of the app.</li>
+          </ul>
+          <p>
+            Your data never leaves your device unless you explicitly export it, sync it with
+            a partner device, or use one of the optional online features described below.
           </p>
 
           <h2>User Identity</h2>
@@ -95,21 +115,118 @@
             identifier is stored only on your device and is not linked to any personal
             information. No account creation, sign-up, or login is required.
           </p>
+          <p>
+            If you enable Live Holdings, the app also generates a separate random device
+            identifier used solely to rate-limit price requests. BudgetArk's quote service
+            stores only a one-way hash of it (see below).
+          </p>
+
+          <h2>Optional Features That Use the Internet</h2>
+          <p>
+            Each of these is <strong>off until you turn it on</strong>, and the app shows a
+            plain-language disclosure before the first use. If you never enable them,
+            BudgetArk makes no financial-data requests at all.
+          </p>
+
+          <h3>Bank Connections (SimpleFIN or Teller)</h3>
+          <ul>
+            <li>You bring your own credentials: a SimpleFIN setup token, or your own Teller developer certificate. BudgetArk operates no bank aggregator and has no server in between.</li>
+            <li>Your device connects <strong>directly</strong> to SimpleFIN or Teller over HTTPS (Teller additionally uses mutual TLS). Those providers see the requests come from you, and their own privacy policies apply to the accounts you link there.</li>
+            <li>Your credentials are stored encrypted on this device only. They are never synced to a partner device, never included in any export or backup, and if the device's secure keystore is unavailable the app refuses to store them rather than falling back to plaintext.</li>
+            <li>Imported transactions wait in a Review Inbox on your device; nothing enters your budget until you approve it (or you create an "always approve" rule you can change or delete at any time).</li>
+            <li>Removing a connection deletes its credentials from your device. Entries you already approved stay in your budget.</li>
+          </ul>
+
+          <h3>Live Holdings (investment prices)</h3>
+          <ul>
+            <li>To show current prices, the app sends <strong>only your ticker symbols</strong> to BudgetArk's quote service - a small proxy hosted on Cloudflare - which fetches prices from a third-party market data provider (Twelve Data) and returns them. Requests happen at most about once a day and only when you tap "Update prices."</li>
+            <li>Your share counts, cost basis, balances, account names, and identity are never sent.</li>
+            <li>The quote service keeps a short-lived price cache keyed by symbol, a one-way hash of your random device identifier for rate limiting, and a list of symbols that have been requested. It does not store which device asked for which symbols, and it keeps no request logs that would. Like any web request, it can see your IP address, which is used only for abuse prevention and is not stored with any symbol data.</li>
+          </ul>
+
+          <h3>Exchange rates</h3>
+          <ul>
+            <li>When you switch your display currency or use the currency exchange calculator, the app downloads the day's public exchange-rate table from a free service (open.er-api.com). The request carries no account, amount, or identity - it is the same table everyone receives. Conversion of your amounts happens on your device.</li>
+          </ul>
+
+          <h3>App updates</h3>
+          <ul>
+            <li>On launch, BudgetArk checks Expo's update service (EAS Update) for new versions of the app's code and downloads them if available. That request contains the app version, runtime version, and platform - nothing about you or your finances. Updates that lack version information or would downgrade the app are rejected.</li>
+          </ul>
+
+          <h3>Tip Jar</h3>
+          <ul>
+            <li>Optional one-time tips are handled entirely by the Apple App Store or Google Play using their in-app purchase systems. BudgetArk receives no name, email, or payment details, and stores nothing about your purchase. The store's own privacy policy applies to the transaction.</li>
+          </ul>
+
+          <h2>Partner Sync</h2>
+          <p>
+            Partner Sync lets you pair BudgetArk with one other device (for example, a
+            partner's phone) and share data directly over your <strong>local Wi-Fi
+            network</strong>. There is no cloud relay and no server: devices discover each
+            other with Bonjour/mDNS, verify each other with a shared pairing secret, and
+            exchange data encrypted and authenticated end to end. Nothing is transmitted when
+            the two devices are not on the same network.
+          </p>
+          <ul>
+            <li>Bank credentials, the App Lock PIN, receipt photos, and device-local settings are never synced.</li>
+            <li>Entries you mark <strong>Private</strong> are never sent to the partner device.</li>
+            <li>You can unpair at any time from the Profile tab.</li>
+          </ul>
+
+          <h2>Notifications</h2>
+          <p>
+            If you opt in to Tracking Reminders or the credit-card keep-alive watch,
+            reminders are scheduled locally on your device. BudgetArk uses no
+            push-notification service and never obtains a push token. Notification text
+            never includes amounts, balances, account names, or bill details, and the app
+            does not send payment-due alerts.
+          </p>
+
+          <h2>Device Permissions</h2>
+          <p>BudgetArk asks for a permission only when you use the feature that needs it:</p>
+          <ul>
+            <li><strong>Camera / Photo Library</strong> - to attach receipt photos to expenses. Photos are encrypted on the device; the original copy taken from the camera or picker is deleted after import.</li>
+            <li><strong>Local Network</strong> - to find and sync with your paired partner's device.</li>
+            <li><strong>Notifications</strong> - only if you opt in to reminders.</li>
+            <li><strong>Secure storage (Keychain / Keystore)</strong> - to protect the encryption key.</li>
+          </ul>
+          <p>
+            Home-screen widgets and app links (<code>budgetark://</code>) display only
+            category names and carry no financial data.
+          </p>
 
           <h2>Data Export</h2>
           <p>
-            The app includes an optional "Export My Data" feature that allows you to share
-            your data as a JSON file through your device's native share sheet. This action
-            is entirely user-initiated, and the exported data is handled by your device's
-            operating system and whichever app or service you choose to share it with.
-            BudgetArk does not process, intercept, or retain any exported data.
+            The app includes optional export features (JSON backup, Excel workbook, CSV,
+            receipt-photo archive) that share your data through your device's native share
+            sheet. These actions are entirely user-initiated, and the exported data is
+            handled by your device's operating system and whichever app or service you
+            choose to share it with. Password-protected backups are encrypted and
+            tamper-evident. BudgetArk does not process, intercept, or retain any exported
+            data; temporary export files are deleted once the share sheet closes.
           </p>
 
           <h2>Third-Party Services</h2>
           <p>
-            BudgetArk does not integrate with any third-party services, analytics platforms,
-            advertising networks, or cloud storage providers.
+            BudgetArk integrates with no analytics platforms, advertising networks, or cloud
+            storage providers. The only third parties it can contact - each only when you use
+            the corresponding feature - are:
           </p>
+          <div class="table-wrap">
+            <table class="legal-table">
+              <thead>
+                <tr><th>Feature (opt-in)</th><th>Who is contacted</th><th>What is sent</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Bank Connections</td><td>SimpleFIN or Teller (your own account)</td><td>Your own credentials, directly from your device</td></tr>
+                <tr><td>Live Holdings</td><td>BudgetArk quote service (Cloudflare) → Twelve Data</td><td>Ticker symbols and a hashed random device id</td></tr>
+                <tr><td>Currency conversion</td><td>open.er-api.com</td><td>Nothing - a request for the public rate table</td></tr>
+                <tr><td>App updates</td><td>Expo (EAS Update)</td><td>App version, runtime version, platform</td></tr>
+                <tr><td>Tip Jar</td><td>Apple App Store / Google Play</td><td>Handled entirely by the store</td></tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>Children's Privacy</h2>
           <p>
@@ -121,8 +238,10 @@
           <h2>Data Deletion</h2>
           <p>
             Since all data is stored locally on your device, you can delete all app data at
-            any time by using the "Reset All Data" option in the app's Profile screen, or by
-            uninstalling the app.
+            any time by using the "Reset All Data" option in the app's Profile screen (which
+            also removes automatic backups, receipt photos, bank credentials, and the App
+            Lock PIN), or by uninstalling the app. Removing an individual bank connection
+            deletes that connection's credentials immediately.
           </p>
 
           <h2>Changes to This Policy</h2>

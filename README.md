@@ -28,6 +28,14 @@ Open `news.html` and copy one of the `<article class="news-card">` blocks. Paste
 - the `news-tag` label (e.g. Announcement, Development, Release)
 - the title and paragraph
 
+## Adding a theme
+
+Themes mirror the app's `src/theme/themes.ts` presets. To add one:
+
+1. `index.html` - copy a `<div class="theme-card" data-theme="...">` block into the theme grid and set the `--t-*` preview colors (bg, card, cardBorder, accent, text, textDim, success).
+2. `css/style.css` - add a `[data-theme="..."]` block mapping the preset's colors onto the site variables (`--parchment`, `--card`, `--border`, `--ink`, `--wood`, `--green`, `--gold`, ...). Ambient themes also set `--bg: transparent` and get an `.ambient` gradient + glass-card rule.
+3. `js/main.js` - only for ambient themes: add a backdrop SVG function and a branch in `renderAmbient()`.
+
 ## Deploying
 
 Any static host works:
