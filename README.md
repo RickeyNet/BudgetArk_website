@@ -38,6 +38,27 @@ Themes mirror the app's `src/theme/themes.ts` presets. To add one:
 2. `css/style.css` - add a `[data-theme="..."]` block mapping the preset's colors onto the site variables (`--parchment`, `--card`, `--border`, `--ink`, `--wood`, `--green`, `--gold`, ...). Ambient themes also set `--bg: transparent` and get an `.ambient` gradient + glass-card rule. Check text contrast (`--ink-soft`, `--wood`, `--gold` on `--parchment`; `--accent-text` on `--wood`; `--parchment` on `--green`) stays at or above 4.5:1 - the site palettes are allowed to drift slightly from the app's for that reason.
 3. `js/main.js` - only for ambient themes: add a backdrop SVG function and a branch in `renderAmbient()`.
 
+## Rating, review, and share image
+
+The App Store rating in the home page schema (`aggregateRating`) and the "5.0 on
+the App Store" line in the download section are copied by hand. Refresh them
+now and then from
+`https://itunes.apple.com/lookup?id=6760246006&country=us` (`averageUserRating`,
+`userRatingCount`). Written reviews come from
+`https://itunes.apple.com/us/rss/customerreviews/id=6760246006/json`.
+
+`assets/og-image.jpg` (1200x630) is the link-preview image for every page. It was
+rendered from a small HTML mock using the site's own CSS and a phone
+screenshot, so regenerate it the same way if the branding or screenshots change.
+
+## Default theme and Content Security Policy
+
+First-time visitors get Forest Gold or The Ark depending on their system
+color scheme; a theme picked on the site is remembered in localStorage and wins
+after that. Every page carries a `Content-Security-Policy` meta tag. The inline
+theme script is allowed by its SHA-256 hash, so if you edit that script, the
+hash in every page's CSP tag must be recomputed (same script on all pages).
+
 ## Fonts and screenshots
 
 Fraunces and Inter are self-hosted variable fonts (SIL Open Font License) in

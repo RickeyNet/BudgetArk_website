@@ -3,34 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="description" content="BudgetArk Privacy Policy - BudgetArk collects no personal data. Everything stays encrypted on your device; optional online features explain exactly what they send.">
   <title>Privacy Policy - BudgetArk</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#111410">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
   <link rel="canonical" href="https://budgetark.app/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BudgetArk">
   <meta property="og:url" content="https://budgetark.app/privacy.html">
   <meta property="og:title" content="Privacy Policy - BudgetArk">
   <meta property="og:description" content="BudgetArk Privacy Policy - BudgetArk collects no personal data. Everything stays encrypted on your device; optional online features explain exactly what they send.">
-  <meta property="og:image" content="https://budgetark.app/assets/arklogo.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://budgetark.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BudgetArk - free, private, offline-first budgeting and debt payoff">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@budgetark">
   <meta name="twitter:title" content="Privacy Policy - BudgetArk">
   <meta name="twitter:description" content="BudgetArk Privacy Policy - BudgetArk collects no personal data. Everything stays encrypted on your device; optional online features explain exactly what they send.">
-  <meta name="twitter:image" content="https://budgetark.app/assets/arklogo.png">
+  <meta name="twitter:image" content="https://budgetark.app/assets/og-image.jpg">
   <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script>
-    // Apply saved theme before first paint to avoid a flash of the default
+    // Apply the saved theme before first paint to avoid a flash of the default.
+    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
+    // their system color scheme.
     try {
-      document.documentElement.setAttribute(
-        "data-theme",
-        localStorage.getItem("budgetark-site-theme") || "forest_gold"
-      );
+      var saved = localStorage.getItem("budgetark-site-theme");
+      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
     } catch (e) {}
   </script>
 </head>

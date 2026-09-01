@@ -1355,6 +1355,28 @@ a:hover { text-decoration: underline; }
   font-size: 0.7rem;
 }
 
+.proof {
+  max-width: 40rem;
+  margin: 2.6rem auto 0;
+}
+.proof-rating {
+  color: var(--ink) !important;
+  font-weight: 600;
+  font-size: 1rem !important;
+  margin: 0 0 0.9rem !important;
+}
+.proof-rating .stars { color: var(--gold); letter-spacing: 0.1em; margin-right: 0.3rem; }
+.proof-quote {
+  margin: 0;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.6rem;
+  text-align: left;
+}
+.proof-quote p { color: var(--ink) !important; font-size: 1rem !important; margin: 0 !important; line-height: 1.65; }
+.proof-cite { font-size: 0.88rem !important; margin: 0.7rem 0 0 !important; text-align: right; }
+
 .cta-support { margin-top: 2rem !important; font-size: 0.95rem !important; }
 
 /* ---------- News page ---------- */
