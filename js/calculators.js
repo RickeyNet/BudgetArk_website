@@ -429,6 +429,39 @@
     });
   });
 
+  // Replace the browser's number spinner with minus / plus buttons that
+  // respect the input's step, min, and max, and hold-to-repeat like the
+  // app's adjust buttons. Pointer and keyboard both work.
+  $$('.field-row input[type="number"]').forEach((input) => {
+    const row = input.parentElement;
+    const makeStep = (dir) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'step';
+      btn.dataset.dir = String(dir);
+      btn.textContent = dir < 0 ? '−' : '+';
+      btn.setAttribute('aria-label', (dir < 0 ? 'Decrease ' : 'Increase ') + (row.parentElement.querySelector('span') || {}).textContent);
+      const nudge = () => {
+        if (input.value === '') input.value = input.min || '0';
+        try { dir < 0 ? input.stepDown() : input.stepUp(); } catch (e) { /* out of range or non-numeric: ignore */ }
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      };
+      let timer = null, repeat = null;
+      const stop = () => { clearTimeout(timer); clearInterval(repeat); timer = repeat = null; };
+      btn.addEventListener('pointerdown', (e) => {
+        if (e.button !== 0) return;
+        e.preventDefault();
+        nudge();
+        timer = setTimeout(() => { repeat = setInterval(nudge, 70); }, 400);
+      });
+      ['pointerup', 'pointerleave', 'pointercancel', 'blur'].forEach((ev) => btn.addEventListener(ev, stop));
+      btn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); nudge(); } });
+      return btn;
+    };
+    row.appendChild(makeStep(-1));
+    row.appendChild(makeStep(1));
+  });
+
   const bind = (toolId, render) => {
     const root = document.getElementById(toolId);
     if (!root) return;

@@ -1373,6 +1373,38 @@ input[type="range"] {
   cursor: pointer;
 }
 
+/* Number inputs: hide the browser spinner and use our own stepper buttons */
+.tools input[type="number"]::-webkit-inner-spin-button,
+.tools input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.tools input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+
+.field-row .step {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.3rem 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--wood);
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.field-row .step:hover { background: var(--card-warm); border-color: var(--wood); }
+.field-row .step:active { background: var(--wood); color: var(--accent-text); border-color: var(--wood); }
+.field-row .step + .step { margin-left: 0.25rem; }
+.field-row .step:focus-visible { outline: 2px solid var(--wood); outline-offset: 2px; }
+
 .segmented {
   border: none;
   display: flex;
