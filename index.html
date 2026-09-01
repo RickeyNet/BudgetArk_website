@@ -51,13 +51,74 @@
           "https://github.com/RickeyNet/BudgetArk",
           "https://x.com/budgetark"
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://budgetark.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is BudgetArk really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. There is no subscription, no paid tier, no ads, and no feature behind a paywall. An optional Tip Jar exists for people who want to say thanks, and it unlocks nothing because everything is already included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work without an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Completely. BudgetArk is offline-first, and every core feature works with your phone in airplane mode. The optional online features - bank connections, live investment prices, currency rates, partner sync, and the Tip Jar - stay off until you turn them on, and each one explains exactly what it sends before it runs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can it connect to my bank if there is no BudgetArk server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You bring your own SimpleFIN or Teller credentials, and your phone talks to that provider directly over HTTPS. BudgetArk runs no aggregator and never sits in between. Imported transactions wait in a Review Inbox on your device, and nothing enters your budget until you approve it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is my data stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On your device only, encrypted with AES-256 and authenticated with HMAC-SHA256. The key lives in the iOS Keychain or Android Keystore and never leaves the phone. There is no account to create and no BudgetArk server that could hold a copy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get my data out again?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, in several formats: encrypted JSON backups, a full Excel workbook with live formulas that imports back in, CSV exports for tax reports and amortization schedules, and an archive of your receipt photos. Scheduled local auto-backups run on the device too."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I budget together with a partner?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Partner Sync pairs two phones directly over your own Wi-Fi with end-to-end encryption and no cloud relay. Mark any entry Private and it stays on your phone only."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the Android version coming?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Android is in closed testing on Google Play now. The public launch will be announced on the news page, or email us and we will let you know."
+            }
+          }
+        ]
       }
     ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script>
     // Apply saved theme before first paint to avoid a flash of the default
@@ -88,6 +149,7 @@
         <li><a href="index.html#features">Features</a></li>
         <li><a href="index.html#themes">Themes</a></li>
         <li><a href="index.html#mission">Mission</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="index.html#download" class="btn btn-small">Get the App</a></li>
       </ul>
@@ -223,6 +285,33 @@
             <h3>Widget &amp; Search</h3>
             <p>Log an expense in one tap from a home-screen Quick Entry widget on iOS and Android, and find anything - debts, payments, entries - with global search and advanced filters.</p>
           </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="shots section" id="screens">
+      <div class="container">
+        <p class="eyebrow">ON DECK</p>
+        <h2 class="section-title">The real thing</h2>
+        <p class="section-sub">Straight from the app - shown here in the Deep Space theme.</p>
+        <ul class="shots-grid">
+          <li class="shot"><figure class="shot">
+            <img src="assets/screen-debts.webp" alt="BudgetArk Debt Tracker screen" width="600" height="1304" loading="lazy" decoding="async">
+            <figcaption><strong>Debt Tracker</strong>Snowball, Avalanche, or your own order, with a Debt-Free Countdown built from your real payment pace.</figcaption>
+          </figure></li>
+          <li class="shot"><figure class="shot">
+            <img src="assets/screen-budget.webp" alt="BudgetArk Budget screen" width="600" height="1304" loading="lazy" decoding="async">
+            <figcaption><strong>Budget</strong>Income, spending, cash flow, and a safe-to-spend number for the month.</figcaption>
+          </figure></li>
+          <li class="shot"><figure class="shot">
+            <img src="assets/screen-bridge.webp" alt="BudgetArk The Bridge screen" width="600" height="1304" loading="lazy" decoding="async">
+            <figcaption><strong>The Bridge</strong>Net worth across every account, with history and an emergency fund linked to real savings.</figcaption>
+          </figure></li>
+          <li class="shot"><figure class="shot">
+            <img src="assets/screen-charts.webp" alt="BudgetArk Charts and Course screen" width="600" height="1304" loading="lazy" decoding="async">
+            <figcaption><strong>Charts &amp; Course</strong>Calculators, projections, and the 24-lesson Captain’s Course.</figcaption>
+          </figure></li>
         </ul>
       </div>
     </section>
@@ -500,6 +589,44 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <p class="eyebrow">QUESTIONS FROM THE DOCK</p>
+        <h2 class="section-title">Frequently asked</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Is BudgetArk really free?</summary>
+            <p>Yes. There is no subscription, no paid tier, no ads, and no feature behind a paywall. An optional Tip Jar exists for people who want to say thanks, and it unlocks nothing because everything is already included.</p>
+          </details>
+          <details>
+            <summary>Does it work without an internet connection?</summary>
+            <p>Completely. BudgetArk is offline-first, and every core feature works with your phone in airplane mode. The optional online features - bank connections, live investment prices, currency rates, partner sync, and the Tip Jar - stay off until you turn them on, and each one explains exactly what it sends before it runs.</p>
+          </details>
+          <details>
+            <summary>How can it connect to my bank if there is no BudgetArk server?</summary>
+            <p>You bring your own SimpleFIN or Teller credentials, and your phone talks to that provider directly over HTTPS. BudgetArk runs no aggregator and never sits in between. Imported transactions wait in a Review Inbox on your device, and nothing enters your budget until you approve it.</p>
+          </details>
+          <details>
+            <summary>Where is my data stored?</summary>
+            <p>On your device only, encrypted with AES-256 and authenticated with HMAC-SHA256. The key lives in the iOS Keychain or Android Keystore and never leaves the phone. There is no account to create and no BudgetArk server that could hold a copy.</p>
+          </details>
+          <details>
+            <summary>Can I get my data out again?</summary>
+            <p>Yes, in several formats: encrypted JSON backups, a full Excel workbook with live formulas that imports back in, CSV exports for tax reports and amortization schedules, and an archive of your receipt photos. Scheduled local auto-backups run on the device too.</p>
+          </details>
+          <details>
+            <summary>Can I budget together with a partner?</summary>
+            <p>Yes. Partner Sync pairs two phones directly over your own Wi-Fi with end-to-end encryption and no cloud relay. Mark any entry Private and it stays on your phone only.</p>
+          </details>
+          <details>
+            <summary>When is the Android version coming?</summary>
+            <p>Android is in closed testing on Google Play now. The public launch will be announced on the <a href="news.html">news page</a>, or <a href="mailto:budgetark.support@gmail.com?subject=Notify%20me%20when%20BudgetArk%20launches%20on%20Android">email us</a> and we will let you know.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Download CTA -->
     <section class="cta section" id="download">
       <div class="container cta-inner">
@@ -531,6 +658,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#features">Features</a></li>
         <li><a href="news.html">News</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://x.com/budgetark" target="_blank" rel="noopener">X</a></li>

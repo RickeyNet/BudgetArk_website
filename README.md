@@ -38,6 +38,17 @@ Themes mirror the app's `src/theme/themes.ts` presets. To add one:
 2. `css/style.css` - add a `[data-theme="..."]` block mapping the preset's colors onto the site variables (`--parchment`, `--card`, `--border`, `--ink`, `--wood`, `--green`, `--gold`, ...). Ambient themes also set `--bg: transparent` and get an `.ambient` gradient + glass-card rule. Check text contrast (`--ink-soft`, `--wood`, `--gold` on `--parchment`; `--accent-text` on `--wood`; `--parchment` on `--green`) stays at or above 4.5:1 - the site palettes are allowed to drift slightly from the app's for that reason.
 3. `js/main.js` - only for ambient themes: add a backdrop SVG function and a branch in `renderAmbient()`.
 
+## Fonts and screenshots
+
+Fraunces and Inter are self-hosted variable fonts (SIL Open Font License) in
+`assets/fonts/`, so visitors never contact Google Fonts. The `@font-face` rules
+are at the top of `css/style.css`.
+
+The screenshot strip on the home page uses the App Store screenshots from the
+app repo (`../budgetark/screenshots/app-store/iphone-6.9/`), resized to 600px
+wide WebP files in `assets/`. When the store screenshots are refreshed, re-export
+them the same way and update the captions in `index.html`.
+
 ## Deploying
 
 Any static host works:
