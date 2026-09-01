@@ -7,8 +7,10 @@ Static marketing site for the BudgetArk budgeting app. No build tools, no depend
 ```
 index.html      Home page (hero, features, about, download)
 news.html       News & updates feed
+privacy.html    Privacy policy
+404.html        Custom not-found page (GitHub Pages serves it automatically)
 css/style.css   All styles
-js/main.js      Mobile nav toggle
+js/main.js      Mobile nav toggle, theme switcher, ambient backdrops
 ```
 
 ## Viewing locally
@@ -32,8 +34,8 @@ Open `news.html` and copy one of the `<article class="news-card">` blocks. Paste
 
 Themes mirror the app's `src/theme/themes.ts` presets. To add one:
 
-1. `index.html` - copy a `<div class="theme-card" data-theme="...">` block into the theme grid and set the `--t-*` preview colors (bg, card, cardBorder, accent, text, textDim, success).
-2. `css/style.css` - add a `[data-theme="..."]` block mapping the preset's colors onto the site variables (`--parchment`, `--card`, `--border`, `--ink`, `--wood`, `--green`, `--gold`, ...). Ambient themes also set `--bg: transparent` and get an `.ambient` gradient + glass-card rule.
+1. `index.html` - copy a `<button class="theme-card" data-theme="...">` block into the theme grid and set the `--t-*` preview colors (bg, card, cardBorder, accent, text, textDim, success).
+2. `css/style.css` - add a `[data-theme="..."]` block mapping the preset's colors onto the site variables (`--parchment`, `--card`, `--border`, `--ink`, `--wood`, `--green`, `--gold`, ...). Ambient themes also set `--bg: transparent` and get an `.ambient` gradient + glass-card rule. Check text contrast (`--ink-soft`, `--wood`, `--gold` on `--parchment`; `--accent-text` on `--wood`; `--parchment` on `--green`) stays at or above 4.5:1 - the site palettes are allowed to drift slightly from the app's for that reason.
 3. `js/main.js` - only for ambient themes: add a backdrop SVG function and a branch in `renderAmbient()`.
 
 ## Deploying

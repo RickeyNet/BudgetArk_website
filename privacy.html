@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="BudgetArk Privacy Policy - BudgetArk collects no personal data. Everything stays encrypted on your device; optional online features explain exactly what they send.">
   <title>Privacy Policy - BudgetArk</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#111410">
   <link rel="canonical" href="https://budgetark.app/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BudgetArk">
@@ -20,7 +23,7 @@
   <meta name="twitter:image" content="https://budgetark.app/assets/arklogo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>
     // Apply saved theme before first paint to avoid a flash of the default
@@ -34,18 +37,19 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="ambient" aria-hidden="true"></div>
 
   <header class="site-header">
     <nav class="nav container">
       <a href="index.html" class="logo">
-        <img src="assets/favicon.png" alt="" class="logo-img">
+        <img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30">
         Budget<span class="logo-accent">Ark</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#features">Features</a></li>
         <li><a href="index.html#themes">Themes</a></li>
@@ -56,7 +60,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">YOUR DATA, YOUR DEVICE</p>
@@ -283,7 +287,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo"><img src="assets/favicon.png" alt="" class="logo-img"> Budget<span class="logo-accent">Ark</span></span>
+        <span class="logo"><img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30"> Budget<span class="logo-accent">Ark</span></span>
         <p>Offline-first budgeting. Built for the storm.</p>
       </div>
       <ul class="footer-links">

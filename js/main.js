@@ -2,6 +2,16 @@
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
 
+// Close the mobile menu with Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && links.classList.contains('open')) {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.focus();
+  }
+});
+
 toggle.addEventListener('click', () => {
   const open = links.classList.toggle('open');
   toggle.classList.toggle('open', open);
@@ -194,24 +204,19 @@ function applyTheme(id) {
     localStorage.setItem(THEME_KEY, id);
   } catch (e) {}
   themeCards.forEach((card) => {
-    card.classList.toggle('selected', card.dataset.theme === id);
+    card.setAttribute('aria-pressed', String(card.dataset.theme === id));
   });
   renderAmbient(id);
 }
 
+// Theme cards are real <button>s, so Enter/Space already fire click.
 themeCards.forEach((card) => {
   card.addEventListener('click', () => applyTheme(card.dataset.theme));
-  card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      applyTheme(card.dataset.theme);
-    }
-  });
 });
 
 // On load: mark the saved theme's card and draw its backdrop
 themeCards.forEach((card) => {
-  card.classList.toggle('selected', card.dataset.theme === currentTheme());
+  card.setAttribute('aria-pressed', String(card.dataset.theme === currentTheme()));
 });
 renderAmbient(currentTheme());
 

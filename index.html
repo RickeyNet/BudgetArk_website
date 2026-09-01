@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="BudgetArk - the offline-first, privacy-focused budgeting app. Track debt, budget monthly, connect your bank on your own terms, watch your net worth, and project your future. Free, no subscription, sixteen themes, your data stays on your device.">
   <title>BudgetArk - Free, Private Budgeting &amp; Debt Payoff App</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#111410">
   <link rel="canonical" href="https://budgetark.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BudgetArk">
@@ -54,7 +57,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>
     // Apply saved theme before first paint to avoid a flash of the default
@@ -68,18 +71,19 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="ambient" aria-hidden="true"></div>
 
   <header class="site-header">
     <nav class="nav container">
       <a href="index.html" class="logo">
-        <img src="assets/favicon.png" alt="" class="logo-img">
+        <img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30">
         Budget<span class="logo-accent">Ark</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-nav">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="index.html#features">Features</a></li>
         <li><a href="index.html#themes">Themes</a></li>
@@ -90,13 +94,13 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <img src="assets/arklogo.png" alt="BudgetArk - hand-drawn ark with sunburst" class="hero-logo">
+          <img src="assets/arklogo-220.webp" alt="BudgetArk - hand-drawn ark with sunburst" class="hero-logo" width="110" height="110" fetchpriority="high">
           <h1>Build your ark.<br>Weather any <span class="highlight">storm</span>.</h1>
           <p class="hero-sub">
             BudgetArk is a free, offline-first personal finance app for debt payoff,
@@ -158,68 +162,68 @@
         <p class="eyebrow">WHAT'S ON BOARD</p>
         <h2 class="section-title">Everything you need for the voyage</h2>
         <p class="section-sub">Debt payoff, budgeting, bank syncing, net worth, and planning for the future - all in one vessel.</p>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">⚓</div>
+        <ul class="feature-grid">
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">⚓</div>
             <h3>Debt Tracker</h3>
             <p>Crush every debt with Snowball, Avalanche, or your own payoff order. Due-date reminders, a Debt-Free Countdown built from your real payment pace, and a keep-alive watch so a quiet credit card never gets closed on you.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💰</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">💰</div>
             <h3>Monthly Budget</h3>
             <p>Income, expenses, and category limits with spending-pace marks. A bill calendar shows what's due and paid, bills settle themselves when the real charge arrives, and a safe-to-spend number replaces guesswork.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🏦</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🏦</div>
             <h3>Bank Connections</h3>
             <p>Bring your own SimpleFIN or Teller credentials and let transactions import themselves - nothing enters your budget until you approve it in the Review Inbox. No aggregator, no server in between.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🧭</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🧭</div>
             <h3>The Bridge</h3>
             <p>Your net worth dashboard: accounts, history, and rise/drop tracking over a day, week, month, or quarter. Add live stock and crypto holdings (opt-in), link your emergency fund to real savings accounts, and track purchase plans.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📈</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📈</div>
             <h3>Charts &amp; Calculators</h3>
             <p>Investment projections, loan and mortgage amortization, refinance break-even, a US take-home pay estimator that never phones home, currency exchange, "What if I stopped spending on…", and a Plan-a-Purchase sinking fund tool.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🛶</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛶</div>
             <h3>Build Your Ark</h3>
             <p>A milestone journey for your finances: lay the keel, patch the hull, stock the galley. Quick-start budget templates get you moving, and your ark takes shape as your money does.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎓</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎓</div>
             <h3>Captain's Course</h3>
             <p>All 24 lessons across five chapters - from good vs. bad debt to index funds, insurance, and estate basics - plus a Ship's Log of achievements with live progress rings to earn along the way.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🧾</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🧾</div>
             <h3>Receipts, Business &amp; People</h3>
             <p>Snap encrypted receipt photos onto any entry, tag expenses to a business for a tax-time report and CSV, mark paychecks W-2 or 1099, and assign spending to the people in your household.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🤝</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🤝</div>
             <h3>Partner Sync</h3>
             <p>Budget together. Pair with your partner's device and sync encrypted, directly over your own Wi-Fi - no server in the middle. Mark an entry Private and it stays on your phone only.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🔐</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔐</div>
             <h3>App Lock &amp; Privacy</h3>
             <p>Everything is stored encrypted on your device. Add a PIN gate on launch, block screenshots with Privacy Mode, and skip the sign-up entirely - no email, no account, no analytics.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📤</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📤</div>
             <h3>Backups &amp; Spreadsheets</h3>
             <p>Scheduled local auto-backups, tamper-evident encrypted exports, and a full Excel workbook with live formulas that round-trips back in. Your data is yours - take it anywhere.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📱</div>
+          </li>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📱</div>
             <h3>Widget &amp; Search</h3>
             <p>Log an expense in one tap from a home-screen Quick Entry widget on iOS and Android, and find anything - debts, payments, entries - with global search and advanced filters.</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -236,229 +240,229 @@
         </p>
         <div class="theme-grid">
 
-          <div class="theme-card" data-theme="forest_gold" role="button" tabindex="0" style="--t-bg:#111410; --t-card:#1a1e18; --t-border:#3a4a2a; --t-accent:#d4a020; --t-text:#d4c8a0; --t-dim:#8a9a6a; --t-good:#5cb85c;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="forest_gold" aria-pressed="false" style="--t-bg:#111410; --t-card:#1a1e18; --t-border:#3a4a2a; --t-accent:#d4a020; --t-text:#d4c8a0; --t-dim:#8a9a6a; --t-good:#5cb85c;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Forest Gold <em>· default</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="neon_purple" role="button" tabindex="0" style="--t-bg:#0a0e1a; --t-card:#131829; --t-border:#1e2642; --t-accent:#6c5ce7; --t-text:#e8eaf6; --t-dim:#7986cb; --t-good:#00e676;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="neon_purple" aria-pressed="false" style="--t-bg:#0a0e1a; --t-card:#131829; --t-border:#1e2642; --t-accent:#6c5ce7; --t-text:#e8eaf6; --t-dim:#7986cb; --t-good:#00e676;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Neon Purple</span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="slate_dark" role="button" tabindex="0" style="--t-bg:#1a1915; --t-card:#2b2a26; --t-border:#3d3b34; --t-accent:#da7756; --t-text:#e8e4dd; --t-dim:#a39e93; --t-good:#7dac65;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="slate_dark" aria-pressed="false" style="--t-bg:#1a1915; --t-card:#2b2a26; --t-border:#3d3b34; --t-accent:#da7756; --t-text:#e8e4dd; --t-dim:#a39e93; --t-good:#7dac65;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Easy</span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="rose_light" role="button" tabindex="0" style="--t-bg:#faf5f7; --t-card:#fff9f6; --t-border:#e9d3c8; --t-accent:#d29a80; --t-text:#4a3040; --t-dim:#9a7088; --t-good:#6abf8a;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="rose_light" aria-pressed="false" style="--t-bg:#faf5f7; --t-card:#fff9f6; --t-border:#e9d3c8; --t-accent:#d29a80; --t-text:#4a3040; --t-dim:#9a7088; --t-good:#6abf8a;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Rose</span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="synthwave" role="button" tabindex="0" style="--t-bg:#0e0e20; --t-card:#161633; --t-border:#2a2050; --t-accent:#c44a90; --t-text:#e8e0f0; --t-dim:#8878a8; --t-good:#4ac9a0;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="synthwave" aria-pressed="false" style="--t-bg:#0e0e20; --t-card:#161633; --t-border:#2a2050; --t-accent:#c44a90; --t-text:#e8e0f0; --t-dim:#8878a8; --t-good:#4ac9a0;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Synthwave</span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="deepforest" role="button" tabindex="0" style="--t-bg:#06100d; --t-card:#0c1914; --t-border:#26483a; --t-accent:#67b8a2; --t-text:#e2ece2; --t-dim:#8aa79a; --t-good:#a6d98d;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="deepforest" aria-pressed="false" style="--t-bg:#06100d; --t-card:#0c1914; --t-border:#26483a; --t-accent:#67b8a2; --t-text:#e2ece2; --t-dim:#8aa79a; --t-good:#a6d98d;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Deep Forest <em>· ambient</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="ark_parchment" role="button" tabindex="0" style="--t-bg:#F2E6D0; --t-card:#FAF3E8; --t-border:#D4B896; --t-accent:#7C4A2E; --t-text:#3E2010; --t-dim:#8A6A50; --t-good:#5A7A3A;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="ark_parchment" aria-pressed="false" style="--t-bg:#F2E6D0; --t-card:#FAF3E8; --t-border:#D4B896; --t-accent:#7C4A2E; --t-text:#3E2010; --t-dim:#8A6A50; --t-good:#5A7A3A;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">The Ark</span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="ocean_coral" role="button" tabindex="0" style="--t-bg:#0b1e24; --t-card:#112e35; --t-border:#1a4450; --t-accent:#f08a65; --t-text:#e0d4bc; --t-dim:#7a9a8a; --t-good:#8abb6a;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="ocean_coral" aria-pressed="false" style="--t-bg:#0b1e24; --t-card:#112e35; --t-border:#1a4450; --t-accent:#f08a65; --t-text:#e0d4bc; --t-dim:#7a9a8a; --t-good:#8abb6a;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Coral</span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="slate" role="button" tabindex="0" style="--t-bg:#323437; --t-card:#3d3f43; --t-border:#515458; --t-accent:#e2b714; --t-text:#d1d0c5; --t-dim:#9a9ca0; --t-good:#7cbf6b;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="slate" aria-pressed="false" style="--t-bg:#323437; --t-card:#3d3f43; --t-border:#515458; --t-accent:#e2b714; --t-text:#d1d0c5; --t-dim:#9a9ca0; --t-good:#7cbf6b;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Slate <em>· new</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="classic" role="button" tabindex="0" style="--t-bg:#008080; --t-card:#c0c0c0; --t-border:#808080; --t-accent:#000080; --t-text:#000000; --t-dim:#222222; --t-good:#008000;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="classic" aria-pressed="false" style="--t-bg:#008080; --t-card:#c0c0c0; --t-border:#808080; --t-accent:#000080; --t-text:#000000; --t-dim:#222222; --t-good:#008000;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Classic <em>· new</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card starfield" data-theme="deep_space" role="button" tabindex="0" style="--t-bg:#04060f; --t-card:#0a1020; --t-border:#24477f; --t-accent:#5b9ef0; --t-text:#e4ecf8; --t-dim:#8fa6c8; --t-good:#34d399;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card starfield" data-theme="deep_space" aria-pressed="false" style="--t-bg:#04060f; --t-card:#0a1020; --t-border:#24477f; --t-accent:#5b9ef0; --t-text:#e4ecf8; --t-dim:#8fa6c8; --t-good:#34d399;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Deep Space <em>· ambient</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="deep_sea" role="button" tabindex="0" style="--t-bg:#030b11; --t-card:#0a1b24; --t-border:#164a58; --t-accent:#3fd9c0; --t-text:#dcedf1; --t-dim:#82a9b6; --t-good:#4fd98a;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="deep_sea" aria-pressed="false" style="--t-bg:#030b11; --t-card:#0a1b24; --t-border:#164a58; --t-accent:#3fd9c0; --t-text:#dcedf1; --t-dim:#82a9b6; --t-good:#4fd98a;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Deep Sea <em>· new, ambient</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="lighthouse" role="button" tabindex="0" style="--t-bg:#050505; --t-card:#141414; --t-border:#767676; --t-accent:#ffd75e; --t-text:#ffffff; --t-dim:#d6d6d6; --t-good:#7ee787;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="lighthouse" aria-pressed="false" style="--t-bg:#050505; --t-card:#141414; --t-border:#767676; --t-accent:#ffd75e; --t-text:#ffffff; --t-dim:#d6d6d6; --t-good:#7ee787;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Lighthouse <em>· new, high contrast</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="chart_room" role="button" tabindex="0" style="--t-bg:#c5d6d3; --t-card:#eee2c0; --t-border:#a08a5e; --t-accent:#75561f; --t-text:#123a44; --t-dim:#3f6167; --t-good:#3d6634;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="chart_room" aria-pressed="false" style="--t-bg:#c5d6d3; --t-card:#eee2c0; --t-border:#a08a5e; --t-accent:#75561f; --t-text:#123a44; --t-dim:#3f6167; --t-good:#3d6634;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Chart Room <em>· new</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="harbor_dawn" role="button" tabindex="0" style="--t-bg:#fadfc9; --t-card:#eef6f2; --t-border:#c3d8d0; --t-accent:#8a6a14; --t-text:#3a4550; --t-dim:#61707d; --t-good:#297a58;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="harbor_dawn" aria-pressed="false" style="--t-bg:#fadfc9; --t-card:#eef6f2; --t-border:#c3d8d0; --t-accent:#8a6a14; --t-text:#3a4550; --t-dim:#61707d; --t-good:#297a58;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Harbor Dawn <em>· new</em></span>
-          </div>
+          </button>
 
-          <div class="theme-card" data-theme="ledger" role="button" tabindex="0" style="--t-bg:#dde9d8; --t-card:#f8faf2; --t-border:#a9c19f; --t-accent:#1e6f47; --t-text:#232a20; --t-dim:#5c6b54; --t-good:#277a4c;">
-            <div class="theme-screen">
-              <div class="t-title"></div>
-              <div class="t-card">
-                <div class="t-line"></div>
-                <div class="t-line short good"></div>
-                <div class="t-bar"><div class="t-fill"></div></div>
-              </div>
-              <div class="t-btn"></div>
-              <div class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
+          <button type="button" class="theme-card" data-theme="ledger" aria-pressed="false" style="--t-bg:#dde9d8; --t-card:#f8faf2; --t-border:#a9c19f; --t-accent:#1e6f47; --t-text:#232a20; --t-dim:#5c6b54; --t-good:#277a4c;">
+            <span class="theme-screen" aria-hidden="true">
+              <span class="t-title"></span>
+              <span class="t-card">
+                <span class="t-line"></span>
+                <span class="t-line short good"></span>
+                <span class="t-bar"><span class="t-fill"></span></span>
+              </span>
+              <span class="t-btn"></span>
+              <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+            </span>
             <span class="theme-name">Ledger <em>· new</em></span>
-          </div>
+          </button>
 
         </div>
       </div>
@@ -469,6 +473,7 @@
       <div class="container mission-inner">
         <p class="eyebrow">OUR MISSION</p>
         <h2 class="section-title">Why BudgetArk exists</h2>
+        <figure class="mission-quote">
         <blockquote>
           "I wanted to be proactive with my finances, get them under control and start
           preparing for the future, without giving up my privacy or paying for another
@@ -476,6 +481,8 @@
           road ahead in one offline app that stays on your device and goes nowhere else.
           I built BudgetArk to help you do the same, at no cost to you."
         </blockquote>
+        <figcaption class="mission-cite">- Rickey Cornett, developer of BudgetArk</figcaption>
+        </figure>
         <div class="mission-pillars">
           <div class="pillar">
             <span class="pillar-number">$0</span>
@@ -497,16 +504,16 @@
     <section class="cta section" id="download">
       <div class="container cta-inner">
         <h2>Ready to come aboard?</h2>
-        <p>BudgetArk is available now on iOS. Android is in closed testing on Google Play - watch the <a href="news.html">news page</a> for the public launch.</p>
+        <p>BudgetArk is available now on iOS. Android is in closed testing on Google Play - watch the <a href="news.html">news page</a> for the public launch, or <a href="mailto:budgetark.support@gmail.com?subject=Notify%20me%20when%20BudgetArk%20launches%20on%20Android">ask to be notified</a>.</p>
         <div class="store-buttons">
-          <a href="https://apps.apple.com/us/app/budgetark/id6760246006" class="store-btn" title="Download on the App Store" target="_blank" rel="noopener">
-            <span class="store-icon"></span>
+          <a href="https://apps.apple.com/us/app/budgetark/id6760246006" class="store-btn" target="_blank" rel="noopener">
+            <span class="store-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16.365 12.77c-.02-2.19 1.79-3.24 1.87-3.29-1.02-1.49-2.6-1.7-3.17-1.72-1.35-.14-2.63.79-3.32.79-.68 0-1.74-.77-2.86-.75-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.32 0 1.7.71 2.87.69 1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.36-3.53zM14.18 6.32c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.55 1.31-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.49 2.57-1.23z"/></svg></span>
             <span class="store-text"><small>Download on the</small>App Store</span>
           </a>
-          <a href="#" class="store-btn" title="In closed testing">
-            <span class="store-icon">▶</span>
+          <span class="store-btn" aria-disabled="true" title="Android is in closed testing">
+            <span class="store-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3.5v17c0 .5.55.8.95.53l12.6-8.5a.62.62 0 0 0 0-1.06L4.95 2.97A.62.62 0 0 0 4 3.5z"/></svg></span>
             <span class="store-text"><small>Coming soon to</small>Google Play</span>
-          </a>
+          </span>
         </div>
         <p class="cta-support">Questions? Reach us at <a href="mailto:budgetark.support@gmail.com">budgetark.support@gmail.com</a></p>
       </div>
@@ -517,7 +524,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo"><img src="assets/favicon.png" alt="" class="logo-img"> Budget<span class="logo-accent">Ark</span></span>
+        <span class="logo"><img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30"> Budget<span class="logo-accent">Ark</span></span>
         <p>Offline-first budgeting. Built for the storm.</p>
       </div>
       <ul class="footer-links">
