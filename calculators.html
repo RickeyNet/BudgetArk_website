@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="description" content="Free financial calculators from BudgetArk: investment growth, loan and mortgage amortization, refinance break-even, debt payoff (snowball vs. avalanche), US take-home pay, emergency fund, sinking fund, and currency exchange. Runs in your browser, nothing is sent anywhere.">
+  <title>Free Financial Calculators - BudgetArk</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <link rel="canonical" href="https://budgetark.app/calculators.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BudgetArk">
+  <meta property="og:url" content="https://budgetark.app/calculators.html">
+  <meta property="og:title" content="Free Financial Calculators - BudgetArk">
+  <meta property="og:description" content="Investment growth, loan amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange. The same math as the BudgetArk app, in your browser.">
+  <meta property="og:image" content="https://budgetark.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BudgetArk - free, private, offline-first budgeting and debt payoff">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@budgetark">
+  <meta name="twitter:title" content="Free Financial Calculators - BudgetArk">
+  <meta name="twitter:description" content="Investment growth, loan amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange. The same math as the BudgetArk app, in your browser.">
+  <meta name="twitter:image" content="https://budgetark.app/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BudgetArk Financial Calculators",
+    "url": "https://budgetark.app/calculators.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@id": "https://budgetark.app/#org" },
+    "description": "Investment growth, loan and mortgage amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange calculators that run entirely in the browser."
+  }
+  </script>
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash of the default.
+    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
+    // their system color scheme.
+    try {
+      var saved = localStorage.getItem("budgetark-site-theme");
+      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30">
+        Budget<span class="logo-accent">Ark</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="calculators.html" class="active">Tools</a></li>
+        <li><a href="index.html#themes">Themes</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="index.html#download" class="btn btn-small">Get the App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">SHIP'S INSTRUMENTS</p>
+        <h1>Financial calculators</h1>
+        <p class="page-hero-sub">The same math that runs the app's Charts tab, right here in your browser. Nothing you type is stored or sent anywhere.</p>
+        <nav class="news-index tool-index" aria-label="Jump to a calculator">
+          <a href="#tool-invest">Investment growth</a>
+          <a href="#tool-loan">Loan &amp; mortgage</a>
+          <a href="#tool-refi">Refinance</a>
+          <a href="#tool-payoff">Debt payoff</a>
+          <a href="#tool-whatif">What if I stopped spending on…</a>
+          <a href="#tool-takehome">Take-home pay</a>
+          <a href="#tool-efund">Emergency fund</a>
+          <a href="#tool-purchase">Plan a purchase</a>
+          <a href="#tool-fx">Currency exchange</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section tools">
+      <div class="container tools-list">
+
+        <!-- Investment growth -->
+        <article class="tool" id="tool-invest">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <div>
+              <h2>Investment growth</h2>
+              <p>Contribute every month, let it compound, and see what it becomes.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Monthly contribution</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="contribution" data-sync="inv-c" value="500" min="0" max="1000000" step="25"></span>
+                <input type="range" data-sync="inv-c" name="contribution-range" value="500" min="0" max="5000" step="25" aria-label="Monthly contribution slider">
+              </label>
+              <label class="field"><span>Annual return</span>
+                <span class="field-row"><input type="number" name="return" data-sync="inv-r" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
+                <input type="range" data-sync="inv-r" name="return-range" value="7" min="0" max="15" step="0.5" aria-label="Annual return slider">
+              </label>
+              <label class="field"><span>Years</span>
+                <span class="field-row"><input type="number" name="years" data-sync="inv-y" value="20" min="1" max="60" step="1"></span>
+                <input type="range" data-sync="inv-y" name="years-range" value="20" min="1" max="50" step="1" aria-label="Years slider">
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- Loan / mortgage -->
+        <article class="tool" id="tool-loan">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🏠</div>
+            <div>
+              <h2>Loan &amp; mortgage</h2>
+              <p>Monthly payment, total interest, and a year-by-year amortization summary.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Loan amount</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="amount" data-sync="loan-a" value="300000" min="1000" max="1000000" step="1000"></span>
+                <input type="range" data-sync="loan-a" name="amount-range" value="300000" min="1000" max="1000000" step="1000" aria-label="Loan amount slider">
+              </label>
+              <label class="field"><span>Interest rate (APR)</span>
+                <span class="field-row"><input type="number" name="rate" data-sync="loan-r" value="6.5" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
+                <input type="range" data-sync="loan-r" name="rate-range" value="6.5" min="0.5" max="30" step="0.25" aria-label="Interest rate slider">
+              </label>
+              <label class="field"><span>Term</span>
+                <span class="field-row"><input type="number" name="term" data-sync="loan-t" value="30" min="1" max="40" step="1"><span class="suffix">years</span></span>
+                <input type="range" data-sync="loan-t" name="term-range" value="30" min="1" max="30" step="1" aria-label="Loan term slider">
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- Refinance -->
+        <article class="tool" id="tool-refi">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🔁</div>
+            <div>
+              <h2>Refinance break-even</h2>
+              <p>Does a lower rate actually save money once closing costs are paid?</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs two-col" onsubmit="return false">
+              <label class="field"><span>Remaining balance</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="balance" value="280000" min="0" step="1000"></span>
+              </label>
+              <label class="field"><span>Closing costs</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="closing" value="4000" min="0" step="100"></span>
+              </label>
+              <label class="field"><span>Current rate</span>
+                <span class="field-row"><input type="number" name="currentRate" value="7.25" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
+              </label>
+              <label class="field"><span>Years left</span>
+                <span class="field-row"><input type="number" name="currentTerm" value="28" min="1" max="40" step="1"><span class="suffix">years</span></span>
+              </label>
+              <label class="field"><span>New rate</span>
+                <span class="field-row"><input type="number" name="newRate" value="5.5" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
+              </label>
+              <label class="field"><span>New term</span>
+                <span class="field-row"><input type="number" name="newTerm" value="30" min="1" max="40" step="1"><span class="suffix">years</span></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- Debt payoff -->
+        <article class="tool" id="tool-payoff">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">⚓</div>
+            <div>
+              <h2>Debt payoff planner</h2>
+              <p>List your debts, pick Snowball or Avalanche, and see when you're debt-free. Minimums are paid every month; anything extra goes to one target debt at a time.</p>
+            </div>
+          </header>
+          <div class="tool-body tool-body-stack">
+            <form class="tool-inputs" onsubmit="return false">
+              <div class="table-wrap">
+                <table class="calc-table debt-table">
+                  <thead><tr><th>Debt</th><th>Balance ($)</th><th>APR (%)</th><th>Minimum ($/mo)</th><th>Type</th><th></th></tr></thead>
+                  <tbody id="debt-rows"></tbody>
+                </table>
+              </div>
+              <div class="payoff-controls">
+                <button type="button" class="btn btn-ghost btn-small-ghost" id="debt-add">+ Add a debt</button>
+                <fieldset class="segmented">
+                  <legend class="sr-only">Payoff method</legend>
+                  <label><input type="radio" name="method" value="avalanche" checked><span>Avalanche <small>highest rate first</small></span></label>
+                  <label><input type="radio" name="method" value="snowball"><span>Snowball <small>smallest balance first</small></span></label>
+                </fieldset>
+                <label class="field field-inline"><span>Extra each month</span>
+                  <span class="field-row"><span class="prefix">$</span><input type="number" name="extra" value="200" min="0" step="25"></span>
+                </label>
+              </div>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- What if -->
+        <article class="tool" id="tool-whatif">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🧭</div>
+            <div>
+              <h2>What if I stopped spending on…</h2>
+              <p>Take a monthly habit and see what that money becomes if you invest it, or aim it at the debts above.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Monthly amount you'd stop spending</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="wamount" value="150" min="0" step="10"></span>
+              </label>
+              <label class="field"><span>If invested, annual return</span>
+                <span class="field-row"><input type="number" name="wrate" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- Take-home pay -->
+        <article class="tool" id="tool-takehome">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🧾</div>
+            <div>
+              <h2>US take-home pay</h2>
+              <p>Federal brackets, FICA, and state income tax for tax year <span class="tax-year">2026</span>. An estimate: credits, itemized deductions, and local taxes are not modeled.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs two-col" onsubmit="return false">
+              <label class="field"><span>Gross annual salary</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="gross" value="75000" min="0" step="1000"></span>
+              </label>
+              <label class="field"><span>Filing status</span>
+                <span class="field-row"><select name="status"></select></span>
+              </label>
+              <label class="field"><span>State</span>
+                <span class="field-row"><select name="state"></select></span>
+              </label>
+              <label class="field"><span>Pay frequency</span>
+                <span class="field-row"><select name="periods">
+                  <option value="52">Weekly</option>
+                  <option value="26" selected>Biweekly</option>
+                  <option value="24">Semimonthly</option>
+                  <option value="12">Monthly</option>
+                </select></span>
+              </label>
+              <label class="field"><span>Traditional 401(k)</span>
+                <span class="field-row"><input type="number" name="k401" value="6" min="0" max="100" step="0.5"><span class="suffix">% of gross</span></span>
+              </label>
+              <label class="field"><span>HSA, per year</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="hsa" value="0" min="0" step="100"></span>
+              </label>
+              <label class="field"><span>Health premium, per month</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="premium" value="0" min="0" step="10"></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+          <p class="tool-note tool-foot">Data: IRS Rev. Proc. 2025-32 and the SSA 2026 wage base, via the Tax Foundation's 2026 state tables. Married-joint doubles single-filer state thresholds; married-separate and head-of-household reuse the single table. Same tables as the app.</p>
+        </article>
+
+        <!-- Emergency fund -->
+        <article class="tool" id="tool-efund">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">⛵</div>
+            <div>
+              <h2>Emergency fund</h2>
+              <p>How far you are from a three-month cushion and a full six-month fund.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Monthly expenses</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="expenses" value="3200" min="0" step="100"></span>
+              </label>
+              <label class="field"><span>Saved so far</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="current" value="2500" min="0" step="100"></span>
+              </label>
+              <label class="field"><span>Adding each month</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="savings" value="500" min="0" step="25"></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- Plan a purchase -->
+        <article class="tool" id="tool-purchase">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🛶</div>
+            <div>
+              <h2>Plan a purchase</h2>
+              <p>A sinking fund for something you want to pay cash for.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Price</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="price" value="2400" min="0" step="50"></span>
+              </label>
+              <label class="field"><span>Already saved</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="saved" value="400" min="0" step="50"></span>
+              </label>
+              <fieldset class="segmented">
+                <legend class="sr-only">Plan by</legend>
+                <label><input type="radio" name="pmode" value="monthly" checked><span>I can set aside…</span></label>
+                <label><input type="radio" name="pmode" value="date"><span>I need it by…</span></label>
+              </fieldset>
+              <label class="field pmode-monthly"><span>Set aside each month</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="monthly" value="200" min="0" step="25"></span>
+              </label>
+              <label class="field pmode-date" hidden><span>Need it by</span>
+                <span class="field-row"><input type="month" name="needby"></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <!-- Currency exchange -->
+        <article class="tool" id="tool-fx">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">💱</div>
+            <div>
+              <h2>Currency exchange</h2>
+              <p>Convert between the currencies the app supports using the day's public rate table.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Amount</span>
+                <span class="field-row"><input type="number" name="famount" value="100" min="0" step="1"></span>
+              </label>
+              <label class="field"><span>From</span>
+                <span class="field-row"><select name="from"></select></span>
+              </label>
+              <label class="field"><span>To</span>
+                <span class="field-row"><select name="to"></select></span>
+              </label>
+              <div class="fx-actions">
+                <button type="button" class="btn btn-primary" id="fx-fetch">Get today's rates</button>
+                <button type="button" class="btn btn-ghost btn-small-ghost" id="fx-swap">Swap</button>
+              </div>
+              <p class="tool-note fx-status">No request is made until you press the button.</p>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-inner">
+        <h2>Want these with your real numbers?</h2>
+        <p>In the app, the same tools pull from your actual debts, budget, and accounts - and everything stays on your phone.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="index.html#download" class="btn btn-primary">Get BudgetArk</a>
+          <a href="index.html#features" class="btn btn-ghost">See all features</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30"> Budget<span class="logo-accent">Ark</span></span>
+        <p>Offline-first budgeting. Built for the storm.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="calculators.html">Tools</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/budgetark" target="_blank" rel="noopener">X</a></li>
+        <li><a href="mailto:budgetark.support@gmail.com">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/tax-data-2026.js"></script>
+  <script src="js/calculators.js"></script>
+</body>
+</html>

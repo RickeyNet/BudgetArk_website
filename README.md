@@ -8,9 +8,12 @@ Static marketing site for the BudgetArk budgeting app. No build tools, no depend
 index.html      Home page (hero, features, about, download)
 news.html       News & updates feed
 privacy.html    Privacy policy
+calculators.html Web versions of the app's Charts-tab calculators
 404.html        Custom not-found page (GitHub Pages serves it automatically)
 css/style.css   All styles
 js/main.js      Mobile nav toggle, theme switcher, ambient backdrops
+js/calculators.js  Calculator math (ported from the app's utils) and UI
+js/tax-data-2026.js  Generated from the app's tax tables - do not hand-edit
 ```
 
 ## Viewing locally
@@ -37,6 +40,21 @@ Themes mirror the app's `src/theme/themes.ts` presets. To add one:
 1. `index.html` - copy a `<button class="theme-card" data-theme="...">` block into the theme grid and set the `--t-*` preview colors (bg, card, cardBorder, accent, text, textDim, success).
 2. `css/style.css` - add a `[data-theme="..."]` block mapping the preset's colors onto the site variables (`--parchment`, `--card`, `--border`, `--ink`, `--wood`, `--green`, `--gold`, ...). Ambient themes also set `--bg: transparent` and get an `.ambient` gradient + glass-card rule. Check text contrast (`--ink-soft`, `--wood`, `--gold` on `--parchment`; `--accent-text` on `--wood`; `--parchment` on `--green`) stays at or above 4.5:1 - the site palettes are allowed to drift slightly from the app's for that reason.
 3. `js/main.js` - only for ambient themes: add a backdrop SVG function and a branch in `renderAmbient()`.
+
+## Calculators
+
+`calculators.html` hosts browser versions of the app's Charts-tab tools. The
+math in `js/calculators.js` is a direct port of the app's `src/utils`
+(`calculations.ts`, `chartCalculators.ts`, `taxCalc.ts`, `purchasePlanner.ts`,
+`whatIfSpending.ts`, `exchangeCalculator.ts`) - keep them in step when the app
+changes a formula. `js/tax-data-2026.js` is generated from the app's
+`taxData2026.ts` and `stateTaxData2026.ts` by stripping the TypeScript types;
+regenerate it when the app ships a new tax year. `scripts/parity-check.js` compares the site's
+functions with the app's compiled utils over a few thousand inputs; the header
+of that file has the two commands to run it. The currency tool is the only
+thing on the site that makes a network request (to open.er-api.com, and only
+when the user presses the button), which is why every page's CSP allows that
+one host in `connect-src`.
 
 ## Rating, review, and share image
 
