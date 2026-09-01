@@ -1,0 +1,24 @@
+<!-- Emergency fund -->
+<article class="tool" id="tool-efund">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">⛵</div>
+    <div>
+      <h2>Emergency fund</h2>
+      <p>How far you are from a three-month cushion and a full six-month fund.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs" onsubmit="return false">
+      <label class="field"><span>Monthly expenses</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="expenses" value="3200" min="0" step="100"></span>
+      </label>
+      <label class="field"><span>Saved so far</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="current" value="2500" min="0" step="100"></span>
+      </label>
+      <label class="field"><span>Adding each month</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="savings" value="500" min="0" step="25"></span>
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

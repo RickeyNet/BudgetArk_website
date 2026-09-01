@@ -1,0 +1,29 @@
+<!-- Currency exchange -->
+<article class="tool" id="tool-fx">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">💱</div>
+    <div>
+      <h2>Currency exchange</h2>
+      <p>Convert between the currencies the app supports using the day's public rate table.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs" onsubmit="return false">
+      <label class="field"><span>Amount</span>
+        <span class="field-row"><input type="number" name="famount" value="100" min="0" step="1"></span>
+      </label>
+      <label class="field"><span>From</span>
+        <span class="field-row"><select name="from"></select></span>
+      </label>
+      <label class="field"><span>To</span>
+        <span class="field-row"><select name="to"></select></span>
+      </label>
+      <div class="fx-actions">
+        <button type="button" class="btn btn-primary" id="fx-fetch">Get today's rates</button>
+        <button type="button" class="btn btn-ghost btn-small-ghost" id="fx-swap">Swap</button>
+      </div>
+      <p class="tool-note fx-status">No request is made until you press the button.</p>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

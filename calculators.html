@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="BudgetArk">
   <meta property="og:url" content="https://budgetark.app/calculators.html">
   <meta property="og:title" content="Free Financial Calculators - BudgetArk">
-  <meta property="og:description" content="Investment growth, loan amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange. The same math as the BudgetArk app, in your browser.">
+  <meta property="og:description" content="Free financial calculators from BudgetArk: investment growth, loan and mortgage amortization, refinance break-even, debt payoff (snowball vs. avalanche), US take-home pay, emergency fund, sinking fund, and currency exchange. Runs in your browser, nothing is sent anywhere.">
   <meta property="og:image" content="https://budgetark.app/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,20 +24,82 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@budgetark">
   <meta name="twitter:title" content="Free Financial Calculators - BudgetArk">
-  <meta name="twitter:description" content="Investment growth, loan amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange. The same math as the BudgetArk app, in your browser.">
+  <meta name="twitter:description" content="Free financial calculators from BudgetArk: investment growth, loan and mortgage amortization, refinance break-even, debt payoff (snowball vs. avalanche), US take-home pay, emergency fund, sinking fund, and currency exchange. Runs in your browser, nothing is sent anywhere.">
   <meta name="twitter:image" content="https://budgetark.app/assets/og-image.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "BudgetArk Financial Calculators",
-    "url": "https://budgetark.app/calculators.html",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "browserRequirements": "Requires JavaScript",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "publisher": { "@id": "https://budgetark.app/#org" },
-    "description": "Investment growth, loan and mortgage amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange calculators that run entirely in the browser."
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://budgetark.app/calculators.html",
+        "name": "BudgetArk Financial Calculators",
+        "url": "https://budgetark.app/calculators.html",
+        "description": "Free financial calculators that run in your browser: investment growth, loan and mortgage amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange.",
+        "publisher": {
+          "@id": "https://budgetark.app/#org"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Investment growth calculator",
+            "url": "https://budgetark.app/calculators/investment-growth.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Loan & mortgage calculator",
+            "url": "https://budgetark.app/calculators/loan-mortgage.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Refinance break-even calculator",
+            "url": "https://budgetark.app/calculators/refinance-break-even.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Debt payoff planner",
+            "url": "https://budgetark.app/calculators/debt-payoff.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "What if I stopped spending on…",
+            "url": "https://budgetark.app/calculators/what-if-spending.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "US take-home pay calculator",
+            "url": "https://budgetark.app/calculators/take-home-pay.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Emergency fund calculator",
+            "url": "https://budgetark.app/calculators/emergency-fund.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Plan a purchase",
+            "url": "https://budgetark.app/calculators/sinking-fund.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Currency exchange calculator",
+            "url": "https://budgetark.app/calculators/currency-exchange.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,7 +133,21 @@
       <ul class="nav-links" id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#features">Features</a></li>
-        <li><a href="calculators.html" class="active">Tools</a></li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-drop-btn active" aria-expanded="false" aria-controls="tools-menu">Tools <span class="caret" aria-hidden="true"></span></button>
+          <ul class="dropdown-menu" id="tools-menu">
+            <li><a href="calculators.html">All calculators</a></li>
+            <li><a href="calculators/investment-growth.html">📈 Investment growth</a></li>
+            <li><a href="calculators/loan-mortgage.html">🏠 Loan &amp; mortgage</a></li>
+            <li><a href="calculators/refinance-break-even.html">🔁 Refinance break-even</a></li>
+            <li><a href="calculators/debt-payoff.html">⚓ Debt payoff planner</a></li>
+            <li><a href="calculators/what-if-spending.html">🧭 What if I stopped spending on...</a></li>
+            <li><a href="calculators/take-home-pay.html">🧾 US take-home pay</a></li>
+            <li><a href="calculators/emergency-fund.html">⛵ Emergency fund</a></li>
+            <li><a href="calculators/sinking-fund.html">🛶 Plan a purchase</a></li>
+            <li><a href="calculators/currency-exchange.html">💱 Currency exchange</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#themes">Themes</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="news.html">News</a></li>
@@ -86,299 +162,76 @@
         <p class="eyebrow">SHIP'S INSTRUMENTS</p>
         <h1>Financial calculators</h1>
         <p class="page-hero-sub">The same math that runs the app's Charts tab, right here in your browser. Nothing you type is stored or sent anywhere.</p>
-        <nav class="news-index tool-index" aria-label="Jump to a calculator">
-          <a href="#tool-invest">Investment growth</a>
-          <a href="#tool-loan">Loan &amp; mortgage</a>
-          <a href="#tool-refi">Refinance</a>
-          <a href="#tool-payoff">Debt payoff</a>
-          <a href="#tool-whatif">What if I stopped spending on…</a>
-          <a href="#tool-takehome">Take-home pay</a>
-          <a href="#tool-efund">Emergency fund</a>
-          <a href="#tool-purchase">Plan a purchase</a>
-          <a href="#tool-fx">Currency exchange</a>
-        </nav>
       </div>
     </section>
 
-    <section class="section tools">
-      <div class="container tools-list">
-
-        <!-- Investment growth -->
-        <article class="tool" id="tool-invest">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">📈</div>
-            <div>
-              <h2>Investment growth</h2>
-              <p>Contribute every month, let it compound, and see what it becomes.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs" onsubmit="return false">
-              <label class="field"><span>Monthly contribution</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="contribution" data-sync="inv-c" value="500" min="0" max="1000000" step="25"></span>
-                <input type="range" data-sync="inv-c" name="contribution-range" value="500" min="0" max="5000" step="25" aria-label="Monthly contribution slider">
-              </label>
-              <label class="field"><span>Annual return</span>
-                <span class="field-row"><input type="number" name="return" data-sync="inv-r" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
-                <input type="range" data-sync="inv-r" name="return-range" value="7" min="0" max="15" step="0.5" aria-label="Annual return slider">
-              </label>
-              <label class="field"><span>Years</span>
-                <span class="field-row"><input type="number" name="years" data-sync="inv-y" value="20" min="1" max="60" step="1"></span>
-                <input type="range" data-sync="inv-y" name="years-range" value="20" min="1" max="50" step="1" aria-label="Years slider">
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- Loan / mortgage -->
-        <article class="tool" id="tool-loan">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">🏠</div>
-            <div>
-              <h2>Loan &amp; mortgage</h2>
-              <p>Monthly payment, total interest, and a year-by-year amortization summary.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs" onsubmit="return false">
-              <label class="field"><span>Loan amount</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="amount" data-sync="loan-a" value="300000" min="1000" max="1000000" step="1000"></span>
-                <input type="range" data-sync="loan-a" name="amount-range" value="300000" min="1000" max="1000000" step="1000" aria-label="Loan amount slider">
-              </label>
-              <label class="field"><span>Interest rate (APR)</span>
-                <span class="field-row"><input type="number" name="rate" data-sync="loan-r" value="6.5" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
-                <input type="range" data-sync="loan-r" name="rate-range" value="6.5" min="0.5" max="30" step="0.25" aria-label="Interest rate slider">
-              </label>
-              <label class="field"><span>Term</span>
-                <span class="field-row"><input type="number" name="term" data-sync="loan-t" value="30" min="1" max="40" step="1"><span class="suffix">years</span></span>
-                <input type="range" data-sync="loan-t" name="term-range" value="30" min="1" max="30" step="1" aria-label="Loan term slider">
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- Refinance -->
-        <article class="tool" id="tool-refi">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">🔁</div>
-            <div>
-              <h2>Refinance break-even</h2>
-              <p>Does a lower rate actually save money once closing costs are paid?</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs two-col" onsubmit="return false">
-              <label class="field"><span>Remaining balance</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="balance" value="280000" min="0" step="1000"></span>
-              </label>
-              <label class="field"><span>Closing costs</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="closing" value="4000" min="0" step="100"></span>
-              </label>
-              <label class="field"><span>Current rate</span>
-                <span class="field-row"><input type="number" name="currentRate" value="7.25" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
-              </label>
-              <label class="field"><span>Years left</span>
-                <span class="field-row"><input type="number" name="currentTerm" value="28" min="1" max="40" step="1"><span class="suffix">years</span></span>
-              </label>
-              <label class="field"><span>New rate</span>
-                <span class="field-row"><input type="number" name="newRate" value="5.5" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
-              </label>
-              <label class="field"><span>New term</span>
-                <span class="field-row"><input type="number" name="newTerm" value="30" min="1" max="40" step="1"><span class="suffix">years</span></span>
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- Debt payoff -->
-        <article class="tool" id="tool-payoff">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">⚓</div>
-            <div>
+    <section class="section">
+      <div class="container">
+        <ul class="feature-grid tool-cards">
+          <li class="feature-card tool-card">
+            <a href="calculators/investment-growth.html">
+              <div class="feature-icon" aria-hidden="true">📈</div>
+              <h2>Investment growth calculator</h2>
+              <p>See what monthly contributions become with compound growth.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/loan-mortgage.html">
+              <div class="feature-icon" aria-hidden="true">🏠</div>
+              <h2>Loan &amp; mortgage calculator</h2>
+              <p>Monthly payment, total interest, and a year-by-year amortization table.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/refinance-break-even.html">
+              <div class="feature-icon" aria-hidden="true">🔁</div>
+              <h2>Refinance break-even calculator</h2>
+              <p>Find out how long a refinance takes to pay for its closing costs.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/debt-payoff.html">
+              <div class="feature-icon" aria-hidden="true">⚓</div>
               <h2>Debt payoff planner</h2>
-              <p>List your debts, pick Snowball or Avalanche, and see when you're debt-free. Minimums are paid every month; anything extra goes to one target debt at a time.</p>
-            </div>
-          </header>
-          <div class="tool-body tool-body-stack">
-            <form class="tool-inputs" onsubmit="return false">
-              <div class="table-wrap">
-                <table class="calc-table debt-table">
-                  <thead><tr><th>Debt</th><th>Balance ($)</th><th>APR (%)</th><th>Minimum ($/mo)</th><th>Type</th><th></th></tr></thead>
-                  <tbody id="debt-rows"></tbody>
-                </table>
-              </div>
-              <div class="payoff-controls">
-                <button type="button" class="btn btn-ghost btn-small-ghost" id="debt-add">+ Add a debt</button>
-                <fieldset class="segmented">
-                  <legend class="sr-only">Payoff method</legend>
-                  <label><input type="radio" name="method" value="avalanche" checked><span>Avalanche <small>highest rate first</small></span></label>
-                  <label><input type="radio" name="method" value="snowball"><span>Snowball <small>smallest balance first</small></span></label>
-                </fieldset>
-                <label class="field field-inline"><span>Extra each month</span>
-                  <span class="field-row"><span class="prefix">$</span><input type="number" name="extra" value="200" min="0" step="25"></span>
-                </label>
-              </div>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- What if -->
-        <article class="tool" id="tool-whatif">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">🧭</div>
-            <div>
+              <p>List your debts, pick Snowball or Avalanche, and see your debt-free date.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/what-if-spending.html">
+              <div class="feature-icon" aria-hidden="true">🧭</div>
               <h2>What if I stopped spending on…</h2>
-              <p>Take a monthly habit and see what that money becomes if you invest it, or aim it at the debts above.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs" onsubmit="return false">
-              <label class="field"><span>Monthly amount you'd stop spending</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="wamount" value="150" min="0" step="10"></span>
-              </label>
-              <label class="field"><span>If invested, annual return</span>
-                <span class="field-row"><input type="number" name="wrate" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- Take-home pay -->
-        <article class="tool" id="tool-takehome">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">🧾</div>
-            <div>
-              <h2>US take-home pay</h2>
-              <p>Federal brackets, FICA, and state income tax for tax year <span class="tax-year">2026</span>. An estimate: credits, itemized deductions, and local taxes are not modeled.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs two-col" onsubmit="return false">
-              <label class="field"><span>Gross annual salary</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="gross" value="75000" min="0" step="1000"></span>
-              </label>
-              <label class="field"><span>Filing status</span>
-                <span class="field-row"><select name="status"></select></span>
-              </label>
-              <label class="field"><span>State</span>
-                <span class="field-row"><select name="state"></select></span>
-              </label>
-              <label class="field"><span>Pay frequency</span>
-                <span class="field-row"><select name="periods">
-                  <option value="52">Weekly</option>
-                  <option value="26" selected>Biweekly</option>
-                  <option value="24">Semimonthly</option>
-                  <option value="12">Monthly</option>
-                </select></span>
-              </label>
-              <label class="field"><span>Traditional 401(k)</span>
-                <span class="field-row"><input type="number" name="k401" value="6" min="0" max="100" step="0.5"><span class="suffix">% of gross</span></span>
-              </label>
-              <label class="field"><span>HSA, per year</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="hsa" value="0" min="0" step="100"></span>
-              </label>
-              <label class="field"><span>Health premium, per month</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="premium" value="0" min="0" step="10"></span>
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-          <p class="tool-note tool-foot">Data: IRS Rev. Proc. 2025-32 and the SSA 2026 wage base, via the Tax Foundation's 2026 state tables. Married-joint doubles single-filer state thresholds; married-separate and head-of-household reuse the single table. Same tables as the app.</p>
-        </article>
-
-        <!-- Emergency fund -->
-        <article class="tool" id="tool-efund">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">⛵</div>
-            <div>
-              <h2>Emergency fund</h2>
-              <p>How far you are from a three-month cushion and a full six-month fund.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs" onsubmit="return false">
-              <label class="field"><span>Monthly expenses</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="expenses" value="3200" min="0" step="100"></span>
-              </label>
-              <label class="field"><span>Saved so far</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="current" value="2500" min="0" step="100"></span>
-              </label>
-              <label class="field"><span>Adding each month</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="savings" value="500" min="0" step="25"></span>
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- Plan a purchase -->
-        <article class="tool" id="tool-purchase">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">🛶</div>
-            <div>
+              <p>Turn a monthly habit into its 1, 5, and 10-year value, invested or aimed at debt.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/take-home-pay.html">
+              <div class="feature-icon" aria-hidden="true">🧾</div>
+              <h2>US take-home pay calculator</h2>
+              <p>Federal, state, and FICA taxes for 2026 - what actually lands in your account.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/emergency-fund.html">
+              <div class="feature-icon" aria-hidden="true">⛵</div>
+              <h2>Emergency fund calculator</h2>
+              <p>How far you are from three and six months of expenses, and when you get there.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/sinking-fund.html">
+              <div class="feature-icon" aria-hidden="true">🛶</div>
               <h2>Plan a purchase</h2>
-              <p>A sinking fund for something you want to pay cash for.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs" onsubmit="return false">
-              <label class="field"><span>Price</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="price" value="2400" min="0" step="50"></span>
-              </label>
-              <label class="field"><span>Already saved</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="saved" value="400" min="0" step="50"></span>
-              </label>
-              <fieldset class="segmented">
-                <legend class="sr-only">Plan by</legend>
-                <label><input type="radio" name="pmode" value="monthly" checked><span>I can set aside…</span></label>
-                <label><input type="radio" name="pmode" value="date"><span>I need it by…</span></label>
-              </fieldset>
-              <label class="field pmode-monthly"><span>Set aside each month</span>
-                <span class="field-row"><span class="prefix">$</span><input type="number" name="monthly" value="200" min="0" step="25"></span>
-              </label>
-              <label class="field pmode-date" hidden><span>Need it by</span>
-                <span class="field-row"><input type="month" name="needby"></span>
-              </label>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
-        <!-- Currency exchange -->
-        <article class="tool" id="tool-fx">
-          <header class="tool-head">
-            <div class="feature-icon" aria-hidden="true">💱</div>
-            <div>
-              <h2>Currency exchange</h2>
-              <p>Convert between the currencies the app supports using the day's public rate table.</p>
-            </div>
-          </header>
-          <div class="tool-body">
-            <form class="tool-inputs" onsubmit="return false">
-              <label class="field"><span>Amount</span>
-                <span class="field-row"><input type="number" name="famount" value="100" min="0" step="1"></span>
-              </label>
-              <label class="field"><span>From</span>
-                <span class="field-row"><select name="from"></select></span>
-              </label>
-              <label class="field"><span>To</span>
-                <span class="field-row"><select name="to"></select></span>
-              </label>
-              <div class="fx-actions">
-                <button type="button" class="btn btn-primary" id="fx-fetch">Get today's rates</button>
-                <button type="button" class="btn btn-ghost btn-small-ghost" id="fx-swap">Swap</button>
-              </div>
-              <p class="tool-note fx-status">No request is made until you press the button.</p>
-            </form>
-            <div class="tool-results" aria-live="polite"></div>
-          </div>
-        </article>
-
+              <p>Save up for something on purpose - by monthly amount or by target date.</p>
+            </a>
+          </li>
+          <li class="feature-card tool-card">
+            <a href="calculators/currency-exchange.html">
+              <div class="feature-icon" aria-hidden="true">💱</div>
+              <h2>Currency exchange calculator</h2>
+              <p>Convert between USD, EUR, GBP, CAD, JPY, and SEK with the day's rates.</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -416,7 +269,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/tax-data-2026.js"></script>
-  <script src="js/calculators.js"></script>
 </body>
 </html>

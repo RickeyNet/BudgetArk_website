@@ -8,7 +8,8 @@ Static marketing site for the BudgetArk budgeting app. No build tools, no depend
 index.html      Home page (hero, features, about, download)
 news.html       News & updates feed
 privacy.html    Privacy policy
-calculators.html Web versions of the app's Charts-tab calculators
+calculators.html Calculator index (generated)
+calculators/    One page per calculator (generated)
 404.html        Custom not-found page (GitHub Pages serves it automatically)
 css/style.css   All styles
 js/main.js      Mobile nav toggle, theme switcher, ambient backdrops
@@ -43,7 +44,11 @@ Themes mirror the app's `src/theme/themes.ts` presets. To add one:
 
 ## Calculators
 
-`calculators.html` hosts browser versions of the app's Charts-tab tools. The
+`calculators/` holds one page per tool and `calculators.html` is the index. Both
+are generated: run `python scripts/build-calculators.py` after editing the copy
+and FAQs in that script or the interactive markup in `scripts/calculators/*.html`
+(never edit the generated pages directly). The nav's Tools dropdown on the other
+pages is hand-copied from the same script's `nav_dropdown()`. The
 math in `js/calculators.js` is a direct port of the app's `src/utils`
 (`calculations.ts`, `chartCalculators.ts`, `taxCalc.ts`, `purchasePlanner.ts`,
 `whatIfSpending.ts`, `exchangeCalculator.ts`) - keep them in step when the app

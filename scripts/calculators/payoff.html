@@ -1,0 +1,32 @@
+<!-- Debt payoff -->
+<article class="tool" id="tool-payoff">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">⚓</div>
+    <div>
+      <h2>Debt payoff planner</h2>
+      <p>List your debts, pick Snowball or Avalanche, and see when you're debt-free. Minimums are paid every month; anything extra goes to one target debt at a time.</p>
+    </div>
+  </header>
+  <div class="tool-body tool-body-stack">
+    <form class="tool-inputs" onsubmit="return false">
+      <div class="table-wrap">
+        <table class="calc-table debt-table">
+          <thead><tr><th>Debt</th><th>Balance ($)</th><th>APR (%)</th><th>Minimum ($/mo)</th><th>Type</th><th></th></tr></thead>
+          <tbody id="debt-rows"></tbody>
+        </table>
+      </div>
+      <div class="payoff-controls">
+        <button type="button" class="btn btn-ghost btn-small-ghost" id="debt-add">+ Add a debt</button>
+        <fieldset class="segmented">
+          <legend class="sr-only">Payoff method</legend>
+          <label><input type="radio" name="method" value="avalanche" checked><span>Avalanche <small>highest rate first</small></span></label>
+          <label><input type="radio" name="method" value="snowball"><span>Snowball <small>smallest balance first</small></span></label>
+        </fieldset>
+        <label class="field field-inline"><span>Extra each month</span>
+          <span class="field-row"><span class="prefix">$</span><input type="number" name="extra" value="200" min="0" step="25"></span>
+        </label>
+      </div>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

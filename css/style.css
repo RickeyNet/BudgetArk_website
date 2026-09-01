@@ -610,6 +610,81 @@ a:hover { text-decoration: underline; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Tools dropdown */
+.nav-dropdown { position: relative; }
+.nav-drop-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink-soft);
+  font: inherit;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+.nav-drop-btn:hover, .nav-drop-btn.active, .nav-drop-btn[aria-expanded="true"] { color: var(--wood-deep); }
+.caret {
+  width: 0.42em;
+  height: 0.42em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.15em) rotate(45deg);
+  transition: transform 0.2s;
+}
+.nav-drop-btn[aria-expanded="true"] .caret { transform: translateY(0.1em) rotate(225deg); }
+.dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 17rem;
+  background: var(--parchment);
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
+  display: none;
+  z-index: 120;
+}
+.dropdown-menu::before {
+  /* invisible bridge so the pointer can travel from the button to the menu */
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: -1rem;
+  height: 1rem;
+}
+.nav-dropdown.open .dropdown-menu { display: block; }
+@media (hover: hover) and (min-width: 861px) {
+  .nav-dropdown:hover .dropdown-menu { display: block; }
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 9px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.dropdown-menu li a:hover, .dropdown-menu li a[aria-current="page"] {
+  background: var(--card-warm);
+  color: var(--wood-deep);
+  text-decoration: none;
+}
+.dropdown-menu li:first-child a {
+  font-weight: 600;
+  color: var(--wood);
+  border-bottom: 1px solid var(--border);
+  border-radius: 9px 9px 0 0;
+  margin-bottom: 0.35rem;
+}
+
 /* ---------- Buttons ---------- */
 
 .btn {
@@ -1535,6 +1610,44 @@ input[type="range"] {
 .fx-actions .btn { cursor: pointer; font-family: var(--font-body); border: none; }
 .fx-actions .btn-ghost { border: 2px solid var(--border-strong); }
 
+/* Calculator pages */
+.breadcrumb { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 1.2rem; }
+.breadcrumb a { color: var(--ink-soft); }
+.breadcrumb span { color: var(--ink); }
+.page-hero .page-hero-sub { max-width: 44rem; margin-left: auto; margin-right: auto; }
+.tool-extra-note { margin: 0 auto 1rem; }
+
+.tool-copy { border-top: 2px solid var(--border); }
+.tool-copy-inner { max-width: 780px; margin: 0 auto; }
+.tool-copy h2 { font-size: 1.45rem; color: var(--wood-deep); margin: 2.2rem 0 0.8rem; }
+.tool-copy h2:first-child { margin-top: 0; }
+.tool-copy p { color: var(--ink-soft); }
+.tool-copy code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; color: var(--ink); background: var(--card-warm); padding: 0.1em 0.4em; border-radius: 6px; }
+.how-list { padding-left: 1.3rem; color: var(--ink-soft); display: flex; flex-direction: column; gap: 0.6rem; }
+.how-list li::marker { color: var(--wood); font-weight: 700; }
+.faq-list-left { margin-top: 0; }
+.related-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.related-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.related-list a:hover { border-color: var(--wood); color: var(--wood-deep); text-decoration: none; }
+.tool-copy .tool-note { margin-top: 2rem; }
+
+.tool-cards .tool-card { padding: 0; }
+.tool-card a { display: block; padding: 1.7rem 1.5rem; color: inherit; height: 100%; }
+.tool-card a:hover { text-decoration: none; }
+.tool-card h2 { font-size: 1.12rem; margin-bottom: 0.45rem; color: var(--wood-deep); }
+.tool-card p { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
+
 /* ---------- CTA / download ---------- */
 
 .cta {
@@ -1827,6 +1940,21 @@ input[type="range"] {
     display: none;
   }
   .nav-links.open { display: flex; }
+
+  .nav-dropdown { display: flex; flex-direction: column; align-items: center; }
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    min-width: 0;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--border);
+    border-radius: 0;
+    padding: 0.2rem 0 0 0.9rem;
+    margin-top: 0.7rem;
+    text-align: left;
+  }
+  .dropdown-menu li a { padding: 0.4rem 0.6rem; }
 }
 
 @media (max-width: 560px) {

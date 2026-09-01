@@ -1,0 +1,27 @@
+<!-- Investment growth -->
+<article class="tool" id="tool-invest">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">📈</div>
+    <div>
+      <h2>Investment growth</h2>
+      <p>Contribute every month, let it compound, and see what it becomes.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs" onsubmit="return false">
+      <label class="field"><span>Monthly contribution</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="contribution" data-sync="inv-c" value="500" min="0" max="1000000" step="25"></span>
+        <input type="range" data-sync="inv-c" name="contribution-range" value="500" min="0" max="5000" step="25" aria-label="Monthly contribution slider">
+      </label>
+      <label class="field"><span>Annual return</span>
+        <span class="field-row"><input type="number" name="return" data-sync="inv-r" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
+        <input type="range" data-sync="inv-r" name="return-range" value="7" min="0" max="15" step="0.5" aria-label="Annual return slider">
+      </label>
+      <label class="field"><span>Years</span>
+        <span class="field-row"><input type="number" name="years" data-sync="inv-y" value="20" min="1" max="60" step="1"></span>
+        <input type="range" data-sync="inv-y" name="years-range" value="20" min="1" max="50" step="1" aria-label="Years slider">
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

@@ -1,0 +1,32 @@
+<!-- Plan a purchase -->
+<article class="tool" id="tool-purchase">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">🛶</div>
+    <div>
+      <h2>Plan a purchase</h2>
+      <p>A sinking fund for something you want to pay cash for.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs" onsubmit="return false">
+      <label class="field"><span>Price</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="price" value="2400" min="0" step="50"></span>
+      </label>
+      <label class="field"><span>Already saved</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="saved" value="400" min="0" step="50"></span>
+      </label>
+      <fieldset class="segmented">
+        <legend class="sr-only">Plan by</legend>
+        <label><input type="radio" name="pmode" value="monthly" checked><span>I can set aside…</span></label>
+        <label><input type="radio" name="pmode" value="date"><span>I need it by…</span></label>
+      </fieldset>
+      <label class="field pmode-monthly"><span>Set aside each month</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="monthly" value="200" min="0" step="25"></span>
+      </label>
+      <label class="field pmode-date" hidden><span>Need it by</span>
+        <span class="field-row"><input type="month" name="needby"></span>
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

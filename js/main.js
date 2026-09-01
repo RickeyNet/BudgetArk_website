@@ -18,6 +18,38 @@ toggle.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', open);
 });
 
+// Tools dropdown: click or keyboard toggles, Escape and focus-out close.
+// (Hover-open on pointer devices is handled in CSS.)
+document.querySelectorAll('.nav-dropdown').forEach((dd) => {
+  const btn = dd.querySelector('.nav-drop-btn');
+  const setOpen = (open) => {
+    dd.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  };
+  btn.addEventListener('click', () => setOpen(!dd.classList.contains('open')));
+  dd.addEventListener('focusout', (e) => {
+    if (!dd.contains(e.relatedTarget)) setOpen(false);
+  });
+  dd.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { setOpen(false); btn.focus(); }
+  });
+  document.addEventListener('click', (e) => {
+    if (!dd.contains(e.target)) setOpen(false);
+  });
+});
+
+// The calculators used to live on one page with #tool-* anchors; send old
+// links to the tool's own page.
+if (/calculators\.html$/.test(location.pathname) && location.hash) {
+  const old = {
+    'tool-invest': 'investment-growth', 'tool-loan': 'loan-mortgage', 'tool-refi': 'refinance-break-even',
+    'tool-payoff': 'debt-payoff', 'tool-whatif': 'what-if-spending', 'tool-takehome': 'take-home-pay',
+    'tool-efund': 'emergency-fund', 'tool-purchase': 'sinking-fund', 'tool-fx': 'currency-exchange',
+  };
+  const slug = old[location.hash.slice(1)];
+  if (slug) location.replace('calculators/' + slug + '.html');
+}
+
 // Close menu when a link is tapped
 links.addEventListener('click', (e) => {
   if (e.target.tagName === 'A') {

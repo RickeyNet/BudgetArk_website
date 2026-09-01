@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="description" content="Free 2026 take-home pay calculator for all 50 states and DC: federal brackets, Social Security and Medicare, state income tax, and pre-tax 401(k), HSA, and health premiums. Per-paycheck and annual results, nothing sent to a server.">
+  <title>US Take-Home Pay Calculator 2026 (Federal, State &amp; FICA) - BudgetArk</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <link rel="canonical" href="https://budgetark.app/calculators/take-home-pay.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BudgetArk">
+  <meta property="og:url" content="https://budgetark.app/calculators/take-home-pay.html">
+  <meta property="og:title" content="US Take-Home Pay Calculator 2026 (Federal, State &amp; FICA) - BudgetArk">
+  <meta property="og:description" content="Free 2026 take-home pay calculator for all 50 states and DC: federal brackets, Social Security and Medicare, state income tax, and pre-tax 401(k), HSA, and health premiums. Per-paycheck and annual results, nothing sent to a server.">
+  <meta property="og:image" content="https://budgetark.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BudgetArk - free, private, offline-first budgeting and debt payoff">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@budgetark">
+  <meta name="twitter:title" content="US Take-Home Pay Calculator 2026 (Federal, State &amp; FICA) - BudgetArk">
+  <meta name="twitter:description" content="Free 2026 take-home pay calculator for all 50 states and DC: federal brackets, Social Security and Medicare, state income tax, and pre-tax 401(k), HSA, and health premiums. Per-paycheck and annual results, nothing sent to a server.">
+  <meta name="twitter:image" content="https://budgetark.app/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://budgetark.app/calculators/take-home-pay.html#app",
+        "name": "US Take-Home Pay Calculator 2026 (Federal, State & FICA)",
+        "url": "https://budgetark.app/calculators/take-home-pay.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@id": "https://budgetark.app/#org"
+        },
+        "description": "Free 2026 take-home pay calculator for all 50 states and DC: federal brackets, Social Security and Medicare, state income tax, and pre-tax 401(k), HSA, and health premiums. Per-paycheck and annual results, nothing sent to a server."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://budgetark.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://budgetark.app/calculators.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "US take-home pay calculator",
+            "item": "https://budgetark.app/calculators/take-home-pay.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why doesn't this match my paycheck exactly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Employers withhold based on your W-4, which can over- or under-collect relative to your real annual tax; this page estimates the real annual amount. It also leaves out local taxes, tax credits, itemized deductions, state disability or family-leave contributions, and other payroll deductions like dental or life insurance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which states have no income tax on wages?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Choose one of them, or leave the state blank, to see federal and FICA only."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the tax data come from and how current is it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Federal brackets and standard deductions are from IRS Rev. Proc. 2025-32 for tax year 2026, the Social Security wage base from the SSA, and state tables from the Tax Foundation's 2026 survey. The app refreshes them each tax year and this page is generated from the same file."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preload" href="../assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash of the default.
+    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
+    // their system color scheme.
+    try {
+      var saved = localStorage.getItem("budgetark-site-theme");
+      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../" class="logo">
+        <img src="../assets/favicon-32.png" alt="" class="logo-img" width="30" height="30">
+        Budget<span class="logo-accent">Ark</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../#features">Features</a></li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-drop-btn active" aria-expanded="false" aria-controls="tools-menu">Tools <span class="caret" aria-hidden="true"></span></button>
+          <ul class="dropdown-menu" id="tools-menu">
+            <li><a href="../calculators.html">All calculators</a></li>
+            <li><a href="../calculators/investment-growth.html">📈 Investment growth</a></li>
+            <li><a href="../calculators/loan-mortgage.html">🏠 Loan &amp; mortgage</a></li>
+            <li><a href="../calculators/refinance-break-even.html">🔁 Refinance break-even</a></li>
+            <li><a href="../calculators/debt-payoff.html">⚓ Debt payoff planner</a></li>
+            <li><a href="../calculators/what-if-spending.html">🧭 What if I stopped spending on...</a></li>
+            <li><a href="../calculators/take-home-pay.html" aria-current="page">🧾 US take-home pay</a></li>
+            <li><a href="../calculators/emergency-fund.html">⛵ Emergency fund</a></li>
+            <li><a href="../calculators/sinking-fund.html">🛶 Plan a purchase</a></li>
+            <li><a href="../calculators/currency-exchange.html">💱 Currency exchange</a></li>
+          </ul>
+        </li>
+        <li><a href="../#themes">Themes</a></li>
+        <li><a href="../#faq">FAQ</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li><a href="../#download" class="btn btn-small">Get the App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="../calculators.html">Calculators</a> › <span aria-current="page">US take-home pay calculator</span></nav>
+        <p class="eyebrow">SHIP'S INSTRUMENTS</p>
+        <h1>US take-home pay calculator</h1>
+        <p class="page-hero-sub">Enter your salary, filing status, state, and pre-tax deductions to estimate your paycheck after federal income tax, FICA, and state income tax. The tables are the 2026 IRS and state figures the app ships with, and the math runs entirely on this page.</p>
+      </div>
+    </section>
+
+    <section class="section tools">
+      <div class="container tools-list">
+        <!-- Take-home pay -->
+        <article class="tool" id="tool-takehome">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🧾</div>
+            <div>
+              <h2>US take-home pay</h2>
+              <p>Federal brackets, FICA, and state income tax for tax year <span class="tax-year">2026</span>. An estimate: credits, itemized deductions, and local taxes are not modeled.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs two-col" onsubmit="return false">
+              <label class="field"><span>Gross annual salary</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="gross" value="75000" min="0" step="1000"></span>
+              </label>
+              <label class="field"><span>Filing status</span>
+                <span class="field-row"><select name="status"></select></span>
+              </label>
+              <label class="field"><span>State</span>
+                <span class="field-row"><select name="state"></select></span>
+              </label>
+              <label class="field"><span>Pay frequency</span>
+                <span class="field-row"><select name="periods">
+                  <option value="52">Weekly</option>
+                  <option value="26" selected>Biweekly</option>
+                  <option value="24">Semimonthly</option>
+                  <option value="12">Monthly</option>
+                </select></span>
+              </label>
+              <label class="field"><span>Traditional 401(k)</span>
+                <span class="field-row"><input type="number" name="k401" value="6" min="0" max="100" step="0.5"><span class="suffix">% of gross</span></span>
+              </label>
+              <label class="field"><span>HSA, per year</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="hsa" value="0" min="0" step="100"></span>
+              </label>
+              <label class="field"><span>Health premium, per month</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="premium" value="0" min="0" step="10"></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+          <p class="tool-note tool-foot">Data: IRS Rev. Proc. 2025-32 and the SSA 2026 wage base, via the Tax Foundation's 2026 state tables. Married-joint doubles single-filer state thresholds; married-separate and head-of-household reuse the single table. Same tables as the app.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tool-copy">
+      <div class="container tool-copy-inner">
+        <h2>How it's calculated</h2>
+        <ol class="how-list">
+          <li>A traditional 401(k) contribution lowers the income that federal and state tax apply to, but not Social Security and Medicare wages. HSA contributions and health premiums through payroll (a Section 125 plan) lower both.</li>
+          <li>Federal tax applies the standard deduction, then the marginal brackets for your filing status. Social Security is 6.2% up to the 2026 wage base of $184,500; Medicare is 1.45%, plus 0.9% above $200,000 ($250,000 married filing jointly).</li>
+          <li>State tax uses each state's flat rate or brackets and its standard deduction. Married-joint doubles the single-filer thresholds; married-separate and head-of-household use the single table. Local and city taxes, credits, and itemized deductions are not modeled, and the note under the result says so for the states where that matters most.</li>
+        </ol>
+        <h2>Worked example</h2>
+        <p>A single filer earning $75,000 with 6% into a 401(k) and no state income tax takes home about $58,083 a year, or $2,234 every two weeks - an effective rate of 16.6% while the top federal bracket touched is 22%.</p>
+        <h2>Frequently asked</h2>
+        <div class="faq-list faq-list-left">
+          <details>
+            <summary>Why doesn't this match my paycheck exactly?</summary>
+            <p>Employers withhold based on your W-4, which can over- or under-collect relative to your real annual tax; this page estimates the real annual amount. It also leaves out local taxes, tax credits, itemized deductions, state disability or family-leave contributions, and other payroll deductions like dental or life insurance.</p>
+          </details>
+          <details>
+            <summary>Which states have no income tax on wages?</summary>
+            <p>Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Choose one of them, or leave the state blank, to see federal and FICA only.</p>
+          </details>
+          <details>
+            <summary>Where does the tax data come from and how current is it?</summary>
+            <p>Federal brackets and standard deductions are from IRS Rev. Proc. 2025-32 for tax year 2026, the Social Security wage base from the SSA, and state tables from the Tax Foundation's 2026 survey. The app refreshes them each tax year and this page is generated from the same file.</p>
+          </details>
+        </div>
+        <h2>Related calculators</h2>
+        <ul class="related-list">
+          <li><a href="investment-growth.html"><span aria-hidden="true">📈</span> Investment growth calculator</a></li>
+          <li><a href="emergency-fund.html"><span aria-hidden="true">⛵</span> Emergency fund calculator</a></li>
+          <li><a href="debt-payoff.html"><span aria-hidden="true">⚓</span> Debt payoff planner</a></li>
+        </ul>
+        <p class="tool-note">Every calculator here runs in your browser and matches the math in the BudgetArk app's Charts tab. Nothing you enter is stored or sent anywhere.</p>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-inner">
+        <h2>Want it with your real numbers?</h2>
+        <p>In the app, this tool pulls from your actual debts, budget, and accounts - and everything stays on your phone.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../index.html#download" class="btn btn-primary">Get BudgetArk</a>
+          <a href="../calculators.html" class="btn btn-ghost">All calculators</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><img src="../assets/favicon-32.png" alt="" class="logo-img" width="30" height="30"> Budget<span class="logo-accent">Ark</span></span>
+        <p>Offline-first budgeting. Built for the storm.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../#features">Features</a></li>
+        <li><a href="../calculators.html">Tools</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li><a href="../#faq">FAQ</a></li>
+        <li><a href="../privacy.html">Privacy Policy</a></li>
+        <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/budgetark" target="_blank" rel="noopener">X</a></li>
+        <li><a href="mailto:budgetark.support@gmail.com">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/tax-data-2026.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="description" content="What would happen if you stopped a monthly expense? Free calculator shows what that money becomes in 1, 5, and 10 years if invested, or how much sooner you would be debt-free if you aimed it at your debts.">
+  <title>What If I Stopped Spending On... Calculator - BudgetArk</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <link rel="canonical" href="https://budgetark.app/calculators/what-if-spending.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BudgetArk">
+  <meta property="og:url" content="https://budgetark.app/calculators/what-if-spending.html">
+  <meta property="og:title" content="What If I Stopped Spending On... Calculator - BudgetArk">
+  <meta property="og:description" content="What would happen if you stopped a monthly expense? Free calculator shows what that money becomes in 1, 5, and 10 years if invested, or how much sooner you would be debt-free if you aimed it at your debts.">
+  <meta property="og:image" content="https://budgetark.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BudgetArk - free, private, offline-first budgeting and debt payoff">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@budgetark">
+  <meta name="twitter:title" content="What If I Stopped Spending On... Calculator - BudgetArk">
+  <meta name="twitter:description" content="What would happen if you stopped a monthly expense? Free calculator shows what that money becomes in 1, 5, and 10 years if invested, or how much sooner you would be debt-free if you aimed it at your debts.">
+  <meta name="twitter:image" content="https://budgetark.app/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://budgetark.app/calculators/what-if-spending.html#app",
+        "name": "What If I Stopped Spending On... Calculator",
+        "url": "https://budgetark.app/calculators/what-if-spending.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@id": "https://budgetark.app/#org"
+        },
+        "description": "What would happen if you stopped a monthly expense? Free calculator shows what that money becomes in 1, 5, and 10 years if invested, or how much sooner you would be debt-free if you aimed it at your debts."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://budgetark.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://budgetark.app/calculators.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What if I stopped spending on…",
+            "item": "https://budgetark.app/calculators/what-if-spending.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why compare investing and debt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They are the two things freed-up cash can do. If your debt's APR is higher than the return you expect from investing, paying it down is the better guaranteed return; if it is lower, investing usually wins. The two results let you see both numbers before deciding."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the app do this with my real spending?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes - in the app the tool lists your actual budget categories with their six-month averages, so you pick a category instead of typing an amount."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is 7% a safe assumption?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a long-run, after-inflation stock market average, not a promise. Use a lower number for savings accounts or a shorter horizon."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preload" href="../assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash of the default.
+    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
+    // their system color scheme.
+    try {
+      var saved = localStorage.getItem("budgetark-site-theme");
+      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../" class="logo">
+        <img src="../assets/favicon-32.png" alt="" class="logo-img" width="30" height="30">
+        Budget<span class="logo-accent">Ark</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../#features">Features</a></li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-drop-btn active" aria-expanded="false" aria-controls="tools-menu">Tools <span class="caret" aria-hidden="true"></span></button>
+          <ul class="dropdown-menu" id="tools-menu">
+            <li><a href="../calculators.html">All calculators</a></li>
+            <li><a href="../calculators/investment-growth.html">📈 Investment growth</a></li>
+            <li><a href="../calculators/loan-mortgage.html">🏠 Loan &amp; mortgage</a></li>
+            <li><a href="../calculators/refinance-break-even.html">🔁 Refinance break-even</a></li>
+            <li><a href="../calculators/debt-payoff.html">⚓ Debt payoff planner</a></li>
+            <li><a href="../calculators/what-if-spending.html" aria-current="page">🧭 What if I stopped spending on...</a></li>
+            <li><a href="../calculators/take-home-pay.html">🧾 US take-home pay</a></li>
+            <li><a href="../calculators/emergency-fund.html">⛵ Emergency fund</a></li>
+            <li><a href="../calculators/sinking-fund.html">🛶 Plan a purchase</a></li>
+            <li><a href="../calculators/currency-exchange.html">💱 Currency exchange</a></li>
+          </ul>
+        </li>
+        <li><a href="../#themes">Themes</a></li>
+        <li><a href="../#faq">FAQ</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li><a href="../#download" class="btn btn-small">Get the App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="../calculators.html">Calculators</a> › <span aria-current="page">What if I stopped spending on…</span></nav>
+        <p class="eyebrow">SHIP'S INSTRUMENTS</p>
+        <h1>What if I stopped spending on…</h1>
+        <p class="page-hero-sub">Pick a monthly expense you could drop - a subscription, takeout, the second streaming service - and see what that money turns into. Invest it and watch it compound; or add your debts below and see how many months it shaves off your payoff.</p>
+      </div>
+    </section>
+
+    <section class="section tools">
+      <div class="container tools-list">
+        <!-- What if -->
+        <article class="tool" id="tool-whatif">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">🧭</div>
+            <div>
+              <h2>What if I stopped spending on…</h2>
+              <p>Take a monthly habit and see what that money becomes if you invest it, or aim it at the debts above.</p>
+            </div>
+          </header>
+          <div class="tool-body">
+            <form class="tool-inputs" onsubmit="return false">
+              <label class="field"><span>Monthly amount you'd stop spending</span>
+                <span class="field-row"><span class="prefix">$</span><input type="number" name="wamount" value="150" min="0" step="10"></span>
+              </label>
+              <label class="field"><span>If invested, annual return</span>
+                <span class="field-row"><input type="number" name="wrate" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
+              </label>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <p class="section-sub tool-extra-note">Add your debts here to see the payoff impact above.</p>
+        <!-- Debt payoff -->
+        <article class="tool" id="tool-payoff">
+          <header class="tool-head">
+            <div class="feature-icon" aria-hidden="true">⚓</div>
+            <div>
+              <h2>Debt payoff planner</h2>
+              <p>List your debts, pick Snowball or Avalanche, and see when you're debt-free. Minimums are paid every month; anything extra goes to one target debt at a time.</p>
+            </div>
+          </header>
+          <div class="tool-body tool-body-stack">
+            <form class="tool-inputs" onsubmit="return false">
+              <div class="table-wrap">
+                <table class="calc-table debt-table">
+                  <thead><tr><th>Debt</th><th>Balance ($)</th><th>APR (%)</th><th>Minimum ($/mo)</th><th>Type</th><th></th></tr></thead>
+                  <tbody id="debt-rows"></tbody>
+                </table>
+              </div>
+              <div class="payoff-controls">
+                <button type="button" class="btn btn-ghost btn-small-ghost" id="debt-add">+ Add a debt</button>
+                <fieldset class="segmented">
+                  <legend class="sr-only">Payoff method</legend>
+                  <label><input type="radio" name="method" value="avalanche" checked><span>Avalanche <small>highest rate first</small></span></label>
+                  <label><input type="radio" name="method" value="snowball"><span>Snowball <small>smallest balance first</small></span></label>
+                </fieldset>
+                <label class="field field-inline"><span>Extra each month</span>
+                  <span class="field-row"><span class="prefix">$</span><input type="number" name="extra" value="200" min="0" step="25"></span>
+                </label>
+              </div>
+            </form>
+            <div class="tool-results" aria-live="polite"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tool-copy">
+      <div class="container tool-copy-inner">
+        <h2>How it's calculated</h2>
+        <ol class="how-list">
+          <li>The invested rows use the same monthly-compounding formula as the <a href="investment-growth.html">investment growth calculator</a> at 1, 5, and 10 years, split into what you put in and what growth added.</li>
+          <li>The debt rows run the <a href="debt-payoff.html">payoff planner</a> twice - once as-is and once with the amount added as an extra monthly payment - and report the difference in months and interest.</li>
+        </ol>
+        <h2>Worked example</h2>
+        <p>$150 a month at 7% is $1,859 after one year, $10,739 after five, and $25,963 after ten - with nearly $8,000 of that coming from growth rather than your contributions.</p>
+        <h2>Frequently asked</h2>
+        <div class="faq-list faq-list-left">
+          <details>
+            <summary>Why compare investing and debt?</summary>
+            <p>They are the two things freed-up cash can do. If your debt's APR is higher than the return you expect from investing, paying it down is the better guaranteed return; if it is lower, investing usually wins. The two results let you see both numbers before deciding.</p>
+          </details>
+          <details>
+            <summary>Does the app do this with my real spending?</summary>
+            <p>Yes - in the app the tool lists your actual budget categories with their six-month averages, so you pick a category instead of typing an amount.</p>
+          </details>
+          <details>
+            <summary>Is 7% a safe assumption?</summary>
+            <p>It is a long-run, after-inflation stock market average, not a promise. Use a lower number for savings accounts or a shorter horizon.</p>
+          </details>
+        </div>
+        <h2>Related calculators</h2>
+        <ul class="related-list">
+          <li><a href="investment-growth.html"><span aria-hidden="true">📈</span> Investment growth calculator</a></li>
+          <li><a href="debt-payoff.html"><span aria-hidden="true">⚓</span> Debt payoff planner</a></li>
+          <li><a href="sinking-fund.html"><span aria-hidden="true">🛶</span> Plan a purchase</a></li>
+        </ul>
+        <p class="tool-note">Every calculator here runs in your browser and matches the math in the BudgetArk app's Charts tab. Nothing you enter is stored or sent anywhere.</p>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-inner">
+        <h2>Want it with your real numbers?</h2>
+        <p>In the app, this tool pulls from your actual debts, budget, and accounts - and everything stays on your phone.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../index.html#download" class="btn btn-primary">Get BudgetArk</a>
+          <a href="../calculators.html" class="btn btn-ghost">All calculators</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><img src="../assets/favicon-32.png" alt="" class="logo-img" width="30" height="30"> Budget<span class="logo-accent">Ark</span></span>
+        <p>Offline-first budgeting. Built for the storm.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../#features">Features</a></li>
+        <li><a href="../calculators.html">Tools</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li><a href="../#faq">FAQ</a></li>
+        <li><a href="../privacy.html">Privacy Policy</a></li>
+        <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/budgetark" target="_blank" rel="noopener">X</a></li>
+        <li><a href="mailto:budgetark.support@gmail.com">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calculators.js"></script>
+</body>
+</html>

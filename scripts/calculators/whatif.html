@@ -1,0 +1,21 @@
+<!-- What if -->
+<article class="tool" id="tool-whatif">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">🧭</div>
+    <div>
+      <h2>What if I stopped spending on…</h2>
+      <p>Take a monthly habit and see what that money becomes if you invest it, or aim it at the debts above.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs" onsubmit="return false">
+      <label class="field"><span>Monthly amount you'd stop spending</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="wamount" value="150" min="0" step="10"></span>
+      </label>
+      <label class="field"><span>If invested, annual return</span>
+        <span class="field-row"><input type="number" name="wrate" value="7" min="-50" max="50" step="0.5"><span class="suffix">%</span></span>
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

@@ -1,0 +1,27 @@
+<!-- Loan / mortgage -->
+<article class="tool" id="tool-loan">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">🏠</div>
+    <div>
+      <h2>Loan &amp; mortgage</h2>
+      <p>Monthly payment, total interest, and a year-by-year amortization summary.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs" onsubmit="return false">
+      <label class="field"><span>Loan amount</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="amount" data-sync="loan-a" value="300000" min="1000" max="1000000" step="1000"></span>
+        <input type="range" data-sync="loan-a" name="amount-range" value="300000" min="1000" max="1000000" step="1000" aria-label="Loan amount slider">
+      </label>
+      <label class="field"><span>Interest rate (APR)</span>
+        <span class="field-row"><input type="number" name="rate" data-sync="loan-r" value="6.5" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
+        <input type="range" data-sync="loan-r" name="rate-range" value="6.5" min="0.5" max="30" step="0.25" aria-label="Interest rate slider">
+      </label>
+      <label class="field"><span>Term</span>
+        <span class="field-row"><input type="number" name="term" data-sync="loan-t" value="30" min="1" max="40" step="1"><span class="suffix">years</span></span>
+        <input type="range" data-sync="loan-t" name="term-range" value="30" min="1" max="30" step="1" aria-label="Loan term slider">
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

@@ -1,0 +1,42 @@
+<!-- Take-home pay -->
+<article class="tool" id="tool-takehome">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">🧾</div>
+    <div>
+      <h2>US take-home pay</h2>
+      <p>Federal brackets, FICA, and state income tax for tax year <span class="tax-year">2026</span>. An estimate: credits, itemized deductions, and local taxes are not modeled.</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs two-col" onsubmit="return false">
+      <label class="field"><span>Gross annual salary</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="gross" value="75000" min="0" step="1000"></span>
+      </label>
+      <label class="field"><span>Filing status</span>
+        <span class="field-row"><select name="status"></select></span>
+      </label>
+      <label class="field"><span>State</span>
+        <span class="field-row"><select name="state"></select></span>
+      </label>
+      <label class="field"><span>Pay frequency</span>
+        <span class="field-row"><select name="periods">
+          <option value="52">Weekly</option>
+          <option value="26" selected>Biweekly</option>
+          <option value="24">Semimonthly</option>
+          <option value="12">Monthly</option>
+        </select></span>
+      </label>
+      <label class="field"><span>Traditional 401(k)</span>
+        <span class="field-row"><input type="number" name="k401" value="6" min="0" max="100" step="0.5"><span class="suffix">% of gross</span></span>
+      </label>
+      <label class="field"><span>HSA, per year</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="hsa" value="0" min="0" step="100"></span>
+      </label>
+      <label class="field"><span>Health premium, per month</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="premium" value="0" min="0" step="10"></span>
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+  <p class="tool-note tool-foot">Data: IRS Rev. Proc. 2025-32 and the SSA 2026 wage base, via the Tax Foundation's 2026 state tables. Married-joint doubles single-filer state thresholds; married-separate and head-of-household reuse the single table. Same tables as the app.</p>
+</article>

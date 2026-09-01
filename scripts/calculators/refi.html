@@ -1,0 +1,33 @@
+<!-- Refinance -->
+<article class="tool" id="tool-refi">
+  <header class="tool-head">
+    <div class="feature-icon" aria-hidden="true">🔁</div>
+    <div>
+      <h2>Refinance break-even</h2>
+      <p>Does a lower rate actually save money once closing costs are paid?</p>
+    </div>
+  </header>
+  <div class="tool-body">
+    <form class="tool-inputs two-col" onsubmit="return false">
+      <label class="field"><span>Remaining balance</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="balance" value="280000" min="0" step="1000"></span>
+      </label>
+      <label class="field"><span>Closing costs</span>
+        <span class="field-row"><span class="prefix">$</span><input type="number" name="closing" value="4000" min="0" step="100"></span>
+      </label>
+      <label class="field"><span>Current rate</span>
+        <span class="field-row"><input type="number" name="currentRate" value="7.25" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
+      </label>
+      <label class="field"><span>Years left</span>
+        <span class="field-row"><input type="number" name="currentTerm" value="28" min="1" max="40" step="1"><span class="suffix">years</span></span>
+      </label>
+      <label class="field"><span>New rate</span>
+        <span class="field-row"><input type="number" name="newRate" value="5.5" min="0" max="30" step="0.125"><span class="suffix">%</span></span>
+      </label>
+      <label class="field"><span>New term</span>
+        <span class="field-row"><input type="number" name="newTerm" value="30" min="1" max="40" step="1"><span class="suffix">years</span></span>
+      </label>
+    </form>
+    <div class="tool-results" aria-live="polite"></div>
+  </div>
+</article>

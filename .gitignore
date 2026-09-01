@@ -4,3 +4,6 @@ TODO.md
 # OS / editor cruft
 .DS_Store
 Thumbs.db
+
+# Python generator cache
+__pycache__/
