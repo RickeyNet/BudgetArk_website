@@ -52,9 +52,9 @@ pages is hand-copied from the same script's `nav_dropdown()`. The
 math in `js/calculators.js` is a direct port of the app's `src/utils`
 (`calculations.ts`, `chartCalculators.ts`, `taxCalc.ts`, `purchasePlanner.ts`,
 `whatIfSpending.ts`, `exchangeCalculator.ts`) - keep them in step when the app
-changes a formula. One function is site-only: `calcLumpSumGrowth` (a one-time
-amount compounding monthly) powers the lump-sum comparison on the investment
-page and has no app counterpart, so the parity check skips it. `js/tax-data-2026.js` is generated from the app's
+changes a formula. `calcLumpSumGrowth` (a one-time amount compounding monthly)
+powers the lump-sum comparison on the investment page and matches the app's
+function of the same name. `js/tax-data-2026.js` is generated from the app's
 `taxData2026.ts` and `stateTaxData2026.ts` by stripping the TypeScript types;
 regenerate it when the app ships a new tax year. `scripts/parity-check.js` compares the site's
 functions with the app's compiled utils over a few thousand inputs; the header

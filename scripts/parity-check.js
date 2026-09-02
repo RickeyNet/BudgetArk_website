@@ -32,6 +32,8 @@ for (const m of [0, 50, 500, 2500]) for (const r of [-5, 0, 4, 7, 12]) for (cons
   same(`timeline ${m} ${r} ${y}`, site.calcInvestmentTimeline(m, r, y), calc.calcInvestmentTimeline(m, r, y));
   same(`marks ${m} ${r}`, site.buildSavingsGrowthMarks(m, r), wi.buildSavingsGrowthMarks(m, r));
 }
+for (const p of [0, 1000, 40000, 250000]) for (const r of [-10, 0, 7, 12]) for (const y of [0, 1, 10, 30])
+  same(`lump ${p} ${r} ${y}`, site.calcLumpSumGrowth(p, r, y), calc.calcLumpSumGrowth(p, r, y));
 for (const b of [0, 1000, 25000, 300000]) for (const r of [0, 3.5, 6.5, 24.99]) for (const n of [0, 12, 60, 360]) {
   const p1 = site.calcPaymentForGoalDate(b, r, n), p2 = calc.calcPaymentForGoalDate(b, r, n);
   same(`payment ${b} ${r} ${n}`, p1, p2);

@@ -52,8 +52,8 @@
     return timeline;
   };
 
-  // Site-only extension of the app's growth math: a one-time amount left to
-  // compound monthly with nothing added. Same monthly-rate convention.
+  // A one-time amount left to compound monthly with nothing added. Same
+  // monthly-rate convention as calcInvestmentGrowth (mirrors the app).
   const calcLumpSumGrowth = (principal, annualReturn, years) => {
     principal = clamp(principal, 0, MAX_BALANCE);
     annualReturn = clamp(annualReturn, -MAX_RATE, MAX_RATE);
