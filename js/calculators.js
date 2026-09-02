@@ -52,6 +52,16 @@
     return timeline;
   };
 
+  // Site-only extension of the app's growth math: a one-time amount left to
+  // compound monthly with nothing added. Same monthly-rate convention.
+  const calcLumpSumGrowth = (principal, annualReturn, years) => {
+    principal = clamp(principal, 0, MAX_BALANCE);
+    annualReturn = clamp(annualReturn, -MAX_RATE, MAX_RATE);
+    years = clamp(years, 0, MAX_YEARS);
+    if (principal <= 0) return 0;
+    return principal * Math.pow(1 + annualReturn / 100 / 12, years * 12);
+  };
+
   const calcPaymentForGoalDate = (balance, annualRate, monthsRemaining) => {
     balance = clamp(balance, 0, MAX_BALANCE);
     annualRate = clamp(annualRate, 0, MAX_RATE);
@@ -385,7 +395,7 @@
 
   // Expose the pure functions for the parity test script.
   window.BUDGETARK_CALC = {
-    calcInvestmentGrowth, calcInvestmentTimeline, calcPaymentForGoalDate, generatePayoffSchedule,
+    calcInvestmentGrowth, calcInvestmentTimeline, calcLumpSumGrowth, calcPaymentForGoalDate, generatePayoffSchedule,
     simulatePayoffPlan, buildLoanYearlySummary, summarizeLoanCosts, calcRefiComparison,
     calcEmergencyFundPlan, calcPurchaseTimeline, calcRequiredMonthly, monthsUntilTarget,
     buildSavingsGrowthMarks, calcTakeHome, calcBracketTax, calcFICA, calcStateTax, crossRate, formatCrossRate,
@@ -476,39 +486,78 @@
   /* ---------------- Investment growth ---------------- */
 
   bind('tool-invest', (root) => {
+    const lump = num($('[name=lump]', root));
     const monthly = num($('[name=contribution]', root));
     const rate = num($('[name=return]', root));
     const years = Math.max(0, Math.round(num($('[name=years]', root))));
-    const timeline = calcInvestmentTimeline(monthly, rate, years);
-    const last = timeline[timeline.length - 1] || { total: 0, contributed: 0, interest: 0 };
-    $('.tool-results', root).innerHTML =
-      tiles([
-        [`Balance after ${years} years`, money(last.total), 'good'],
-        ['You contributed', money(last.contributed)],
-        ['Growth', money(last.interest), 'accent'],
-        ['Rule of 72', rate > 0 ? `Money doubles about every ${calcRuleOf72Years(rate)} years` : 'No growth at 0%'],
-      ]) + chartBars(timeline);
+
+    const scenarios = [];
+    if (lump > 0) scenarios.push({ key: 'lump', label: 'Lump sum only', cls: 'line-lump', putIn: lump, value: (y) => calcLumpSumGrowth(lump, rate, y) });
+    if (monthly > 0) scenarios.push({ key: 'monthly', label: 'Monthly only', cls: 'line-monthly', putIn: monthly * 12 * years, value: (y) => calcInvestmentGrowth(monthly, rate, y) });
+    if (lump > 0 && monthly > 0) scenarios.push({ key: 'both', label: 'Both together', cls: 'line-both', putIn: lump + monthly * 12 * years, value: (y) => calcLumpSumGrowth(lump, rate, y) + calcInvestmentGrowth(monthly, rate, y) });
+    scenarios.forEach((s) => { s.end = Math.round(s.value(years)); s.growth = Math.round(s.end - s.putIn); });
+
+    const out = $('.tool-results', root);
+    if (scenarios.length === 0) {
+      out.innerHTML = '<p class="tool-note">Enter a starting lump sum, a monthly contribution, or both.</p>';
+      return;
+    }
+    const single = scenarios.length === 1;
+    const head = single
+      ? tiles([
+          [`Balance after ${years} years`, money(scenarios[0].end), 'good'],
+          ['You put in', money(scenarios[0].putIn)],
+          ['Growth', money(scenarios[0].growth), 'accent'],
+          ['Rule of 72', rate > 0 ? `Money doubles about every ${calcRuleOf72Years(rate)} years` : 'No growth at 0%'],
+        ])
+      : (() => {
+          const [l, m, b] = scenarios;
+          const ahead = l.end >= m.end ? l : m;
+          const behind = ahead === l ? m : l;
+          return tiles([
+            [`Lump sum only after ${years} years`, money(l.end), 'accent'],
+            [`Monthly only after ${years} years`, money(m.end), 'good'],
+            ['Both together', money(b.end), 'good'],
+            ['Which wins alone?', `${ahead.label} by ${money(ahead.end - behind.end)}`],
+          ]);
+        })();
+    const table = `<div class="table-wrap"><table class="calc-table"><thead><tr><th>Scenario</th><th>You put in</th><th>Growth</th><th>Ending balance</th></tr></thead><tbody>` +
+      scenarios.map((s) => `<tr><td><span class="key ${s.cls}"></span> ${s.label}</td><td>${money(s.putIn)}</td><td>${money(s.growth)}</td><td><strong>${money(s.end)}</strong></td></tr>`).join('') +
+      `</tbody></table></div>`;
+    const crossover = (() => {
+      if (scenarios.length < 3) return '';
+      const [l, m] = scenarios;
+      if (l.value(years) >= m.value(years)) return `<p class="tool-verdict">Over ${years} years the lump sum stays ahead of the monthly plan. The monthly plan needs ${money(l.end - m.end)} more of growth to catch up.</p>`;
+      for (let y = 1; y <= years; y++) if (m.value(y) >= l.value(y)) return `<p class="tool-verdict">The monthly contributions overtake the lump sum in year ${y}, and by year ${years} they are ahead by ${money(m.end - l.end)}. Doing both ends at ${money(scenarios[2].end)}.</p>`;
+      return '';
+    })();
+    out.innerHTML = head + chartLines(scenarios, years) + table + crossover +
+      (rate > 0 && !single ? `<p class="tool-note">Rule of 72: at ${rate}% money doubles about every ${calcRuleOf72Years(rate)} years.</p>` : '');
   });
 
-  function chartBars(timeline) {
-    const rows = timeline.filter((t) => t.year > 0);
-    if (rows.length === 0) return '';
-    const max = Math.max(...rows.map((t) => t.total), 1);
-    const W = 600, H = 220, padL = 8, padB = 22, gap = 4;
-    const bw = (W - padL * 2) / rows.length - gap;
-    let bars = '';
-    rows.forEach((t, i) => {
-      const x = padL + i * (bw + gap);
-      const hc = ((H - padB) * t.contributed) / max;
-      const hg = ((H - padB) * Math.max(0, t.interest)) / max;
-      bars += `<rect x="${x.toFixed(1)}" y="${(H - padB - hc).toFixed(1)}" width="${bw.toFixed(1)}" height="${hc.toFixed(1)}" class="bar-contrib"/>`;
-      bars += `<rect x="${x.toFixed(1)}" y="${(H - padB - hc - hg).toFixed(1)}" width="${bw.toFixed(1)}" height="${hg.toFixed(1)}" class="bar-growth"/>`;
-      if (rows.length <= 12 || t.year % 5 === 0) {
-        bars += `<text x="${(x + bw / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle" class="bar-label">${t.year}</text>`;
-      }
-    });
-    return `<figure class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Contributions and growth by year">${bars}</svg>
-      <figcaption><span class="key key-contrib"></span> Contributed <span class="key key-growth"></span> Growth</figcaption></figure>`;
+  function chartLines(scenarios, years) {
+    if (years < 1) return '';
+    const W = 600, H = 230, padL = 56, padR = 10, padT = 10, padB = 24;
+    const max = Math.max(1, ...scenarios.map((s) => s.value(years)));
+    const x = (y) => padL + ((W - padL - padR) * y) / years;
+    const yy = (v) => padT + (H - padT - padB) * (1 - v / max);
+    let grid = '';
+    for (let i = 0; i <= 3; i++) {
+      const v = (max * i) / 3;
+      grid += `<line x1="${padL}" x2="${W - padR}" y1="${yy(v).toFixed(1)}" y2="${yy(v).toFixed(1)}" class="grid-line"/>`;
+      grid += `<text x="${padL - 6}" y="${(yy(v) + 4).toFixed(1)}" text-anchor="end" class="bar-label">${usd0.format(v).replace(/,\d{3}$/, 'k').replace(/,\d{3}k$/, 'M')}</text>`;
+    }
+    let labels = '';
+    const step = years <= 12 ? 1 : years <= 30 ? 5 : 10;
+    for (let y = 0; y <= years; y += step) labels += `<text x="${x(y).toFixed(1)}" y="${H - 6}" text-anchor="middle" class="bar-label">${y}</text>`;
+    const lines = scenarios.map((s) => {
+      const pts = [];
+      for (let y = 0; y <= years; y++) pts.push(`${x(y).toFixed(1)},${yy(s.value(y)).toFixed(1)}`);
+      return `<polyline points="${pts.join(' ')}" class="${s.cls}" fill="none" stroke-width="3" stroke-linejoin="round"/>`;
+    }).join('');
+    const legend = scenarios.map((s) => `<span class="key ${s.cls}"></span> ${s.label}`).join(' ');
+    return `<figure class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Balance by year for each scenario">${grid}${labels}${lines}</svg>
+      <figcaption>${legend}</figcaption></figure>`;
   }
 
   /* ---------------- Loan / mortgage ---------------- */

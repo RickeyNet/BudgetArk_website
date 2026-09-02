@@ -1600,6 +1600,11 @@ input[type="range"] {
 .key-contrib, .bar-contrib { background: var(--wood-dark); fill: var(--wood-dark); }
 .key-growth, .bar-growth { background: var(--green); fill: var(--green); }
 .bar-label { fill: var(--ink-soft); font-size: 11px; font-family: var(--font-body); }
+.grid-line { stroke: var(--border); stroke-width: 1; }
+.key-lump, .line-lump { background: var(--wood); stroke: var(--wood); }
+.key-monthly, .line-monthly { background: var(--green); stroke: var(--green); }
+.key-both, .line-both { background: var(--wood-deep); stroke: var(--wood-deep); }
+.calc-table .key { vertical-align: middle; margin-right: 0.3rem; }
 
 .ef-row { display: flex; flex-direction: column; gap: 0.35rem; }
 .ef-head { display: flex; justify-content: space-between; color: var(--ink); }
