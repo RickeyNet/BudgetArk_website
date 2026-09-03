@@ -1715,6 +1715,22 @@ input[type="range"] {
   font-size: 0.7rem;
 }
 
+.android-test {
+  max-width: 40rem;
+  margin: 2.2rem auto 0;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.7rem;
+  text-align: left;
+  scroll-margin-top: 5.5rem;
+}
+.android-test h3 { font-size: 1.25rem; color: var(--wood-deep); margin-bottom: 0.4rem; }
+.android-test p { margin: 0 0 0.8rem !important; font-size: 0.97rem !important; color: var(--ink) !important; }
+.test-steps { padding-left: 1.4rem; color: var(--ink); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.test-steps li::marker { color: var(--wood); font-weight: 700; }
+.android-test .test-note { color: var(--ink-soft) !important; font-size: 0.88rem !important; margin-bottom: 0 !important; }
+
 .proof {
   max-width: 40rem;
   margin: 2.6rem auto 0;
