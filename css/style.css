@@ -1733,24 +1733,34 @@ input[type="range"] {
 
 .proof {
   max-width: 40rem;
-  margin: 2.6rem auto 0;
+  margin: 3rem auto 0;
+  padding-top: 2.4rem;
+  border-top: 2px solid var(--border);
+}
+.proof-eyebrow { margin-bottom: 0.4rem !important; font-size: 0.78rem !important; }
+.proof-title {
+  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  color: var(--wood-deep);
+  margin-bottom: 0.7rem;
 }
 .proof-rating {
   color: var(--ink) !important;
-  font-weight: 600;
-  font-size: 1rem !important;
-  margin: 0 0 0.9rem !important;
+  font-weight: 700;
+  font-size: 1.1rem !important;
+  margin: 0 0 1.1rem !important;
 }
-.proof-rating .stars { color: var(--gold); letter-spacing: 0.1em; margin-right: 0.3rem; }
+.proof-rating .stars { color: var(--gold); letter-spacing: 0.12em; margin-right: 0.4rem; font-size: 1.25rem; }
 .proof-quote {
   margin: 0;
   background: var(--card);
   border: 2px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.3rem 1.6rem;
+  border-left: 5px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.4rem 1.7rem;
   text-align: left;
+  box-shadow: var(--shadow);
 }
-.proof-quote p { color: var(--ink) !important; font-size: 1rem !important; margin: 0 !important; line-height: 1.65; }
+.proof-quote p { color: var(--ink) !important; font-family: var(--font-display); font-size: 1.08rem !important; margin: 0 !important; line-height: 1.7; }
 .proof-cite { font-size: 0.88rem !important; margin: 0.7rem 0 0 !important; text-align: right; }
 
 .cta-support { margin-top: 2rem !important; font-size: 0.95rem !important; }
