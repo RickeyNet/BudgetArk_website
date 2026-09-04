@@ -483,7 +483,7 @@
   const tiles = (items) =>
     items.map(([label, value, cls]) => `<div class="tile"><span class="tile-label">${esc(label)}</span><strong class="tile-value ${cls || ''}">${esc(value)}</strong></div>`).join('');
 
-  /* ---------------- Investment growth ---------------- */
+  /* ---------------- Compound interest ---------------- */
 
   bind('tool-invest', (root) => {
     const lump = num($('[name=lump]', root));

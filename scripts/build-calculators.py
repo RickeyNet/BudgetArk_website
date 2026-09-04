@@ -33,9 +33,9 @@ THEME_SCRIPT = """  <script>
 
 TOOLS = [
     {
-        'key': 'invest', 'slug': 'investment-growth', 'icon': '📈',
-        'title': 'Investment Growth Calculator',
-        'h1': 'Investment growth calculator',
+        'key': 'invest', 'slug': 'compound-interest', 'icon': '📈',
+        'title': 'Compound Interest Calculator',
+        'h1': 'Compound interest calculator',
         'short': 'Lump sum left alone vs. monthly contributions vs. both - side by side.',
         'meta': 'Free compound growth calculator that compares three scenarios: a lump sum invested once, steady monthly contributions, and both together. See each balance, growth, and the year the monthly plan overtakes the lump sum. Runs in your browser.',
         'intro': [
@@ -131,7 +131,7 @@ TOOLS = [
             'Pick a monthly expense you could drop - a subscription, takeout, the second streaming service - and see what that money turns into. Invest it and watch it compound; or add your debts below and see how many months it shaves off your payoff.',
         ],
         'how': [
-            'The invested rows use the same monthly-compounding formula as the <a href="investment-growth.html">investment growth calculator</a> at 1, 5, and 10 years, split into what you put in and what growth added.',
+            'The invested rows use the same monthly-compounding formula as the <a href="compound-interest.html">compound interest calculator</a> at 1, 5, and 10 years, split into what you put in and what growth added.',
             'The debt rows run the <a href="debt-payoff.html">payoff planner</a> twice - once as-is and once with the amount added as an extra monthly payment - and report the difference in months and interest.',
         ],
         'example': '$150 a month at 7% is $1,859 after one year, $10,739 after five, and $25,963 after ten - with nearly $8,000 of that coming from growth rather than your contributions.',
@@ -140,7 +140,7 @@ TOOLS = [
             ('Does the app do this with my real spending?', 'Yes - in the app the tool lists your actual budget categories with their six-month averages, so you pick a category instead of typing an amount.'),
             ('Is 7% a safe assumption?', 'It is a long-run, after-inflation stock market average, not a promise. Use a lower number for savings accounts or a shorter horizon.'),
         ],
-        'related': ['investment-growth', 'debt-payoff', 'sinking-fund'],
+        'related': ['compound-interest', 'debt-payoff', 'sinking-fund'],
         'extra_partials': ['payoff'],
         'extra_note': 'Add your debts here to see the payoff impact above.',
     },
@@ -164,7 +164,7 @@ TOOLS = [
             ('Which states have no income tax on wages?', 'Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Choose one of them, or leave the state blank, to see federal and FICA only.'),
             ('Where does the tax data come from and how current is it?', 'Federal brackets and standard deductions are from IRS Rev. Proc. 2025-32 for tax year 2026, the Social Security wage base from the SSA, and state tables from the Tax Foundation\'s 2026 survey. The app refreshes them each tax year and this page is generated from the same file.'),
         ],
-        'related': ['investment-growth', 'emergency-fund', 'debt-payoff'],
+        'related': ['compound-interest', 'emergency-fund', 'debt-payoff'],
         'scripts': ['tax-data-2026.js'],
     },
     {
@@ -186,7 +186,7 @@ TOOLS = [
             ('Where should the money live?', 'Somewhere boring and liquid: a high-yield savings or money-market account you can reach in a day or two, separate from the checking account you spend from. Not invested - a market drop and a job loss tend to arrive together.'),
             ('Should I build this before paying off debt?', 'Build a small starter cushion first - often around one month of expenses - so the next surprise does not go on a card. Then attack high-interest debt, and finish the full fund after. The <a href="debt-payoff.html">payoff planner</a> can show what the debt side looks like.'),
         ],
-        'related': ['sinking-fund', 'debt-payoff', 'investment-growth'],
+        'related': ['sinking-fund', 'debt-payoff', 'compound-interest'],
     },
     {
         'key': 'purchase', 'slug': 'sinking-fund', 'icon': '🛶',
@@ -207,7 +207,7 @@ TOOLS = [
             ('How is this different from an emergency fund?', 'An emergency fund is for the unknown; a sinking fund is for the known. Tires wearing out is predictable, so it belongs in a sinking fund, which keeps the emergency fund untouched for actual surprises.'),
             ('What if I cannot afford the monthly amount?', 'Push the date out, lower the price, or start with a smaller partial goal. The point is to pay cash when you buy, so a later date beats financing it.'),
         ],
-        'related': ['emergency-fund', 'what-if-spending', 'investment-growth'],
+        'related': ['emergency-fund', 'what-if-spending', 'compound-interest'],
     },
     {
         'key': 'fx', 'slug': 'currency-exchange', 'icon': '💱',
@@ -228,7 +228,7 @@ TOOLS = [
             ('Are these live market rates?', 'They are mid-market reference rates updated about once a day, fine for planning and budgeting. A bank or card will apply its own spread on top, so expect a slightly worse rate when you actually exchange money.'),
             ('Why only six currencies?', 'They are the display currencies the app supports: US dollar, euro, British pound, Canadian dollar, Japanese yen, and Swedish krona. More arrive as the app adds them.'),
         ],
-        'related': ['take-home-pay', 'sinking-fund', 'investment-growth'],
+        'related': ['take-home-pay', 'sinking-fund', 'compound-interest'],
     },
 ]
 BY_SLUG = {t['slug']: t for t in TOOLS}
@@ -482,7 +482,7 @@ def index_page():
                 '@id': f'{SITE}/{path}',
                 'name': 'BudgetArk Financial Calculators',
                 'url': f'{SITE}/{path}',
-                'description': 'Free financial calculators that run in your browser: investment growth, loan and mortgage amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange.',
+                'description': 'Free financial calculators that run in your browser: compound interest, loan and mortgage amortization, refinance break-even, debt payoff, US take-home pay, emergency fund, sinking fund, and currency exchange.',
                 'publisher': {'@id': f'{SITE}/#org'},
             },
             {
@@ -501,7 +501,7 @@ def index_page():
               <p>{t['short']}</p>
             </a>
           </li>''' for t in TOOLS)
-    meta = 'Free financial calculators from BudgetArk: investment growth, loan and mortgage amortization, refinance break-even, debt payoff (snowball vs. avalanche), US take-home pay, emergency fund, sinking fund, and currency exchange. Runs in your browser, nothing is sent anywhere.'
+    meta = 'Free financial calculators from BudgetArk: compound interest, loan and mortgage amortization, refinance break-even, debt payoff (snowball vs. avalanche), US take-home pay, emergency fund, sinking fund, and currency exchange. Runs in your browser, nothing is sent anywhere.'
     return (head(prefix, 'Free Financial Calculators', meta, path, ld) + header(prefix, 'index') + '''
   <main id="main">
     <section class="page-hero">

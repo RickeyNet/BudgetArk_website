@@ -42,7 +42,7 @@ document.querySelectorAll('.nav-dropdown').forEach((dd) => {
 // links to the tool's own page.
 if (/calculators\.html$/.test(location.pathname) && location.hash) {
   const old = {
-    'tool-invest': 'investment-growth', 'tool-loan': 'loan-mortgage', 'tool-refi': 'refinance-break-even',
+    'tool-invest': 'compound-interest', 'tool-loan': 'loan-mortgage', 'tool-refi': 'refinance-break-even',
     'tool-payoff': 'debt-payoff', 'tool-whatif': 'what-if-spending', 'tool-takehome': 'take-home-pay',
     'tool-efund': 'emergency-fund', 'tool-purchase': 'sinking-fund', 'tool-fx': 'currency-exchange',
   };
