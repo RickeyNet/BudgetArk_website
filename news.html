@@ -87,7 +87,7 @@
         <p class="eyebrow">CAPTAIN'S LOG</p>
         <h1>News &amp; Updates</h1>
         <p class="page-hero-sub">What's happening aboard the Ark - releases, announcements, and what's next.</p>
-        <nav class="news-index" aria-label="Jump to a post"><a href="#android-test-2026-09-02">Sep 2 · Android test</a> <a href="#v1-10-1">v1.10.1</a> <a href="#v1-10-0">v1.10.0</a> <a href="#v1-9-3">v1.9.3</a> <a href="#v1-9-2">v1.9.2</a> <a href="#v1-9-1">v1.9.1</a> <a href="#update-2026-07-27">Jul 27 · six new themes</a> <a href="#update-2026-07-27-2">Jul 27 · App Lock &amp; backups</a> <a href="#update-2026-07-20">Jul 20 · search &amp; countdown</a> <a href="#v1-9-0">v1.9.0</a> <a href="#v1-8-3">v1.8.3</a> <a href="#v1-8-0">v1.8.0</a> <a href="#v1-7-4">v1.7.4</a> <a href="#v1-7-2">v1.7.2</a> <a href="#announcement-2026-06-09">Jun 9 · site launch</a> <a href="#v1-7-1">v1.7.1</a> <a href="#v1-6-5">v1.6.5</a> <a href="#v1-6-0">v1.6.0</a> <a href="#v1-5-0">v1.5.0</a></nav>
+        <nav class="news-index" aria-label="Jump to a post"><a href="#v1-10-2">v1.10.2</a> <a href="#android-test-2026-09-02">Sep 2 · Android test</a> <a href="#v1-10-1">v1.10.1</a> <a href="#v1-10-0">v1.10.0</a> <a href="#v1-9-3">v1.9.3</a> <a href="#v1-9-2">v1.9.2</a> <a href="#v1-9-1">v1.9.1</a> <a href="#update-2026-07-27">Jul 27 · six new themes</a> <a href="#update-2026-07-27-2">Jul 27 · App Lock &amp; backups</a> <a href="#update-2026-07-20">Jul 20 · search &amp; countdown</a> <a href="#v1-9-0">v1.9.0</a> <a href="#v1-8-3">v1.8.3</a> <a href="#v1-8-0">v1.8.0</a> <a href="#v1-7-4">v1.7.4</a> <a href="#v1-7-2">v1.7.2</a> <a href="#announcement-2026-06-09">Jun 9 · site launch</a> <a href="#v1-7-1">v1.7.1</a> <a href="#v1-6-5">v1.6.5</a> <a href="#v1-6-0">v1.6.0</a> <a href="#v1-5-0">v1.5.0</a></nav>
       </div>
     </section>
 
@@ -98,6 +98,45 @@
           To add a news post: copy an <article> block below, paste it at the TOP
           of this list, and edit the date, title, tag, and text.
         -->
+
+        <article class="news-card" id="v1-10-2">
+          <div class="news-meta">
+            <time datetime="2026-09-04">September 4, 2026</time>
+            <span class="news-tag">Release v1.10.2</span>
+          </div>
+          <h2>Bring in your history</h2>
+          <p>
+            Bank connections are great from the day you connect, but everything before that
+            lived only in your bank's website. Now you can bring it in: Profile → Data →
+            Import Bank Statement takes a CSV downloaded from any bank and routes its rows
+            through the same Review Inbox as a live sync. The app finds the header row on its
+            own (Bank of America's summary block and Wells Fargo's headerless files included),
+            guesses which columns are the date, description, and amount, and shows a live
+            preview so you can correct it before anything is imported. Once you confirm a
+            layout for a bank, it's remembered for next time. Re-importing an overlapping
+            range never creates duplicates, and nothing touches your budget until you approve
+            it - same as always.
+          </p>
+          <p>
+            Reviewing months of statement rows at once needed a faster inbox, so it gained a
+            Group by Vendor view: every charge from the same place lands in one group, and a
+            single "Approve all as…" files the lot under one category, with an optional
+            "Always file this vendor here" that sweeps the rest of the inbox too. Imported
+            card and loan payments can now be filed against a debt instead of a bill - pick the
+            debt and Approve becomes Log Payment, which reduces the balance and adds the
+            payment to the Debts tab without double counting it in the budget. If you already
+            logged that payment from the due-day reminder, the app spots the match and quietly
+            retires the bank's copy.
+          </p>
+          <p>
+            Two smaller things: exported Excel workbooks are easier to read, with columns sized
+            to fit, money columns formatted with thousands separators, and each month's
+            transactions collapsible under its subtotal (the file still imports back in
+            unchanged). And the day picker on the entry form is now a real calendar with
+            weekday columns, so "which Tuesday" no longer means counting. This update arrives
+            over the air on every 1.10 install - no App Store update needed.
+          </p>
+        </article>
 
         <article class="news-card" id="android-test-2026-09-02">
           <div class="news-meta">
