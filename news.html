@@ -87,7 +87,7 @@
         <p class="eyebrow">CAPTAIN'S LOG</p>
         <h1>News &amp; Updates</h1>
         <p class="page-hero-sub">What's happening aboard the Ark - releases, announcements, and what's next.</p>
-        <nav class="news-index" aria-label="Jump to a post"><a href="#v1-10-2">v1.10.2</a> <a href="#android-test-2026-09-02">Sep 2 · Android test</a> <a href="#v1-10-1">v1.10.1</a> <a href="#v1-10-0">v1.10.0</a> <a href="#v1-9-3">v1.9.3</a> <a href="#v1-9-2">v1.9.2</a> <a href="#v1-9-1">v1.9.1</a> <a href="#update-2026-07-27">Jul 27 · six new themes</a> <a href="#update-2026-07-27-2">Jul 27 · App Lock &amp; backups</a> <a href="#update-2026-07-20">Jul 20 · search &amp; countdown</a> <a href="#v1-9-0">v1.9.0</a> <a href="#v1-8-3">v1.8.3</a> <a href="#v1-8-0">v1.8.0</a> <a href="#v1-7-4">v1.7.4</a> <a href="#v1-7-2">v1.7.2</a> <a href="#announcement-2026-06-09">Jun 9 · site launch</a> <a href="#v1-7-1">v1.7.1</a> <a href="#v1-6-5">v1.6.5</a> <a href="#v1-6-0">v1.6.0</a> <a href="#v1-5-0">v1.5.0</a></nav>
+        <nav class="news-index" aria-label="Jump to a post"><a href="#v1-11-0">v1.11.0 · coming soon</a> <a href="#v1-10-4">v1.10.4</a> <a href="#v1-10-3">v1.10.3</a> <a href="#v1-10-2">v1.10.2</a> <a href="#android-test-2026-09-02">Sep 2 · Android test</a> <a href="#v1-10-1">v1.10.1</a> <a href="#v1-10-0">v1.10.0</a> <a href="#v1-9-3">v1.9.3</a> <a href="#v1-9-2">v1.9.2</a> <a href="#v1-9-1">v1.9.1</a> <a href="#update-2026-07-27">Jul 27 · six new themes</a> <a href="#update-2026-07-27-2">Jul 27 · App Lock &amp; backups</a> <a href="#update-2026-07-20">Jul 20 · search &amp; countdown</a> <a href="#v1-9-0">v1.9.0</a> <a href="#v1-8-3">v1.8.3</a> <a href="#v1-8-0">v1.8.0</a> <a href="#v1-7-4">v1.7.4</a> <a href="#v1-7-2">v1.7.2</a> <a href="#announcement-2026-06-09">Jun 9 · site launch</a> <a href="#v1-7-1">v1.7.1</a> <a href="#v1-6-5">v1.6.5</a> <a href="#v1-6-0">v1.6.0</a> <a href="#v1-5-0">v1.5.0</a></nav>
       </div>
     </section>
 
@@ -98,6 +98,93 @@
           To add a news post: copy an <article> block below, paste it at the TOP
           of this list, and edit the date, title, tag, and text.
         -->
+
+        <article class="news-card" id="v1-11-0">
+          <div class="news-meta">
+            <time datetime="2026-09-24">September 24, 2026</time>
+            <span class="news-tag">Coming soon · v1.11.0</span>
+          </div>
+          <h2>Welcome aboard, in your language</h2>
+          <p>
+            Version 1.11.0 is in testing now and will be out soon. It is the biggest change
+            since launch that touches no numbers at all: BudgetArk is being translated into
+            German, Russian, and Ukrainian. Every screen, modal, and card across the five
+            tabs, onboarding, the feature tour, achievements, the provider setup guides, the
+            quick-start templates, and the data disclosures all follow the language you
+            choose. A new Language row in Profile → Settings, right beside Currency, offers
+            Automatic (follows your phone, falls back to English), English, Deutsch, Русский,
+            and Українська. Switching re-renders every tab on the spot, re-issues pending
+            reminders in the new language, and refreshes the home-screen widget. The setting
+            stays on your device: it is never synced to a partner or included in an export.
+          </p>
+          <p>
+            The details were worked through rather than machine-translated - informal address
+            throughout, proper one / few / many plurals for Russian and Ukrainian, and global
+            search that matches the translated name of a category or debt as well as the
+            original. A few things stay in English by design: the Captain's Course lessons
+            (the reader says so), the US-only tax tools, release notes, theme names, and the
+            sheet and column names in exported spreadsheets, so a workbook still round-trips.
+          </p>
+          <p>
+            Two bank-connection fixes ride along, both from user reports. Automatic sync used
+            to arm itself only after you had visited the Connections section of the Profile
+            tab, so a phone that never opened that screen could go days without a refresh; it
+            now arms at launch every time (every six hours automatically, fifteen minutes
+            between manual pulls, as before). And a pending charge that posted at a slightly
+            different amount - a tip added at settlement, say - was landing in the inbox twice.
+            The app now recognises the posted twin, corrects an approved entry to the settled
+            amount unless you have edited it yourself, and quietly retires pending rows the
+            bank stops listing without ever swallowing a charge that posts late. Because the
+            language support adds a native module, this release comes through the App Store
+            and Google Play rather than over the air - watch for the update prompt.
+          </p>
+        </article>
+
+        <article class="news-card" id="v1-10-4">
+          <div class="news-meta">
+            <time datetime="2026-09-16">September 16, 2026</time>
+            <span class="news-tag">Release v1.10.4</span>
+          </div>
+          <h2>Every cent counts</h2>
+          <p>
+            A user on a comma-decimal keyboard could not add an expense under one unit of
+            currency: the Add Entry form read "0,94" as 0 and kept the button disabled, and
+            "12,50" was silently saved as 12. Every typed money field in the app - entry
+            amounts, 401(k) contributions and 1099 set-asides, debt balances, rates and
+            minimums, pay and repayment amounts, asset balances, share counts and cost basis,
+            emergency-fund contributions, category limits, and the Hull step's extra payment
+            and milestone targets - now understands a comma as the decimal separator. The
+            blank-input behaviour of every field is unchanged, so validation works exactly as
+            it did. This update arrives over the air on every 1.10 install - no App Store
+            update needed.
+          </p>
+        </article>
+
+        <article class="news-card" id="v1-10-3">
+          <div class="news-meta">
+            <time datetime="2026-09-11">September 11, 2026</time>
+            <span class="news-tag">Release v1.10.3</span>
+          </div>
+          <h2>Straight answers</h2>
+          <p>
+            The Hull step's Avalanche-vs-Snowball comparison could say "Not solvable" with a
+            large interest total sitting underneath it - the amount that had accrued before the
+            simulation gave up, which meant nothing. Now the interest column shows a dash for
+            any plan that never finishes, and a note underneath explains why: which debt's
+            minimum payment does not cover its monthly interest (or has no minimum logged at
+            all), and what to do about it - raise the minimum or add an extra payment. When
+            several debts are underwater it names them all.
+          </p>
+          <p>
+            The Purchase Plans projection chart has left the Bridge card. Every plan row there
+            already prints its ready date, and the lines are straight, so on a glanceable
+            dashboard it was height without information. It still lives in the Charts tab's
+            Plan a Purchase tool, where comparing "one at a time" with "split evenly" is
+            worth a picture. Dependency updates for a couple of tooling advisories round it
+            out; none of them touch the app you install. This update arrives over the air on
+            every 1.10 install - no App Store update needed.
+          </p>
+        </article>
 
         <article class="news-card" id="v1-10-2">
           <div class="news-meta">
