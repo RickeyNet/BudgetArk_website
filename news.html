@@ -87,7 +87,7 @@
         <p class="eyebrow">CAPTAIN'S LOG</p>
         <h1>News &amp; Updates</h1>
         <p class="page-hero-sub">What's happening aboard the Ark - releases, announcements, and what's next.</p>
-        <nav class="news-index" aria-label="Jump to a post"><a href="#v1-11-0">v1.11.0</a> <a href="#v1-10-4">v1.10.4</a> <a href="#v1-10-3">v1.10.3</a> <a href="#v1-10-2">v1.10.2</a> <a href="#android-test-2026-09-02">Sep 2 · Android test</a> <a href="#v1-10-1">v1.10.1</a> <a href="#v1-10-0">v1.10.0</a> <a href="#v1-9-3">v1.9.3</a> <a href="#v1-9-2">v1.9.2</a> <a href="#v1-9-1">v1.9.1</a> <a href="#update-2026-07-27">Jul 27 · six new themes</a> <a href="#update-2026-07-27-2">Jul 27 · App Lock &amp; backups</a> <a href="#update-2026-07-20">Jul 20 · search &amp; countdown</a> <a href="#v1-9-0">v1.9.0</a> <a href="#v1-8-3">v1.8.3</a> <a href="#v1-8-0">v1.8.0</a> <a href="#v1-7-4">v1.7.4</a> <a href="#v1-7-2">v1.7.2</a> <a href="#announcement-2026-06-09">Jun 9 · site launch</a> <a href="#v1-7-1">v1.7.1</a> <a href="#v1-6-5">v1.6.5</a> <a href="#v1-6-0">v1.6.0</a> <a href="#v1-5-0">v1.5.0</a></nav>
+        <nav class="news-index" aria-label="Jump to a post"><a href="#android-launch-2026-10-15">Oct 15 · Android launch</a> <a href="#v1-11-1">v1.11.1</a> <a href="#v1-11-0">v1.11.0</a> <a href="#v1-10-4">v1.10.4</a> <a href="#v1-10-3">v1.10.3</a> <a href="#v1-10-2">v1.10.2</a> <a href="#android-test-2026-09-02">Sep 2 · Android test</a> <a href="#v1-10-1">v1.10.1</a> <a href="#v1-10-0">v1.10.0</a> <a href="#v1-9-3">v1.9.3</a> <a href="#v1-9-2">v1.9.2</a> <a href="#v1-9-1">v1.9.1</a> <a href="#update-2026-07-27">Jul 27 · six new themes</a> <a href="#update-2026-07-27-2">Jul 27 · App Lock &amp; backups</a> <a href="#update-2026-07-20">Jul 20 · search &amp; countdown</a> <a href="#v1-9-0">v1.9.0</a> <a href="#v1-8-3">v1.8.3</a> <a href="#v1-8-0">v1.8.0</a> <a href="#v1-7-4">v1.7.4</a> <a href="#v1-7-2">v1.7.2</a> <a href="#announcement-2026-06-09">Jun 9 · site launch</a> <a href="#v1-7-1">v1.7.1</a> <a href="#v1-6-5">v1.6.5</a> <a href="#v1-6-0">v1.6.0</a> <a href="#v1-5-0">v1.5.0</a></nav>
       </div>
     </section>
 
@@ -98,6 +98,91 @@
           To add a news post: copy an <article> block below, paste it at the TOP
           of this list, and edit the date, title, tag, and text.
         -->
+
+        <article class="news-card" id="android-launch-2026-10-15">
+          <div class="news-meta">
+            <time datetime="2026-10-15">October 15, 2026</time>
+            <span class="news-tag">Announcement</span>
+          </div>
+          <h2>BudgetArk is on Google Play</h2>
+          <p>
+            The Android closed test is over. BudgetArk is now in production on Google Play, so
+            anyone can <a href="https://play.google.com/store/apps/details?id=com.budgetark.app" target="_blank" rel="noopener">install it from the store</a>
+            without joining a group or opting in to anything. It is the same app as on iOS: the
+            same five tabs, the same encrypted on-device storage with no account and no server,
+            the same six languages, free with no subscription - plus the Android home-screen
+            Quick Entry widget. If you were in the closed test there is nothing to do; the
+            production release reaches your phone as a normal update and your data stays where
+            it is. Thank you to everyone who tested and sent feedback - the bank-connection
+            work in v1.11.1 below came straight out of those reports.
+          </p>
+        </article>
+
+        <article class="news-card" id="v1-11-1">
+          <div class="news-meta">
+            <time datetime="2026-10-15">October 15, 2026</time>
+            <span class="news-tag">Release v1.11.1</span>
+          </div>
+          <h2>Cards, connected</h2>
+          <p>
+            Version 1.11.1 is about the bank connections you already have, and it starts with
+            credit cards. A card on the Debts tab only follows the bank once it is linked to the
+            matching bank account, and until now the only place to do that was inside the card's
+            editor, so a connected card could sit with a balance that never moved. The bank
+            connection wizard and Profile → Bank Connections now offer a Cards on Debts choice
+            right beside the Bridge accounts, point out accounts that look like credit cards,
+            and push the bank's balance onto the card the moment you pick it. One account feeds
+            one card, and a card never doubles as a Bridge balance. The card keep-alive watch
+            shows its work, too: a watched card keeps its status dot while collapsed (green
+            when all is fine), the expanded card says when it was last used and whether a
+            connected account stamps that for you, the editor shows a live "last used · next
+            use by" line as you change the window, and a long-overdue card keeps getting its
+            weekly reminder instead of going quiet after four weeks.
+          </p>
+          <p>
+            Bank connections now tell you what is going on. Sync now answers every tap - synced
+            just now, already synced with the time the next sync opens, the provider asked us to
+            slow down, or reconnect needed - instead of a spinner that goes quiet. Each account
+            shows the date of the bank's own data, and a balance that has not moved in two days
+            is flagged as stale, so you can tell a sleepy bridge from a bank that wants a fresh
+            login. A connection that needs attention raises a banner on the Bridge and Budget
+            tabs that opens the manager, with Later to hide it for the session. Fixing a stuck
+            bank is one tap: a troubled connection's Sync now skips the 15-minute cooldown, and
+            if the SimpleFIN Bridge stops accepting a connection you can paste a new setup token
+            right in the manager to reconnect it in place - accounts, card links, and imported
+            history all stay. And if importing transactions fails partway through a sync, the
+            pass still updates your Bridge and card balances and shows the error instead of
+            silently stalling.
+          </p>
+          <p>
+            The Review Inbox never loses a transaction silently anymore. Sync now says how many
+            rows it skipped and how many your rules auto-approved, and a new Recently skipped
+            list holds every row that left the inbox without being approved in the last 30 days,
+            with the reason - you skipped it, an Always Skip rule, your partner's phone, a match
+            to something already reviewed, or a pending charge the bank stopped reporting - and
+            a Restore button. A restored row is never skipped automatically again. Paychecks
+            also stop piling on top of the plan: a recurring income can name its earner and how
+            often they are paid, the inbox asks whose paycheck a deposit is (and remembers the
+            payroll merchant), and the month blends what has landed with the estimate for the
+            checks still to come - after the first of two checks half the estimate still counts,
+            and once both arrive the month shows what was really paid. The per-person report
+            under Profile → People shows each earner's income beside their spending, with a net
+            line.
+          </p>
+          <p>
+            The Profile tab is shorter with nothing taken away: thirteen section cards are now
+            eight. People, Businesses, and Help are one row each, with their reports, the
+            tab-by-tab tour, the Update spotlight, and Redo onboarding inside the sheets they
+            open. Categories, People, and Businesses share one Organize header, the Ship's Log
+            line rides on your name card, Automatic Backups joined the Export &amp; Backups
+            sheet, Bank Connections says how many transactions are waiting in the inbox,
+            Partner Sync is a single Sync Now row with an Auto pill and a ⋯ menu for Home Wi-Fi
+            and Unpair, and Settings folds up behind a More settings row with Check for Updates
+            always showing. On the Bridge, the Purchase Plans card opens on just its combined
+            progress bar, with the individual plans behind a Show plans tap. This update
+            arrives over the air on every 1.11.0 install - no store update needed.
+          </p>
+        </article>
 
         <article class="news-card" id="v1-11-0">
           <div class="news-meta">
@@ -256,10 +341,13 @@
             added: <a href="https://groups.google.com/g/budgetarkandroidtesters/" target="_blank" rel="noopener">join the tester group</a>,
             <a href="https://play.google.com/apps/testing/com.budgetark.app" target="_blank" rel="noopener">become a tester</a> on the Play
             opt-in page, and install from Google Play - all with the same Google account you
-            use on the Play Store. The full steps are on the
-            <a href="index.html#android-test">home page</a>. Testing helps the public launch
-            arrive sooner, and bug reports and ideas are welcome through Send Feedback on the
-            Profile tab.
+            use on the Play Store. The full steps are on the home page. Testing helps the
+            public launch arrive sooner, and bug reports and ideas are welcome through Send
+            Feedback on the Profile tab.
+          </p>
+          <p>
+            <em>Update, October 15: the closed test has ended and BudgetArk is
+            <a href="#android-launch-2026-10-15">on Google Play for everyone</a>.</em>
           </p>
         </article>
 
