@@ -74,8 +74,14 @@
   </url>
   <url>
     <loc>https://budgetark.app/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://budgetark.app/support.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

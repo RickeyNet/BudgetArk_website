@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="description" content="Get help with BudgetArk - report a bug or request a feature on GitHub, email support, or use Send Feedback inside the app. Plus what to include so we can fix it fast.">
+  <title>Support - BudgetArk</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <link rel="canonical" href="https://budgetark.app/support.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BudgetArk">
+  <meta property="og:url" content="https://budgetark.app/support.html">
+  <meta property="og:title" content="Support - BudgetArk">
+  <meta property="og:description" content="Get help with BudgetArk - report a bug or request a feature on GitHub, email support, or use Send Feedback inside the app.">
+  <meta property="og:image" content="https://budgetark.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BudgetArk - free, private, offline-first budgeting and debt payoff">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@budgetark">
+  <meta name="twitter:title" content="Support - BudgetArk">
+  <meta name="twitter:description" content="Get help with BudgetArk - report a bug or request a feature on GitHub, email support, or use Send Feedback inside the app.">
+  <meta name="twitter:image" content="https://budgetark.app/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "BudgetArk Support",
+    "url": "https://budgetark.app/support.html",
+    "description": "How to get help with BudgetArk: GitHub issues, email, and Send Feedback inside the app.",
+    "about": { "@id": "https://budgetark.app/#org" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://budgetark.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://budgetark.app/support.html" }
+      ]
+    }
+  }
+  </script>
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash of the default.
+    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
+    // their system color scheme.
+    try {
+      var saved = localStorage.getItem("budgetark-site-theme");
+      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30">
+        Budget<span class="logo-accent">Ark</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-drop-btn" aria-expanded="false" aria-controls="tools-menu">Tools <span class="caret" aria-hidden="true"></span></button>
+          <ul class="dropdown-menu" id="tools-menu">
+            <li><a href="calculators.html">All calculators</a></li>
+            <li><a href="calculators/compound-interest.html">📈 Compound interest</a></li>
+            <li><a href="calculators/loan-mortgage.html">🏠 Loan &amp; mortgage</a></li>
+            <li><a href="calculators/refinance-break-even.html">🔁 Refinance break-even</a></li>
+            <li><a href="calculators/debt-payoff.html">⚓ Debt payoff planner</a></li>
+            <li><a href="calculators/what-if-spending.html">🧭 What if I stopped spending on...</a></li>
+            <li><a href="calculators/take-home-pay.html">🧾 US take-home pay</a></li>
+            <li><a href="calculators/emergency-fund.html">⛵ Emergency fund</a></li>
+            <li><a href="calculators/sinking-fund.html">🛶 Plan a purchase</a></li>
+            <li><a href="calculators/currency-exchange.html">💱 Currency exchange</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#themes">Themes</a></li>
+        <li><a href="index.html#mission">Mission</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="index.html#download" class="btn btn-small">Get the App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">ALL HANDS</p>
+        <h1>Support</h1>
+        <p class="page-hero-sub">Found a bug, have an idea, or stuck on something? BudgetArk is built by one person, and every message gets read. Pick the channel that fits.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <ul class="support-grid">
+          <li class="feature-card support-card">
+            <div class="feature-icon" aria-hidden="true">🐞</div>
+            <h2>Bugs and feature requests</h2>
+            <p>Open an issue on GitHub. It is the best place for anything that should be fixed or added: the thread stays public, so anyone with the same problem can find it, and the fix gets linked back when it ships.</p>
+            <a href="https://github.com/RickeyNet/BudgetArk/issues" class="btn btn-primary btn-small" target="_blank" rel="noopener">Open an issue on GitHub</a>
+          </li>
+          <li class="feature-card support-card">
+            <div class="feature-icon" aria-hidden="true">✉️</div>
+            <h2>Email</h2>
+            <p>For anything you would rather not post publicly, or if you do not have a GitHub account. The address is written out below so you can copy it if the link does not open your mail app.</p>
+            <p class="support-address"><a href="mailto:budgetark.support@gmail.com">budgetark.support@gmail.com</a></p>
+          </li>
+          <li class="feature-card support-card">
+            <div class="feature-icon" aria-hidden="true">📱</div>
+            <h2>From inside the app</h2>
+            <p>Open the Profile tab and tap Send Feedback, right under your name. It drafts the email for you and fills in your app version and phone platform, which is exactly what a bug report needs.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section support-notes">
+      <div class="container">
+        <div class="legal">
+          <h2>What to include in a bug report</h2>
+          <ul>
+            <li><strong>Your app version</strong> - shown at the bottom of the Profile tab. Send Feedback in the app adds it automatically.</li>
+            <li><strong>Your phone and system version</strong> - for example "iPhone 15, iOS 26" or "Pixel 8, Android 16".</li>
+            <li><strong>What you did, what you expected, and what happened instead.</strong> A screenshot helps a lot. Cover any amounts you would rather keep private; the picture is just as useful without them.</li>
+            <li><strong>Whether it happens every time</strong>, or only after something specific like a bank sync, a theme change, or an update.</li>
+          </ul>
+          <p>
+            Please do not send a backup file. BudgetArk never has access to your data, and a bug
+            report should not change that. If a fix needs more detail, we will ask for exactly
+            what is required and nothing more.
+          </p>
+
+          <h2>Before you write</h2>
+          <ul>
+            <li>The <a href="index.html#faq">FAQ</a> covers the questions that come up most: privacy, bank connections, Partner Sync, languages, and why the app is free.</li>
+            <li>Inside the app, Profile → Help → Feature guide lists every feature by tab, with steps and a Try it button that takes you straight there.</li>
+            <li>The <a href="news.html">news page</a> lists every release. If something just started happening after an update, the newest post is the place to look.</li>
+            <li>Questions about what the app collects are answered in full in the <a href="privacy.html">privacy policy</a>.</li>
+          </ul>
+
+          <h2>Reviews and the Tip Jar</h2>
+          <p>
+            Reviews on the <a href="https://apps.apple.com/us/app/budgetark/id6760246006?see-all=reviews" target="_blank" rel="noopener">App Store</a>
+            and <a href="https://play.google.com/store/apps/details?id=com.budgetark.app" target="_blank" rel="noopener">Google Play</a>
+            are the single most helpful thing you can do for a free app with no marketing
+            budget. Tip Jar purchases are handled entirely by the store; for a refund, use the
+            store's own refund request, since BudgetArk never sees the transaction.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><img src="assets/favicon-32.png" alt="" class="logo-img" width="30" height="30"> Budget<span class="logo-accent">Ark</span></span>
+        <p>Offline-first budgeting. Built for the storm.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="calculators.html">Tools</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/budgetark" target="_blank" rel="noopener">X</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

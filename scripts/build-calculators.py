@@ -294,7 +294,7 @@ def footer(prefix):
         <li><a href="{prefix}privacy.html">Privacy Policy</a></li>
         <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://x.com/budgetark" target="_blank" rel="noopener">X</a></li>
-        <li><a href="mailto:budgetark.support@gmail.com">Support</a></li>
+        <li><a href="{prefix}support.html">Support</a></li>
       </ul>
       <p class="footer-copy">© 2026 BudgetArk. All rights reserved.</p>
     </div>

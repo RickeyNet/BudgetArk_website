@@ -8,6 +8,7 @@ Static marketing site for the BudgetArk budgeting app. No build tools, no depend
 index.html      Home page (hero, features, about, download)
 news.html       News & updates feed
 privacy.html    Privacy policy
+support.html    Support page (GitHub issues, email, in-app Send Feedback)
 calculators.html Calculator index (generated)
 calculators/    One page per calculator (generated)
 404.html        Custom not-found page (GitHub Pages serves it automatically)
