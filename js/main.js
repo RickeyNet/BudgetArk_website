@@ -223,7 +223,7 @@ function renderAmbient(themeId) {
 // ---------------------------------------------------------------------------
 
 const THEME_KEY = 'budgetark-site-theme';
-const DEFAULT_THEME = 'forest_gold';
+const DEFAULT_THEME = 'ocean_coral';
 const themeCards = document.querySelectorAll('.theme-card[data-theme]');
 
 function currentTheme() {

@@ -282,11 +282,11 @@ def index_page():
 
     <section class="section course">
       <div class="container course-inner">
+        <p class="course-disclaimer" role="note">{esc(DATA['disclaimer'])}</p>
         <ul class="related-list course-jump" aria-label="Chapters">
 {jump}
         </ul>
-{chapters}        <p class="tool-note lesson-disclaimer">{esc(DATA['disclaimer'])}</p>
-      </div>
+{chapters}      </div>
     </section>
 
     <section class="cta section">

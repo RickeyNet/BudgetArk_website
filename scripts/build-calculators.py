@@ -14,15 +14,13 @@ import json, os, re, sys
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 SITE = 'https://budgetark.app'
-CSP_HASH = "sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso="
+CSP_HASH = "sha256-bBRWKdxdn63XmTXdT67EGaRn9g2IpHZcFz4LOHTHxq8="
 THEME_SCRIPT = """  <script>
     // Apply the saved theme before first paint to avoid a flash of the default.
-    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
-    // their system color scheme.
+    // First-time visitors get Coral.
     try {
       var saved = localStorage.getItem("budgetark-site-theme");
-      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+      document.documentElement.setAttribute("data-theme", saved || "ocean_coral");
     } catch (e) {}
   </script>
 """
@@ -320,8 +318,7 @@ def head(prefix, title, meta, path, ld):
   <link rel="icon" type="image/png" sizes="32x32" href="{prefix}assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="{prefix}assets/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="{prefix}assets/apple-touch-icon.png">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <meta name="theme-color" content="#0b1e24">
   <link rel="canonical" href="{url}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BudgetArk">

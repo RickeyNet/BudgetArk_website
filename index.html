@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-bBRWKdxdn63XmTXdT67EGaRn9g2IpHZcFz4LOHTHxq8='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="description" content="BudgetArk - the offline-first, privacy-focused budgeting app. Track debt, budget monthly, connect your bank on your own terms, watch your net worth, and project your future. Free, no subscription, sixteen themes, your data stays on your device.">
   <title>BudgetArk - Free, Private Budgeting &amp; Debt Payoff App</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <meta name="theme-color" content="#0b1e24">
   <link rel="canonical" href="https://budgetark.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BudgetArk">
@@ -145,12 +144,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script>
     // Apply the saved theme before first paint to avoid a flash of the default.
-    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
-    // their system color scheme.
+    // First-time visitors get Coral.
     try {
       var saved = localStorage.getItem("budgetark-site-theme");
-      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+      document.documentElement.setAttribute("data-theme", saved || "ocean_coral");
     } catch (e) {}
   </script>
 </head>
@@ -381,7 +378,7 @@
               <span class="t-btn"></span>
               <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
             </span>
-            <span class="theme-name">Forest Gold <em>· dark default</em></span>
+            <span class="theme-name">Forest Gold</span>
           </button>
 
           <button type="button" class="theme-card" data-theme="neon_purple" aria-pressed="false" style="--t-bg:#0a0e1a; --t-card:#131829; --t-border:#1e2642; --t-accent:#6c5ce7; --t-text:#e8eaf6; --t-dim:#7986cb; --t-good:#00e676;">
@@ -465,7 +462,7 @@
               <span class="t-btn"></span>
               <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
             </span>
-            <span class="theme-name">The Ark <em>· light default</em></span>
+            <span class="theme-name">The Ark</span>
           </button>
 
           <button type="button" class="theme-card" data-theme="ocean_coral" aria-pressed="false" style="--t-bg:#0b1e24; --t-card:#112e35; --t-border:#1a4450; --t-accent:#f08a65; --t-text:#e0d4bc; --t-dim:#7a9a8a; --t-good:#8abb6a;">
@@ -479,7 +476,7 @@
               <span class="t-btn"></span>
               <span class="t-tabs"><i></i><i class="on"></i><i></i><i></i><i></i></span>
             </span>
-            <span class="theme-name">Coral</span>
+            <span class="theme-name">Coral <em>· default</em></span>
           </button>
 
           <button type="button" class="theme-card" data-theme="slate" aria-pressed="false" style="--t-bg:#323437; --t-card:#3d3f43; --t-border:#515458; --t-accent:#e2b714; --t-text:#d1d0c5; --t-dim:#9a9ca0; --t-good:#7cbf6b;">

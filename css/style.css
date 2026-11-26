@@ -180,7 +180,10 @@ html[data-theme="deepforest"] {
   --accent-text: #06100d;
 }
 
-html[data-theme="ocean_coral"] {
+/* Coral is the default theme: the head script sets it for first-time visitors,
+   and :not([data-theme]) covers pages viewed with JavaScript off. */
+html[data-theme="ocean_coral"],
+html:not([data-theme]) {
   --parchment: #0b1e24;
   --parchment-deep: #0e252c;
   --card: #112e35;
@@ -567,7 +570,7 @@ a:hover { text-decoration: underline; }
   gap: 0.5rem;
 }
 .logo:hover { text-decoration: none; }
-.logo-accent { color: var(--green); }
+.logo-accent { color: var(--wood); }
 .logo-img {
   width: 30px;
   height: 30px;
@@ -712,12 +715,12 @@ a:hover { text-decoration: underline; }
 
 .btn-small {
   padding: 0.5rem 1.1rem !important;
-  background: var(--green);
-  color: var(--parchment) !important;
+  background: var(--wood);
+  color: var(--accent-text) !important;
   border-radius: 10px;
   font-family: var(--font-body);
 }
-.btn-small:hover { background: var(--green-dark); }
+.btn-small:hover { background: var(--wood-dark); }
 
 /* ---------- Hero ---------- */
 
@@ -1817,7 +1820,17 @@ input[type="range"] {
 .course-text strong { color: var(--wood-deep); font-size: 1.04rem; }
 .course-text span { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; }
 .course-min { flex: none; color: var(--ink-soft); font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
-.course .lesson-disclaimer { margin-top: 2.5rem; }
+.course-disclaimer {
+  margin: 0 0 2rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
 
 @media (max-width: 560px) {
   .lesson-pager { grid-template-columns: 1fr; }

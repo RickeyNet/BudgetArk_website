@@ -130,9 +130,9 @@ screenshot, so regenerate it the same way if the branding or screenshots change.
 
 ## Default theme and Content Security Policy
 
-First-time visitors get Forest Gold or The Ark depending on their system
-color scheme; a theme picked on the site is remembered in localStorage and wins
-after that. Every page carries a `Content-Security-Policy` meta tag. The inline
+First-time visitors get Coral; a theme picked on the site is remembered in
+localStorage and wins after that. The logo's "Ark" and the nav's Get the App
+button use the selected theme's accent (`--wood`). Every page carries a `Content-Security-Policy` meta tag. The inline
 theme script is allowed by its SHA-256 hash, so if you edit that script, the
 hash in every page's CSP tag must be recomputed (same script on all pages).
 

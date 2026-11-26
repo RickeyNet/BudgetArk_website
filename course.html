@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Sy7OSgkv+iC55Dcv4tJ4uLYyKO8HA7nQAcxLUzNqGso='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-bBRWKdxdn63XmTXdT67EGaRn9g2IpHZcFz4LOHTHxq8='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://open.er-api.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="description" content="A free personal finance course from BudgetArk: 24 short lessons in 5 chapters covering budgeting basics, debt payoff, saving, investing, and long-term planning. Read it all here, no signup.">
   <title>Captain's Course: Free Personal Finance Lessons - BudgetArk</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7eedd">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111410">
+  <meta name="theme-color" content="#0b1e24">
   <link rel="canonical" href="https://budgetark.app/course.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BudgetArk">
@@ -210,12 +209,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script>
     // Apply the saved theme before first paint to avoid a flash of the default.
-    // First-time visitors get Forest Gold (dark) or The Ark (light) to match
-    // their system color scheme.
+    // First-time visitors get Coral.
     try {
       var saved = localStorage.getItem("budgetark-site-theme");
-      var light = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-      document.documentElement.setAttribute("data-theme", saved || (light ? "ark_parchment" : "forest_gold"));
+      document.documentElement.setAttribute("data-theme", saved || "ocean_coral");
     } catch (e) {}
   </script>
 </head>
@@ -275,6 +272,7 @@
 
     <section class="section course">
       <div class="container course-inner">
+        <p class="course-disclaimer" role="note">BudgetArk lessons reflect one app's approach to personal money management. The author is not a licensed financial advisor, accountant, or attorney. This is general education and opinion, not advice for your situation. For big decisions, talk to a qualified professional.</p>
         <ul class="related-list course-jump" aria-label="Chapters">
           <li><a href="#ch1"><span aria-hidden="true">⛵</span> Setting Sail</a></li>
           <li><a href="#ch2"><span aria-hidden="true">🔨</span> Patching the Hull</a></li>
@@ -557,7 +555,6 @@
           </li>
           </ol>
         </section>
-        <p class="tool-note lesson-disclaimer">BudgetArk lessons reflect one app's approach to personal money management. The author is not a licensed financial advisor, accountant, or attorney. This is general education and opinion, not advice for your situation. For big decisions, talk to a qualified professional.</p>
       </div>
     </section>
 
