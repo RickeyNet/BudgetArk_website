@@ -2051,6 +2051,10 @@ input[type="range"] {
 .release-list li::marker { color: var(--wood); }
 .release-list strong { color: var(--ink); font-weight: 600; }
 
+/* Release posts on the news page: one line per note, then a link to the rest */
+.news-release-list { gap: 0.35rem; }
+.news-card .news-more { margin-top: 0.9rem; font-weight: 600; }
+
 /* ---------- Legal / prose pages ---------- */
 
 .legal {

@@ -96,6 +96,12 @@
         <!--
           To add a news post: copy an <article> block below, paste it at the TOP
           of this list, and edit the date, title, tag, and text.
+
+          Release posts: put an empty pair of markers under the title, with the
+          version number in the opening one (see any release post below). Then
+          run scripts/build-release-notes.py, which fills in one line per
+          release note and the link to the full notes. Text between the markers
+          is regenerated on every run, so do not edit it by hand.
         -->
 
         <article class="news-card" id="course-2026-11-25">
@@ -126,69 +132,42 @@
             <span class="news-tag">Release v1.11.2</span>
           </div>
           <h2>Nothing fails quietly</h2>
-          <p>
-            Version 1.11.2 starts with a user report: refunds were being counted as income. When
-            money comes back for something you returned, tick "This is a refund" on the deposit
-            in the Review Inbox and pick the category the purchase was in. It lowers that
-            category's spending for the month and stays out of your income, and a store you have
-            an "always" rule for gets its refunds filed that way for you. Refunds you already
-            filed as income can be fixed by opening the entry and ticking the same box.
-            Paychecks got tidier too: filing a bank deposit as someone's paycheck used to add a
-            second income row under the bank's long description. Now each person's income stays
-            one line under the name you gave it, showing what has been deposited so far plus the
-            estimate for the checks still to come. Tap it to see each deposit by date. The
-            totals are the same as before; only the list is cleaner.
-          </p>
-          <p>
-            Businesses can now take in money as well as spend it. A deposit in the Review Inbox
-            has the same Business picker an expense does, and so does income you add by hand.
-            Once a business has income, your budget counts just its profit for the month - what
-            it took in minus what it spent - and nothing in a month it runs at a loss, and its
-            bills stop counting as your personal spending. The business report shows income next
-            to expenses with the net, and the CSV export includes the income rows. You can
-            create a business right from the Add Entry form, and each business's line in the
-            income box opens with + Income and + Expense buttons. Rental properties get tenants:
-            tick Rental property on a business under Profile → Businesses, add who rents from
-            you and their monthly rent, and rent is added to what each tenant owes on its due
-            day. Any income you assign to the tenant pays it down, a short payment leaves the
-            rest owing, and a tenant who pays ahead carries a credit. You can raise the rent
-            from a chosen month, add a late fee or a one-off charge, catch up a tenant who
-            started in the past, and mark one as moved out. Loans in Owed to You can now be
-            removed, with or without deleting the expense behind them.
-          </p>
-          <p>
-            The release is named for the rest of it. If a debt payment can't be saved, the
-            amount you typed stays in the box with a note instead of vanishing as if it had been
-            recorded. Adding, editing, or deleting a debt that can't be saved says so and keeps
-            the form open, a failed bank sync from the Review Inbox tells you, a currency
-            conversion that stops partway warns you, and a partner sync that breaks shows Sync
-            Failed instead of going back to idle. A tab that can't read your data shows a notice
-            with Try again instead of looking empty, and the account editor points at each field
-            that needs fixing instead of doing nothing. Destructive actions got safer: exporting
-            an encrypted backup asks for the password twice, a wrong password on import can be
-            retried in place, Reset All Data names everything it removes and offers an export
-            first, a Replace import or backup restore saves a safety copy before it overwrites
-            anything, and deleting a Bridge account now asks first and offers Undo. Quick debt
-            payments and savings changes offer Undo as well, and the Review Inbox asks before
-            approving or skipping a whole batch.
-          </p>
-          <p>
-            Every theme is easier to read. Text on accent-colored buttons was hard to read in
-            eight of the fifteen themes, starting with the Next button on the first setup
-            screen; buttons, chips, badges, and checkmarks now use each theme's own button text
-            color, and the red, amber, and green buttons follow the same rule. Colored figures
-            and small grey captions are stronger across the board, with Rose changing the most,
-            and the phone's clock and battery icons turn dark on the light themes instead of
-            disappearing. The Classic theme is now called 1998; if you had it selected you still
-            do. Setup now starts by asking for your language and ends by asking whether you want
-            the guided tour, and a fresh install no longer opens What's New on top of it.
-            Buttons fit in German and Russian on small phones, entries inside a spending
-            category are full-height tap targets, and the Debts tab shows your first debt
-            without scrolling. The "Open the calculator" buttons in the Captain's Course now
-            open the right calculator instead of just closing the lesson, the debt due prompt's
-            mute button reads "Don't remind me this month", and update pop-ups show one-line
-            headlines with the full notes a tap away.
-          </p>
+          <!-- release:1.11.2 -->
+          <ul class="release-list news-release-list">
+            <li>Refunds are no longer counted as income</li>
+            <li>Paychecks update your income line instead of adding new ones</li>
+            <li>Payments you receive can be assigned to a business</li>
+            <li>A business only adds to your income when it makes money</li>
+            <li>Running a business by hand is simpler</li>
+            <li>Rental properties get tenants</li>
+            <li>Loans can be removed from Owed to You</li>
+            <li>Approved transactions can be changed without leaving the Review Inbox</li>
+            <li>Nothing fails quietly anymore</li>
+            <li>Encrypted backups are harder to get wrong</li>
+            <li>Reset All Data tells you everything it removes</li>
+            <li>Deleting a Bridge account takes two steps</li>
+            <li>The 'Open the calculator' buttons in lessons open the calculator</li>
+            <li>The debt due prompt's mute button says what it does</li>
+            <li>A fresh install no longer opens What's New over the welcome tour</li>
+            <li>Buttons and checkmarks on the accent color are readable in every theme</li>
+            <li>The clock, signal and battery icons at the top of the screen are visible in the light themes</li>
+            <li>Colored text is readable on cards in every theme</li>
+            <li>Small grey text is easier to read in every theme</li>
+            <li>The Classic theme is now called 1998, and its yellow, green and teal text is readable</li>
+            <li>Entries inside a spending category are easier to tap</li>
+            <li>Setup no longer runs straight into the guided tour</li>
+            <li>Replacing your data now keeps a way back</li>
+            <li>Quick actions can be taken back</li>
+            <li>The account editor tells you what's wrong</li>
+            <li>A tab that can't read your data says so</li>
+            <li>Setup starts by asking for your language</li>
+            <li>The Debts tab gets to your debts sooner, and its shortcuts go where you expect</li>
+            <li>Buttons fit in German and Russian on small phones</li>
+            <li>Update pop-ups are shorter</li>
+            <li>Only one Update Ready message appears</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-11-2">Full release notes for v1.11.2</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="android-launch-2026-10-15">
@@ -216,64 +195,21 @@
             <span class="news-tag">Release v1.11.1</span>
           </div>
           <h2>Cards, connected</h2>
-          <p>
-            Version 1.11.1 is about the bank connections you already have, and it starts with
-            credit cards. A card on the Debts tab only follows the bank once it is linked to the
-            matching bank account, and until now the only place to do that was inside the card's
-            editor, so a connected card could sit with a balance that never moved. The bank
-            connection wizard and Profile → Bank Connections now offer a Cards on Debts choice
-            right beside the Bridge accounts, point out accounts that look like credit cards,
-            and push the bank's balance onto the card the moment you pick it. One account feeds
-            one card, and a card never doubles as a Bridge balance. The card keep-alive watch
-            shows its work, too: a watched card keeps its status dot while collapsed (green
-            when all is fine), the expanded card says when it was last used and whether a
-            connected account stamps that for you, the editor shows a live "last used · next
-            use by" line as you change the window, and a long-overdue card keeps getting its
-            weekly reminder instead of going quiet after four weeks.
-          </p>
-          <p>
-            Bank connections now tell you what is going on. Sync now answers every tap - synced
-            just now, already synced with the time the next sync opens, the provider asked us to
-            slow down, or reconnect needed - instead of a spinner that goes quiet. Each account
-            shows the date of the bank's own data, and a balance that has not moved in two days
-            is flagged as stale, so you can tell a sleepy bridge from a bank that wants a fresh
-            login. A connection that needs attention raises a banner on the Bridge and Budget
-            tabs that opens the manager, with Later to hide it for the session. Fixing a stuck
-            bank is one tap: a troubled connection's Sync now skips the 15-minute cooldown, and
-            if the SimpleFIN Bridge stops accepting a connection you can paste a new setup token
-            right in the manager to reconnect it in place - accounts, card links, and imported
-            history all stay. And if importing transactions fails partway through a sync, the
-            pass still updates your Bridge and card balances and shows the error instead of
-            silently stalling.
-          </p>
-          <p>
-            The Review Inbox never loses a transaction silently anymore. Sync now says how many
-            rows it skipped and how many your rules auto-approved, and a new Recently skipped
-            list holds every row that left the inbox without being approved in the last 30 days,
-            with the reason - you skipped it, an Always Skip rule, your partner's phone, a match
-            to something already reviewed, or a pending charge the bank stopped reporting - and
-            a Restore button. A restored row is never skipped automatically again. Paychecks
-            also stop piling on top of the plan: a recurring income can name its earner and how
-            often they are paid, the inbox asks whose paycheck a deposit is (and remembers the
-            payroll merchant), and the month blends what has landed with the estimate for the
-            checks still to come - after the first of two checks half the estimate still counts,
-            and once both arrive the month shows what was really paid. The per-person report
-            under Profile → People shows each earner's income beside their spending, with a net
-            line.
-          </p>
-          <p>
-            The Profile tab is shorter with nothing taken away: thirteen section cards are now
-            eight. People, Businesses, and Help are one row each, with their reports, the
-            tab-by-tab tour, the Update spotlight, and Redo onboarding inside the sheets they
-            open. Categories, People, and Businesses share one Organize header, the Ship's Log
-            line rides on your name card, Automatic Backups joined the Export &amp; Backups
-            sheet, Bank Connections says how many transactions are waiting in the inbox,
-            Partner Sync is a single Sync Now row with an Auto pill and a ⋯ menu for Home Wi-Fi
-            and Unpair, and Settings folds up behind a More settings row with Check for Updates
-            always showing. On the Bridge, the Purchase Plans card opens on just its combined
-            progress bar, with the individual plans behind a Show plans tap. This update
-            arrives over the air on every 1.11.0 install - no store update needed.
-          </p>
+          <!-- release:1.11.1 -->
+          <ul class="release-list news-release-list">
+            <li>A shorter Profile tab, with nothing taken away</li>
+            <li>The Profile tab keeps getting shorter: thirteen section headers are now eight</li>
+            <li>Paychecks now adjust the plan instead of piling on top of it</li>
+            <li>Connected credit cards track their own balance - and now you can set that up where you connect the bank</li>
+            <li>The card keep-alive watch finally shows its work</li>
+            <li>Bank sync keeps your balances moving even when the Review Inbox hiccups</li>
+            <li>Bank connections tell you what's going on</li>
+            <li>Fix a stuck bank in one tap</li>
+            <li>The Bridge's Purchase Plans card is a glance again</li>
+            <li>The Review Inbox never loses a transaction silently anymore</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-11-1">Full release notes for v1.11.1</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-11-0">
@@ -282,58 +218,22 @@
             <span class="news-tag">Release v1.11.0</span>
           </div>
           <h2>Welcome aboard, in your language</h2>
-          <p>
-            Version 1.11.0 is out on the App Store and Google Play. It is the biggest change
-            since launch that touches no numbers at all: BudgetArk now speaks six languages.
-            English is joined by German, Russian, Ukrainian, Swedish, and Norwegian. Every
-            screen, modal, and card across the five tabs, onboarding, achievements, the
-            provider setup guides, the quick-start templates, and the data disclosures follow
-            the language you choose. A new Language row in Profile → Settings, right beside
-            Currency, offers Automatic (follows your phone, falls back to English) plus the six
-            languages. Each one is listed in the language the app is currently showing, with
-            its own name underneath, so if you ever land in a language you cannot read you can
-            still find your way back. Switching re-renders every tab on the spot, re-issues
-            pending reminders in the new language, and refreshes the Android widget; the iOS
-            widget follows your phone's language. The setting stays on your device: it is never
-            synced to a partner or included in an export.
-          </p>
-          <p>
-            The details were worked through rather than left to a machine - informal address
-            throughout, proper one / few / many plurals for Russian and Ukrainian, and global
-            search that matches the translated name of a category or debt as well as the
-            original. A few things stay in English by design: the Captain's Course lessons
-            (the reader says so), the US-only tax tools, release notes, theme names, and the
-            sheet and column names in exported spreadsheets, so a workbook still round-trips.
-          </p>
-          <p>
-            Finding your way around gets easier too. Profile → Help has a new Feature guide: a
-            searchable directory of every feature on your install, grouped by tab. Tap one to
-            see where it lives, a few numbered steps, and a Try it button that takes you
-            straight there. The old Feature tour is now the Update spotlight and only shows
-            what is new in the current release, so it stops replaying slides you have already
-            seen. Profile → Data folds six rows into two: Export (encrypted backup or
-            spreadsheet) and Import (backup file, pasted backup text, spreadsheet, or bank
-            statement). Every date picker in the app - the entry form's one-off date and
-            recurring day, a debt's due day, and the Bill Calendar - now shares one proper
-            calendar grid with a weekday header. That fixes the Bill Calendar's misaligned
-            columns and a day-of-month that could land a bill on the wrong day west of UTC, and
-            it keeps the 29th through 31st pickable in a short month.
-          </p>
-          <p>
-            Four bank-connection fixes ride along, all from user reports. Automatic sync used
-            to arm itself only after you had visited the Connections section of the Profile
-            tab, so a phone that never opened that screen could go days without a refresh; it
-            now arms at launch every time (every six hours automatically, fifteen minutes
-            between manual pulls, as before). A pending charge that posted at a slightly
-            different amount - a tip added at settlement, say - was landing in the inbox twice;
-            the app now recognises the posted twin, corrects an approved entry to the settled
-            amount unless you have edited it yourself, and quietly retires pending rows the
-            bank stops listing without ever swallowing a charge that posts late. The
-            connection wizard's Done screen no longer freezes the app, and the Review Inbox
-            keeps your place after Approve or Skip instead of jumping to the bottom. Because
-            the language support adds native modules, this release comes through the App
-            Store and Google Play rather than over the air - watch for the update prompt.
-          </p>
+          <!-- release:1.11.0 -->
+          <ul class="release-list news-release-list">
+            <li>A Feature guide, so nothing stays hidden</li>
+            <li>The what's-new carousel is now the Update spotlight, and it sticks to the news</li>
+            <li>BudgetArk now speaks German, Russian, Ukrainian, Swedish and Norwegian</li>
+            <li>Search understands every language</li>
+            <li>The Data card on the Profile tab is down to four rows</li>
+            <li>Bank balances refresh on every launch</li>
+            <li>No more double-counted card charges</li>
+            <li>The bank connection wizard no longer freezes the app on its Done screen</li>
+            <li>The Review Inbox keeps your place</li>
+            <li>The Bill Calendar lines up again</li>
+            <li>Every day picker is a real calendar now</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-11-0">Full release notes for v1.11.0</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-10-4">
@@ -342,18 +242,12 @@
             <span class="news-tag">Release v1.10.4</span>
           </div>
           <h2>Every cent counts</h2>
-          <p>
-            A user on a comma-decimal keyboard could not add an expense under one unit of
-            currency: the Add Entry form read "0,94" as 0 and kept the button disabled, and
-            "12,50" was silently saved as 12. Every typed money field in the app - entry
-            amounts, 401(k) contributions and 1099 set-asides, debt balances, rates and
-            minimums, pay and repayment amounts, asset balances, share counts and cost basis,
-            emergency-fund contributions, category limits, and the Hull step's extra payment
-            and milestone targets - now understands a comma as the decimal separator. The
-            blank-input behaviour of every field is unchanged, so validation works exactly as
-            it did. This update arrives over the air on every 1.10 install - no App Store
-            update needed.
-          </p>
+          <!-- release:1.10.4 -->
+          <ul class="release-list news-release-list">
+            <li>Amounts typed with a decimal comma now work everywhere</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-10-4">Full release notes for v1.10.4</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-10-3">
@@ -362,24 +256,13 @@
             <span class="news-tag">Release v1.10.3</span>
           </div>
           <h2>Straight answers</h2>
-          <p>
-            The Hull step's Avalanche-vs-Snowball comparison could say "Not solvable" with a
-            large interest total sitting underneath it - the amount that had accrued before the
-            simulation gave up, which meant nothing. Now the interest column shows a dash for
-            any plan that never finishes, and a note underneath explains why: which debt's
-            minimum payment does not cover its monthly interest (or has no minimum logged at
-            all), and what to do about it - raise the minimum or add an extra payment. When
-            several debts are underwater it names them all.
-          </p>
-          <p>
-            The Purchase Plans projection chart has left the Bridge card. Every plan row there
-            already prints its ready date, and the lines are straight, so on a glanceable
-            dashboard it was height without information. It still lives in the Charts tab's
-            Plan a Purchase tool, where comparing "one at a time" with "split evenly" is
-            worth a picture. Dependency updates for a couple of tooling advisories round it
-            out; none of them touch the app you install. This update arrives over the air on
-            every 1.10 install - no App Store update needed.
-          </p>
+          <!-- release:1.10.3 -->
+          <ul class="release-list news-release-list">
+            <li>Build Your Ark's Hull step now tells you WHY a payoff plan is 'Not solvable' instead of leaving you guessing</li>
+            <li>The Purchase Plans card on your Bridge is shorter: the projection chart has moved off it</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-10-3">Full release notes for v1.10.3</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-10-2">
@@ -388,37 +271,16 @@
             <span class="news-tag">Release v1.10.2</span>
           </div>
           <h2>Bring in your history</h2>
-          <p>
-            Bank connections are great from the day you connect, but everything before that
-            lived only in your bank's website. Now you can bring it in: Profile → Data →
-            Import Bank Statement takes a CSV downloaded from any bank and routes its rows
-            through the same Review Inbox as a live sync. The app finds the header row on its
-            own (Bank of America's summary block and Wells Fargo's headerless files included),
-            guesses which columns are the date, description, and amount, and shows a live
-            preview so you can correct it before anything is imported. Once you confirm a
-            layout for a bank, it's remembered for next time. Re-importing an overlapping
-            range never creates duplicates, and nothing touches your budget until you approve
-            it - same as always.
-          </p>
-          <p>
-            Reviewing months of statement rows at once needed a faster inbox, so it gained a
-            Group by Vendor view: every charge from the same place lands in one group, and a
-            single "Approve all as…" files the lot under one category, with an optional
-            "Always file this vendor here" that sweeps the rest of the inbox too. Imported
-            card and loan payments can now be filed against a debt instead of a bill - pick the
-            debt and Approve becomes Log Payment, which reduces the balance and adds the
-            payment to the Debts tab without double counting it in the budget. If you already
-            logged that payment from the due-day reminder, the app spots the match and quietly
-            retires the bank's copy.
-          </p>
-          <p>
-            Two smaller things: exported Excel workbooks are easier to read, with columns sized
-            to fit, money columns formatted with thousands separators, and each month's
-            transactions collapsible under its subtotal (the file still imports back in
-            unchanged). And the day picker on the entry form is now a real calendar with
-            weekday columns, so "which Tuesday" no longer means counting. This update arrives
-            over the air on every 1.10 install - no App Store update needed.
-          </p>
+          <!-- release:1.10.2 -->
+          <ul class="release-list news-release-list">
+            <li>Import a bank statement</li>
+            <li>The Excel export is easier to read</li>
+            <li>Review Inbox: your debts now appear in the 'Applies to bill' list</li>
+            <li>The Add / Edit Entry sheet's DAY picker is now a real calendar</li>
+            <li>Review the inbox by vendor</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-10-2">Full release notes for v1.10.2</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="android-test-2026-09-02">
@@ -449,34 +311,43 @@
             <span class="news-tag">Release v1.10.1</span>
           </div>
           <h2>Banks that keep up, plans that add up, and lump sum vs. monthly</h2>
-          <p>
-            Two halves to this one. On the bank side, a connected account can now land in
-            any Bridge category - 401k, investment, HSA, not just checking - and the app
-            guesses the right one from the bank's own account name. If a bank on your
-            SimpleFIN bridge needs a fresh login, BudgetArk now says so instead of quietly
-            reporting "last synced 2 hours ago", and when the bank comes back it re-imports
-            the gap on its own (up to 90 days). Two phones on the same bank no longer ask you
-            to review the same transactions twice: approvals and skips travel with partner
-            sync. Also fixed: the wizard's Connected screen could freeze the app on Done, and
-            the setup screen's take-home pay and rent fields no longer hide behind the
-            keyboard.
-          </p>
-          <p>
-            On the planning side, Purchase Plans add up: a summary of everything saved and
-            still to go, snowball-style ordering, one monthly amount split across plans or
-            poured into one at a time, a stacked savings chart, cost per use, what-if chips,
-            and a line showing what the same money would do on your highest-rate debt. The
-            Review Inbox can send a transfer straight to a plan's balance, offers "Always
-            approve as…" after three matching approvals, and flags unusually large charges.
-            The Bridge shows what a savings account earns at its APY, a new Subscription
-            Detective finds recurring charges with no bill on file, and People gains Settle Up
-            for monthly shared expenses. And the Compound Interest Calculator can now compare
-            a lump sum invested once against monthly contributions - what each becomes, what
-            both become together, and the year the monthly plan overtakes the lump sum. The
-            same comparison is live in the
-            <a href="calculators/compound-interest.html">compound interest calculator</a> on
-            this site.
-          </p>
+          <!-- release:1.10.1 -->
+          <ul class="release-list news-release-list">
+            <li>Bank accounts can now land in any Bridge category</li>
+            <li>The form also guesses the category from the bank's own account name</li>
+            <li>Fixed: the connection wizard's 'Connected' screen could freeze the whole app on Done</li>
+            <li>Fixed: connecting a second phone to the same bank asked you to review transactions you had already reviewed on the first one</li>
+            <li>Skipped transactions now travel with partner sync too</li>
+            <li>If one of your banks needs a fresh login on your SimpleFIN Bridge, BudgetArk now tells you</li>
+            <li>And when the bank comes back, the app catches up on its own</li>
+            <li>Your Purchase Plans now add up</li>
+            <li>Rank your plans the way you'd rank debts</li>
+            <li>Then set one monthly amount for all of them</li>
+            <li>Plan a Purchase now shows what a thing really costs</li>
+            <li>Every plan that's getting money this month now says what that money would do on your highest-rate debt instead</li>
+            <li>Every plan row now carries two little what-ifs</li>
+            <li>And a cost per use</li>
+            <li>And a picture of it all: a progress chart under the plan controls draws one line per plan, showing how much of its own target is saved month by month on a shared 0-100% scale, with a dot where each plan reaches 100%</li>
+            <li>Review Inbox: moved money into savings for a purchase plan?</li>
+            <li>Review Inbox: after you've filed the same store into the same category three times, the row offers 'Always approve as ...' - one tap makes it a rule, so future imports sort themselves</li>
+            <li>Bridge: tell a savings or checking account its APY and the row shows what it earns a year</li>
+            <li>Charts: Subscription Detective</li>
+            <li>Review Inbox: charges far above what a store usually bills you, or a large first-ever charge from a new merchant, now carry a 'worth a look' line so nothing surprising slips through on Approve</li>
+            <li>Lent someone money?</li>
+            <li>Charts: your Personal Inflation Rate</li>
+            <li>Budget: Until Payday</li>
+            <li>Bridge: where your net worth is heading</li>
+            <li>Charts: Quarterly Taxes</li>
+            <li>Profile → Partner Sync: recent activity</li>
+            <li>Switching from YNAB, Mint or Monarch?</li>
+            <li>Fixed: spending exactly up to a category limit no longer triggers the Spending Pace alert ('over by $0')</li>
+            <li>Fixed: during setup, the take-home pay, rent and display-name fields could hide behind the keyboard while you typed</li>
+            <li>Profile → About now links to the BudgetArk website, budgetark.app, next to the GitHub link</li>
+            <li>Fixed: on iPhone, tapping the MONTH field on the Add / Edit Entry sheet did nothing</li>
+            <li>The Compound Interest Calculator on the Charts tab can now compare a lump sum with monthly contributions</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-10-1">Full release notes for v1.10.1</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-10-0">
@@ -485,49 +356,50 @@
             <span class="news-tag">Release v1.10.0</span>
           </div>
           <h2>Bills that settle themselves, cards that track themselves, and sturdier sync</h2>
-          <p>
-            Bills that change every month now settle themselves. Set electric or water up
-            once with your best estimate; when the real charge arrives - from your bank or
-            typed in with the new "Log actual" button - file it against the bill and the actual
-            replaces the estimate everywhere, with no double counting. Tick "Always do this"
-            and next month's charge is filed automatically; when actuals drift, editing the
-            bill offers the three-month average in one tap. The Review Inbox can even spot a
-            merchant that has charged monthly for three months and offer to create the bill
-            for you. Credit cards on the Debts tab can now follow the connected bank account
-            behind them, so the balance updates after every sync - with a switch to turn
-            mirroring off, and the payoff ring never going negative when you charge more than
-            the original balance.
-          </p>
-          <p>
-            The Budget tab learned a lot: a Limits sheet that sets every category at once
-            ("Copy last month", "Use 3-month averages"), pace marks on every limited category
-            that turn amber when you're spending faster than the month allows, a Spending Pace
-            card that says so plainly, and real dates on entries instead of everything landing
-            on the 15th. The Add Entry form remembers descriptions you've used, switches
-            category when it recognises a name, and has "Save + another"; a "+ New" pill
-            creates a category on the spot, built-in categories can be hidden, and an expense
-            can be split across several people with per-person totals that still add up. The
-            Bridge gains a "This month" card with your spending pace, last three entries, and
-            a quick add. New installs open with the mission statement, can start from a
-            quick-start budget template (single, couple, debt-heavy, zero-based) sized to your
-            pay and rent, and are asked about Tracking Reminders during setup. After the
-            occasional win, a small Tip Jar note explains that tips are optional and unlock
-            nothing.
-          </p>
-          <p>
-            Under the hood, a deep pass over storage, sync, and restore. Fixed: a save on the
-            Budget or Bridge tab could undo what a partner or bank sync had just written;
-            removed budget limits never reached a partner's phone; restoring a backup now
-            tells the next sync to start from scratch; and on Android, exporting a backup over
-            about 1 MB could stall the app - backups are now shared as files with no size
-            limit. Bank transactions match their posted versions even when the bank rewrites
-            the description, spreadsheet exports carry keep-alive settings, applied payment
-            amounts, and fund holdings, lesson progress rides along in backups, the app asks
-            before the first exchange-rate fetch, storage errors now show a message where
-            they happen, and plaintext export files are deleted the moment the share sheet
-            closes. About 600 new automated checks cover storage, sync, bank import, and every
-            calculator. This one is a store update on both platforms.
-          </p>
+          <!-- release:1.10.0 -->
+          <ul class="release-list news-release-list">
+            <li>BudgetArk has a new icon: the ark under a sunburst, drawn in the same parchment-and-ink style as The Ark theme</li>
+            <li>Bills that change every month, like electric and water, now settle themselves</li>
+            <li>It works without a bank link too</li>
+            <li>Tick 'Always do this' when you approve and the merchant rule remembers the bill</li>
+            <li>When a bill's real charges drift from your estimate, editing the bill shows what the last three actuals averaged, with a one-tap 'Use $X'</li>
+            <li>The bill link syncs with the entry, rides your backups</li>
+            <li>The Bridge now carries your budget's pulse</li>
+            <li>New categories, right where you need them</li>
+            <li>Built-in categories can now be hidden</li>
+            <li>The Add Entry form now remembers</li>
+            <li>The bank can now teach the budget its bills</li>
+            <li>All your limits on one screen</li>
+            <li>Budget limits now know what day it is</li>
+            <li>Entries now have a real date</li>
+            <li>Credit cards on the Debts tab can now follow your bank</li>
+            <li>This is the same link that powers the card keep-alive watch</li>
+            <li>You stay in control</li>
+            <li>Charging more than the card's original balance no longer sends the payoff ring negative</li>
+            <li>Balances arrive the way your provider reports them, as the amount you owe</li>
+            <li>Private like the rest of Bank Connections: which account feeds which card is remembered on this phone only</li>
+            <li>Expenses can now be assigned to more than one person</li>
+            <li>The Review Inbox and Merchant Rules screens catch up</li>
+            <li>New installs now open with the mission statement</li>
+            <li>Setup can now start from a template</li>
+            <li>New installs are now asked about Tracking Reminders during setup</li>
+            <li>The mission statement also gained an open invitation, in both places</li>
+            <li>Now and then, after a win - a debt payment, a payoff, a bill settled against its budget line</li>
+            <li>Also in this version: a deep pass over how BudgetArk stores, syncs, and restores your data</li>
+            <li>Fixed: saving on the Budget or Bridge tab could quietly undo records a partner sync or bank sync had just written behind the screen</li>
+            <li>Fixed: removing a category budget limit never reached your partner's phone</li>
+            <li>Fixed: restoring from a backup file tells the next partner sync to start from scratch</li>
+            <li>Fixed: on Android, Export My Data could look like it worked</li>
+            <li>Bank connections: a transaction you approved or skipped while pending is matched to its posted version even when the bank rewrites the description, always-approve rules use the bank's own dates, and business/person suggestions follow your rules more reliably</li>
+            <li>Spreadsheet exports now carry card keep-alive settings, the amount each payment actually applied</li>
+            <li>Your lesson progress now rides along in backups and restores</li>
+            <li>Switching display currency explains up front that BudgetArk fetches public exchange rates</li>
+            <li>When something can't be saved - full storage, an unavailable keystore, a failed bank action</li>
+            <li>Plaintext export files are deleted the moment the share sheet closes; nothing lingers in the app's cache</li>
+            <li>Under the hood: about 600 new automated checks</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-10-0">Full release notes for v1.10.0</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-9-3">
@@ -536,14 +408,16 @@
             <span class="news-tag">Release v1.9.3</span>
           </div>
           <h2>Change your bank account choices anytime</h2>
-          <p>
-            The account mapping you picked when you first connected a bank was one-shot -
-            not anymore. Every linked account in the Connections manager now has its own
-            "Import transactions" switch and "Balance updates" picker, so you can map an
-            account to the Bridge (or create a new one inline) whenever you like. Also
-            fixed: pending bank transactions that occasionally resurfaced as duplicates
-            once they posted, and the Tip Jar can now log a completed tip as a Giving entry.
-          </p>
+          <!-- release:1.9.3 -->
+          <ul class="release-list news-release-list">
+            <li>Fixed: a bank transaction you approved</li>
+            <li>Your bank connection choices are no longer set in stone</li>
+            <li>This unblocks the emergency fund</li>
+            <li>Turning imports on for an account you previously left out fetches its recent history right away, the same as a freshly connected account, and anything already in your budget is never imported twice</li>
+            <li>Tip Jar: after a tip goes through, the thank-you screen offers to add it to your budget as a Giving expense for today - one tap, and it's an ordinary entry you can edit or remove like any other</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-9-3">Full release notes for v1.9.3</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-9-2">
@@ -552,13 +426,15 @@
             <span class="news-tag">Release v1.9.2</span>
           </div>
           <h2>Emergency fund, linked to your real savings</h2>
-          <p>
-            Mark one or more savings accounts on the Bridge as your emergency fund and
-            BudgetArk reads the fund's value straight from those balances - kept current by
-            bank-connection updates. The Keel and Deck milestones in Build Your Ark, the
-            Galley Stocked badge, the Budget tab, and the Charts emergency-fund plan all
-            show the same number. Backups and partner sync carry the designation too.
-          </p>
+          <!-- release:1.9.2 -->
+          <ul class="release-list news-release-list">
+            <li>Your emergency fund can now live in your real savings accounts</li>
+            <li>The linked value follows you everywhere the emergency fund appears</li>
+            <li>Manual contributions pause while accounts are designated, because the accounts ARE the fund</li>
+            <li>The designation is part of your data, like everything else</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-9-2">Full release notes for v1.9.2</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-9-1">
@@ -567,11 +443,17 @@
             <span class="news-tag">Release v1.9.1</span>
           </div>
           <h2>Stability &amp; security fixes - and Android enters closed testing</h2>
+          <!-- release:1.9.1 -->
+          <ul class="release-list news-release-list">
+            <li>Fixed the welcome walkthrough freezing the app on iPhone</li>
+            <li>BudgetArk now handles a struggling phone honestly</li>
+            <li>Under-the-hood security updates to several of the third-party building blocks the app is built with</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-9-1">Full release notes for v1.9.1</a></p>
+          <!-- /release -->
           <p>
-            Fixes an onboarding freeze on some iPhones, storage failures at startup that
-            could re-run onboarding or blank the Profile tab, and patches dependency security
-            advisories. This is also the first build in the Google Play closed test - the
-            public Android launch is getting closer.
+            This is also the first build in the Google Play closed test - the public
+            Android launch is getting closer.
           </p>
         </article>
 
@@ -636,17 +518,60 @@
             <span class="news-tag">Release v1.9.0</span>
           </div>
           <h2>Bank Connections - your bank, on your terms</h2>
-          <p>
-            Bring your own SimpleFIN or Teller credentials and let transactions import
-            themselves. Nothing enters your budget until you approve it in the new Review
-            Inbox, credentials stay encrypted on your device, and BudgetArk still operates
-            no server - it never sits between you and your bank. The same release adds
-            encrypted receipt photos and business expense tracking with a tax-time report,
-            W-2 / 1099 paycheck tagging, assigning spending to people in your household,
-            opt-in tracking reminders that never put amounts on your lock screen, an Android
-            Quick Entry home-screen widget, the Deep Sea ambient theme, and an optional
-            Tip Jar that unlocks nothing because everything is already free.
-          </p>
+          <!-- release:1.9.0 -->
+          <ul class="release-list news-release-list">
+            <li>Connect your bank and let transactions import themselves</li>
+            <li>Two ways to connect</li>
+            <li>Not sure which to pick or how to sign up?</li>
+            <li>A Teller connection can now hold more than one bank</li>
+            <li>Nothing enters your budget without your say-so</li>
+            <li>And those 'always do this' choices are never set in stone</li>
+            <li>Balances stay current</li>
+            <li>No duplicates, ever</li>
+            <li>Private by design</li>
+            <li>Syncing is polite and automatic</li>
+            <li>Also fixed: when both partners' phones confirmed the same debt payment from the due-date reminder, sync could count it twice</li>
+            <li>New: a Tip Jar in Profile</li>
+            <li>New: optional Tracking Reminders (Profile → Tracking Reminders, off unless you turn them on)</li>
+            <li>Tracking Reminders are private like everything else</li>
+            <li>New on Android: a Quick Entry home-screen widget</li>
+            <li>New: track business expenses alongside personal ones</li>
+            <li>New: a tax-time Business Expense Report (Profile → Business Expenses)</li>
+            <li>New: attach receipt photos to budget entries</li>
+            <li>And when you DO want receipts to leave your phone, that's your call</li>
+            <li>New: tell BudgetArk what kind of income you're logging</li>
+            <li>W-2 paychecks: enter your take-home</li>
+            <li>1099 / contractor pay: nothing is withheld from these payments</li>
+            <li>New: watch your accounts rise and fall</li>
+            <li>New: 'Plan a Purchase' on the Charts tab</li>
+            <li>New: a 'What If I Stopped Spending on…' tool on the Charts tab</li>
+            <li>New: a Take-Home Pay calculator on the Charts tab</li>
+            <li>New: a Currency Exchange calculator on the Charts tab</li>
+            <li>New: a Debt-Free Countdown on the Debts tab</li>
+            <li>New: private budget entries</li>
+            <li>New: search everything</li>
+            <li>New: a Cash Flow card on the Budget tab that answers the real question - what's actually safe to spend?</li>
+            <li>The Cash Flow card also keeps you honest month to month</li>
+            <li>New: App Lock (Profile → Settings → App Lock, off unless you turn it on)</li>
+            <li>New: automatic backups</li>
+            <li>Under-the-hood security hardening</li>
+            <li>New theme: Deep Sea (Profile → Appearance)</li>
+            <li>Two more themes join Appearance</li>
+            <li>And four MORE themes round out the fleet, each with its own personality</li>
+            <li>The welcome setup now has Back buttons, so you can step back and change a choice instead of starting over</li>
+            <li>Onboarding is now one flow, start to finish</li>
+            <li>New: a searchable onboarding guide</li>
+            <li>New: a credit card keep-alive watch</li>
+            <li>Fixed entries filing into the wrong month</li>
+            <li>Fixed rare cases where a change you'd just saved could be overwritten a moment later by the app's own background tidying</li>
+            <li>Spreadsheet import is sturdier</li>
+            <li>Partner sync got a reliability pass</li>
+            <li>Snappier all around: switching months on the Budget screen no longer reloads everything, a category with a long bank-imported history shows its first 30 entries with a Show-more button instead of drawing hundreds at once, and the Profile screen was rebuilt under the hood so typing in its forms no longer redraws the whole page</li>
+            <li>Screen readers work again on the appearance and currency pickers</li>
+            <li>Note: connecting via Teller, the Tip Jar, Tracking Reminders, the Quick Entry widget</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-9-0">Full release notes for v1.9.0</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-8-3">
@@ -655,14 +580,18 @@
             <span class="news-tag">Release v1.8.3</span>
           </div>
           <h2>Captain's Course is complete</h2>
-          <p>
-            All 24 lessons across five chapters are now aboard: Stocking the Galley
-            (emergency funds, HYSAs, sinking funds), Catching Wind (compounding, index funds,
-            401(k)/IRA/Roth, asset allocation), and Charting Far Waters (net worth, buy vs.
-            rent, insurance, estate basics) join the first two chapters. The Budget tab's
-            Debt Payments section also got a correctness pass - no more phantom planned rows
-            in past months.
-          </p>
+          <!-- release:1.8.3 -->
+          <ul class="release-list news-release-list">
+            <li>The Captain's Course is complete</li>
+            <li>Lessons that tell you to open an account now name real places to look</li>
+            <li>The index funds lesson now teaches the expense ratio by name and lists real funds with their actual costs</li>
+            <li>Fixed past months on the Budget screen inventing debt entries</li>
+            <li>Fixed 'deleting' a debt payment row on the Budget screen doing nothing while claiming success</li>
+            <li>The final payment that clears a debt no longer vanishes from the Budget screen</li>
+            <li>Debt payments logged late in the evening on the last day of a month now count toward the month you actually paid them in, matching how the due-date reminder already counted them</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-8-3">Full release notes for v1.8.3</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-8-0">
@@ -671,14 +600,19 @@
             <span class="news-tag">Release v1.8.0</span>
           </div>
           <h2>Live stock &amp; crypto holdings on the Bridge</h2>
-          <p>
-            Add tickers under each brokerage on the Bridge and see their market value roll
-            into your net worth. The feature is opt-in and shows a plain-language disclosure
-            first: only ticker symbols leave your phone - never share counts, balances, or
-            who you are - through a private proxy that stores no portfolio data. Crypto pairs
-            like BTC/USD work too, converted into your display currency. Prices update
-            daily as of v1.8.1.
-          </p>
+          <!-- release:1.8.0 -->
+          <ul class="release-list news-release-list">
+            <li>Track your stocks, ETFs, and crypto, organized by broker</li>
+            <li>Holdings now convert into your chosen currency</li>
+            <li>You decide when prices update</li>
+            <li>Live Holdings stays off until you turn it on</li>
+            <li>Your tickers and share counts sync to your paired partner just like your accounts</li>
+            <li>Holdings are included in your backups</li>
+            <li>Fixed the update pop-ups: the 'What's New' notes and the 'Update Ready' prompt no longer appear stacked on top of each other, and the release notes always show - if an update is published without them, they appear right after it installs</li>
+            <li>Fixed the on-screen keyboard hiding the field you're typing in on pop-up forms across the app</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-8-0">Full release notes for v1.8.0</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-7-4">
@@ -687,12 +621,16 @@
             <span class="news-tag">Release v1.7.4</span>
           </div>
           <h2>Swedish Krona and real currency conversion</h2>
-          <p>
-            SEK joins the currency list, and switching currencies now offers to convert every
-            stored amount at today's rate - or just change the symbol if your numbers are
-            already in the new currency. Default milestone targets are localized for new
-            plans, and achievement progress reads in your own currency.
-          </p>
+          <!-- release:1.7.4 -->
+          <ul class="release-list news-release-list">
+            <li>Added Swedish Krona (SEK) as a currency option in Profile</li>
+            <li>Changing your currency can now convert your existing amounts</li>
+            <li>Converting amounts is only offered when your device isn't paired with a partner, since your data is shared</li>
+            <li>Milestone targets now start in your own currency instead of US dollars</li>
+            <li>Ship's Log badge progress now shows amounts in your selected currency's symbol instead of always using a dollar sign</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-7-4">Full release notes for v1.7.4</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-7-2">
@@ -701,13 +639,24 @@
             <span class="news-tag">Release v1.7.2</span>
           </div>
           <h2>Reliability + sync security</h2>
-          <p>
-            Partner sync moves to protocol v2 with the whole message envelope authenticated
-            (both phones need this version to sync again). Net-worth history and custom
-            categories now sync between paired devices, deleted items stay deleted after a
-            sync, backups grew much larger import limits, and a dozen date and timezone edge
-            cases were fixed across budgets and debt payments.
-          </p>
+          <!-- release:1.7.2 -->
+          <ul class="release-list news-release-list">
+            <li>Partner sync messages are now fully authenticated end-to-end, closing a hole where someone on your WiFi could replay captured sync traffic</li>
+            <li>Net worth history now syncs between paired devices</li>
+            <li>Custom categories and your 50/30/20 bucket assignments now sync between paired devices</li>
+            <li>Deletions now stick properly: deleting a debt, entry, goal, or account right before certain screens saved could quietly make the deletion un-undoable and let it reappear on your partner's device</li>
+            <li>Deleting a payment that was larger than the remaining balance no longer inflates the debt past what you ever owed - only the amount that actually reduced the balance is added back</li>
+            <li>Double-tapping 'Yes, log it' on the due-date prompt can no longer record the payment twice</li>
+            <li>Backups got smaller and the import size limits got much bigger</li>
+            <li>Importing a backup in merge mode no longer wipes your net-worth history or rolls back milestone progress to the backup's older state</li>
+            <li>Spreadsheet import now skips invalid rows</li>
+            <li>Due-date reminders and new budget entries now use your local calendar month</li>
+            <li>Annual Report only counts months that have actually happened</li>
+            <li>Payoff strategy comparisons no longer show 'Infinity mo faster' when a plan isn't solvable</li>
+            <li>Send Feedback emails now open pre-filled with a short template</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-7-2">Full release notes for v1.7.2</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="announcement-2026-06-09">
@@ -729,16 +678,19 @@
             <span class="news-tag">Release v1.7.1</span>
           </div>
           <h2>Debt due-date reminders + Captain's Course Chapter 2</h2>
-          <p>
-            Never miss a payment again: every debt can now carry its own payment due day,
-            and a reminder banner on the Budget and Debts tabs shows what's coming up - with
-            a one-tap prompt to log the payment when the day arrives. Captain's Course
-            Chapter 2, <em>Patching the Hull</em>, ships with six new lessons covering good
-            vs. bad debt, how interest works, starter emergency funds, snowball vs.
-            avalanche, refinancing, and debt snowflakes. Plus: batch-add multiple budget
-            entries at once, and the budget now reflects planned debt minimums from the
-            first of the month.
-          </p>
+          <!-- release:1.7.1 -->
+          <ul class="release-list news-release-list">
+            <li>In-app debt due-date reminders: each debt can have a minimum payment due day (1-31)</li>
+            <li>Set the due day from Add/Edit Debt with a default/custom toggle and a stepper</li>
+            <li>On the Debts tab, focusing the screen on a due day brings up a prompt asking whether you made this month's minimum</li>
+            <li>Captain's Course chapter 2 (Patching the Hull) is now live with all six lessons</li>
+            <li>Added a 'not a financial professional' disclaimer on the Course landing and individual lesson screens so the educational framing is clear</li>
+            <li>Budget tab now counts each active debt as the larger of your logged payments or the Debts-tab minimum for the current month</li>
+            <li>Added a mission-statement card to the Profile tab explaining why BudgetArk exists and that it's free</li>
+            <li>Add Budget Entry supports multiple lines in one save</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-7-1">Full release notes for v1.7.1</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-6-5">
@@ -747,14 +699,18 @@
             <span class="news-tag">Release v1.6.5</span>
           </div>
           <h2>Ship's Log progress rings + Refinance calculator</h2>
-          <p>
-            Achievement badges in the Ship's Log now show live progress - a partial ring
-            and an "X / Y" caption tell you how close you are to each one, across a dozen
-            badges. A new legendary badge, <em>Galleon's Hold</em>, awaits anyone who
-            reaches a $1,000,000 net worth. Utilities gained a <a href="calculators/refinance-break-even.html">Refinance Break-Even
-            calculator</a> that pulls straight from your debt tracker, so you can see in
-            seconds whether a refi actually saves you money.
-          </p>
+          <!-- release:1.6.5 -->
+          <ul class="release-list news-release-list">
+            <li>Ship's Log badges now show how close you are to earning them</li>
+            <li>Tap a locked badge to see the same progress in the detail sheet alongside its hint</li>
+            <li>Some badges now reflect your current state instead of staying earned forever</li>
+            <li>New legendary badge: Galleon's Hold 💰 - awarded when net worth crosses $1,000,000</li>
+            <li>New Refinance Break-Even calculator on Utilities</li>
+            <li>Fixed the bottom of every main tab</li>
+            <li>Fixed the walkthrough spotlight not landing on the + button on the Debts and Budget screens</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-6-5">Full release notes for v1.6.5</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-6-0">
@@ -763,13 +719,17 @@
             <span class="news-tag">Release v1.6.0</span>
           </div>
           <h2>Appearance controls + full amortization schedules</h2>
-          <p>
-            Theme and design style are now separate choices - mix Solid or Glass looks
-            with any color theme. Deep Forest gets a misty night-forest ambient background,
-            and a new toggle lets you switch decorative backgrounds off for maximum
-            readability. The <a href="calculators/loan-mortgage.html">Loan / Mortgage calculator</a> now produces a full month-by-month
-            amortization schedule with yearly summaries and CSV export.
-          </p>
+          <!-- release:1.6.0 -->
+          <ul class="release-list news-release-list">
+            <li>Appearance is now split into Theme + Design Style</li>
+            <li>Deep Forest now gets a richer misty night-forest ambient background, while Deep Space keeps its starfield look when decorative backgrounds are enabled</li>
+            <li>Added an Ambient Backgrounds toggle in Profile → Appearance so users can turn off decorative backgrounds and keep a plain backdrop for comfort, readability, or accessibility</li>
+            <li>Budget now shows an in-app due-date reminder banner for upcoming recurring bills</li>
+            <li>The Loan / Mortgage Calculator on Utilities now includes a full amortization schedule with month-by-month principal, interest, payment, and remaining balance</li>
+            <li>Loan results also add a yearly summary, first-5-years interest highlight, collapsible yearly section</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-6-0">Full release notes for v1.6.0</a></p>
+          <!-- /release -->
         </article>
 
         <article class="news-card" id="v1-5-0">
@@ -778,13 +738,22 @@
             <span class="news-tag">Release v1.5.0</span>
           </div>
           <h2>Bill Calendar, custom categories, and a fresh look</h2>
-          <p>
-            The Budget tab gained a Bill Calendar - a monthly grid of every recurring bill,
-            color-coded by category, with paid vs. remaining totals and your next bill at
-            a glance. Custom budget categories with emoji icons, flexible recurring entries
-            (monthly, quarterly, every 6 months, yearly), a 6-month cash-flow chart on the
-            Bridge, and the opt-in Deep Space theme round out the release.
-          </p>
+          <!-- release:1.5.0 -->
+          <ul class="release-list news-release-list">
+            <li>Bridge and Budget got a full visual redesign</li>
+            <li>Budget's Spending card is reworked</li>
+            <li>Budget month navigation is now a single tidy month pill with ‹ › arrows instead of the two wide buttons</li>
+            <li>Added a Monthly Cash Flow chart to the Bridge</li>
+            <li>New "Deep Space" theme in Profile → Appearance</li>
+            <li>Added custom budget categories with emoji icons - create your own categories alongside the built-in ones</li>
+            <li>Recurring budget entries now support a frequency: Monthly, Quarterly, Every 6 months, or Yearly</li>
+            <li>New Bill Calendar on the Budget tab</li>
+            <li>Ship's Log is complete: five new achievement badges, a full-year history view</li>
+            <li>Added an Annual Financial Report on the Bridge - your year in review for net worth, spending, and progress</li>
+            <li>Added a "View history" hint on the debt payoff ring so it's clearer you can tap through to payment history</li>
+          </ul>
+          <p class="news-more"><a href="release-notes.html#v1-5-0">Full release notes for v1.5.0</a></p>
+          <!-- /release -->
         </article>
 
       </div>

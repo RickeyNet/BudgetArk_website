@@ -39,6 +39,44 @@ def highlight(text):
         return f'<strong>{esc(m.group(1))}</strong> {esc(m.group(2))}'
     return esc(text)
 
+def headline(text):
+    """The short title of a release note, for the news page.
+
+    Newer notes open with a one-sentence headline. Older ones are a single long
+    sentence, so cut those at the first natural break instead.
+    """
+    m = re.match(r'(.+?[.!?])(?:\s+(?=[A-Z"\'(\d])|$)', text, re.S)
+    s = m.group(1) if m else text
+    if len(s) > 110:
+        cut = re.match(r'(.{30,110}?)(?::\s| - | \(|;\s|, so |, with |, and )', s)
+        if cut:
+            s = cut.group(1)
+    return s.rstrip('.').strip()
+
+NEWS_BLOCK = re.compile(r'([ \t]*)<!-- release:([\d.]+) -->.*?<!-- /release -->', re.S)
+
+def news_block(m):
+    pad, version = m.group(1), m.group(2)
+    r = next((x for x in RELEASES if x['version'] == version), None)
+    if r is None:
+        raise SystemExit(f'news.html has a block for v{version}, which is not in notes.json')
+    items = '\n'.join(f'{pad}  <li>{esc(headline(h))}</li>' for h in r['highlights'])
+    return f'''{pad}<!-- release:{version} -->
+{pad}<ul class="release-list news-release-list">
+{items}
+{pad}</ul>
+{pad}<p class="news-more"><a href="release-notes.html#{anchor(r)}">Full release notes for v{version}</a></p>
+{pad}<!-- /release -->'''
+
+def sync_news():
+    """Refill the generated lists in the hand-written news.html."""
+    src = open('news.html', encoding='utf-8').read()
+    out, n = NEWS_BLOCK.subn(news_block, src)
+    if out != src:
+        with open('news.html', 'w', encoding='utf-8', newline='\n') as f:
+            f.write(out)
+    return n
+
 def release_html(r):
     items = '\n'.join(f'            <li>{highlight(h)}</li>' for h in r['highlights'])
     return f'''        <article class="news-card release" id="{anchor(r)}">
@@ -120,3 +158,4 @@ def page():
 if __name__ == '__main__':
     bc.write('release-notes.html', page())
     print('wrote release-notes.html -', len(RELEASES), 'releases')
+    print('news.html -', sync_news(), 'release posts refreshed')

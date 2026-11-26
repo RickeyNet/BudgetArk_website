@@ -38,6 +38,19 @@ Open `news.html` and copy one of the `<article class="news-card">` blocks. Paste
 - the `news-tag` label (e.g. Announcement, Development, Release)
 - the title and paragraph
 
+For a release post, skip the paragraph. Put an empty pair of markers under the
+title instead, with the version in the opening one:
+
+```
+<!-- release:1.11.2 -->
+<!-- /release -->
+```
+
+Then run `python scripts/build-release-notes.py`. It fills the markers with one
+line per release note (the note's headline) and a link to that version on the
+release notes page. Everything between the markers is regenerated on each run,
+so do not edit it by hand; anything you write outside them is left alone.
+
 ## Adding a theme
 
 Themes mirror the app's `src/theme/themes.ts` presets. To add one:
@@ -98,8 +111,9 @@ node scripts/extract-release-notes.js ../BudgetArk
 python scripts/build-release-notes.py
 ```
 
-The news page stays hand-written: it tells the story of a release, while this
-page is the full list.
+The same script refreshes the release posts on the news page: each one lists
+the headline of every note in that version and links here for the full text.
+The post's date, tag, and title stay hand-written.
 
 ## Automatic sync from the app
 
@@ -112,7 +126,10 @@ notes page updates by itself within a day, or right away if you run the
 workflow by hand. The site copies whatever the app's `releaseNotes.ts` says,
 dates included, so fix a wrong date in the app, not in `notes.json`.
 
-Still by hand: news posts, the `softwareVersion` in the home page schema, and a
+The lists inside existing release posts on the news page update the same way.
+
+Still by hand: adding a news post for a new version (date, title, and the empty
+markers), the `softwareVersion` in the home page schema, and a
 `sitemap.xml` entry for any brand-new lesson.
 
 ## Rating, review, and share image
