@@ -293,6 +293,7 @@ def footer(prefix):
         <li><a href="{prefix}calculators.html">Tools</a></li>
         <li><a href="{prefix}course.html">Course</a></li>
         <li><a href="{prefix}news.html">News</a></li>
+        <li><a href="{prefix}release-notes.html">Release Notes</a></li>
         <li><a href="{home}#faq">FAQ</a></li>
         <li><a href="{prefix}privacy.html">Privacy Policy</a></li>
         <li><a href="https://github.com/RickeyNet/BudgetArk" target="_blank" rel="noopener">GitHub</a></li>

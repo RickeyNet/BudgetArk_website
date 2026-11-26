@@ -2025,6 +2025,19 @@ input[type="range"] {
 }
 .news-card p { color: var(--ink-soft); font-size: 0.97rem; }
 
+/* Release notes page (release-notes.html, generated) */
+.release { scroll-margin-top: 5.5rem; }
+.release-list {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+.release-list li::marker { color: var(--wood); }
+.release-list strong { color: var(--ink); font-weight: 600; }
+
 /* ---------- Legal / prose pages ---------- */
 
 .legal {

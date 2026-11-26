@@ -13,6 +13,7 @@ calculators.html Calculator index (generated)
 calculators/    One page per calculator (generated)
 course.html     Captain's Course chapter outline (generated)
 course/         One page per lesson (generated)
+release-notes.html  Every app release and its changes (generated)
 404.html        Custom not-found page (GitHub Pages serves it automatically)
 css/style.css   All styles
 js/main.js      Mobile nav toggle, theme switcher, ambient backdrops
@@ -83,6 +84,22 @@ footer) comes from `build-calculators.py`, so a nav change there needs both
 build scripts re-run. In-lesson calculator cards link to the matching page
 under `calculators/`; lesson actions that open an app screen become a "next
 step in the app" note instead.
+
+## Release notes
+
+`release-notes.html` lists every app release, newest first, with an anchor per
+version (`release-notes.html#v1-11-2`). It is generated from the app's
+user-facing notes (`src/data/releaseNotes.ts`, the list shown under Profile →
+Release Notes); `scripts/release-notes/notes.json` is a committed copy. After
+each app release:
+
+```
+node scripts/extract-release-notes.js ../BudgetArk
+python scripts/build-release-notes.py
+```
+
+The news page stays hand-written: it tells the story of a release, while this
+page is the full list.
 
 ## Rating, review, and share image
 
