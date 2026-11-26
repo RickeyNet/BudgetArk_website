@@ -1,0 +1,65 @@
+# Keeps the generated pages in step with the app repo.
+#
+# Once a day (and on demand from the Actions tab) this checks out the public
+# app repo, re-extracts the release notes and the Captain's Course, rebuilds
+# release-notes.html, course.html and course/, and commits the result if
+# anything changed. News posts and sitemap entries for brand-new lessons are
+# still written by hand.
+name: Sync app content
+
+on:
+  schedule:
+    - cron: '17 9 * * *'   # 09:17 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-app-content
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+
+      - name: Check out the app's content files
+        uses: actions/checkout@v4
+        with:
+          repository: RickeyNet/BudgetArk
+          path: .app
+          sparse-checkout: |
+            src/data
+            src/i18n/locales/en
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install TypeScript for the extract scripts
+        run: npm install --no-save --no-audit --no-fund --prefix "$RUNNER_TEMP/ts" typescript@6
+
+      - name: Extract and rebuild
+        env:
+          NODE_PATH: ${{ runner.temp }}/ts/node_modules
+        run: |
+          node scripts/extract-release-notes.js .app
+          node scripts/extract-course.js .app
+          python3 scripts/build-release-notes.py
+          python3 scripts/build-course.py
+
+      - name: Commit and push if anything changed
+        run: |
+          git add release-notes.html course.html course scripts/release-notes scripts/course
+          if git diff --cached --quiet; then
+            echo "Already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync release notes and course from the app"
+          git push

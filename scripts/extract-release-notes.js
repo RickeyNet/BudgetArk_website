@@ -11,7 +11,10 @@ const os = require('os');
 const path = require('path');
 
 const app = path.resolve(process.argv[2] || '../BudgetArk');
-const ts = require(path.join(app, 'node_modules/typescript'));
+// The app's own TypeScript when its dependencies are installed; otherwise any
+// TypeScript Node can resolve (the sync workflow installs one via NODE_PATH).
+let ts;
+try { ts = require(path.join(app, 'node_modules/typescript')); } catch (e) { ts = require('typescript'); }
 const src = fs.readFileSync(path.join(app, 'src/data/releaseNotes.ts'), 'utf8');
 const js = ts.transpileModule(src, {
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },

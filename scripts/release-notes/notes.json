@@ -3,7 +3,7 @@
     {
       "version": "1.11.2",
       "title": "Nothing Fails Quietly",
-      "releasedAt": "2026-11-10",
+      "releasedAt": "2026-11-25",
       "highlights": [
         "Refunds are no longer counted as income. When money comes back for something you returned, tick 'This is a refund' on the deposit in the Review Inbox and pick the category the purchase was in. It lowers that category's spending for the month and stays out of your income. Refunds you already filed as income can be fixed the same way: open the entry and tick the box. If you have an 'always' rule for a store, money coming back from that store is filed as a refund for you.",
         "Paychecks update your income line instead of adding new ones. When you file a bank deposit as someone's paycheck, the Budget tab used to add a second income row under the bank's long description next to the one you set up. Now that person's income stays one tidy line under the name you gave it, showing what has been deposited so far plus the estimate for the paychecks still to come, with how many are in. Tap the line to see each deposit by date and to edit the monthly estimate. The totals are the same as before - only the list is cleaner.",

@@ -101,6 +101,20 @@ python scripts/build-release-notes.py
 The news page stays hand-written: it tells the story of a release, while this
 page is the full list.
 
+## Automatic sync from the app
+
+`.github/workflows/sync-app-content.yml` runs once a day (09:17 UTC) and on
+demand from the Actions tab ("Sync app content" → Run workflow). It checks out
+the public app repo, runs the two extract scripts and the two build scripts
+for the release notes and the Captain's Course, and commits to `master` only
+if a generated file changed. So after an app release is pushed, the release
+notes page updates by itself within a day, or right away if you run the
+workflow by hand. The site copies whatever the app's `releaseNotes.ts` says,
+dates included, so fix a wrong date in the app, not in `notes.json`.
+
+Still by hand: news posts, the `softwareVersion` in the home page schema, and a
+`sitemap.xml` entry for any brand-new lesson.
+
 ## Rating, review, and share image
 
 The App Store rating in the home page schema (`aggregateRating`) and the "5.0 on
