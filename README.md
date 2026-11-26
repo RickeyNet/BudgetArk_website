@@ -11,6 +11,8 @@ privacy.html    Privacy policy
 support.html    Support page (GitHub issues, email, in-app Send Feedback)
 calculators.html Calculator index (generated)
 calculators/    One page per calculator (generated)
+course.html     Captain's Course chapter outline (generated)
+course/         One page per lesson (generated)
 404.html        Custom not-found page (GitHub Pages serves it automatically)
 css/style.css   All styles
 js/main.js      Mobile nav toggle, theme switcher, ambient backdrops
@@ -63,6 +65,24 @@ of that file has the two commands to run it. The currency tool is the only
 thing on the site that makes a network request (to open.er-api.com, and only
 when the user presses the button), which is why every page's CSP allows that
 one host in `connect-src`.
+
+## Captain's Course
+
+`course.html` and `course/*.html` are the app's Captain's Course (the lessons
+on the Charts tab), one page per lesson. Both are generated, so never edit
+them directly. The lesson text lives in the app repo; `scripts/course/lessons.json`
+is a committed copy of it. When the app adds or changes a lesson:
+
+```
+node scripts/extract-course.js ../BudgetArk   # refresh lessons.json from the app
+python scripts/build-course.py                # rewrite course.html and course/
+```
+
+Then add any new lesson URL to `sitemap.xml`. The page shell (head, nav,
+footer) comes from `build-calculators.py`, so a nav change there needs both
+build scripts re-run. In-lesson calculator cards link to the matching page
+under `calculators/`; lesson actions that open an app screen become a "next
+step in the app" note instead.
 
 ## Rating, review, and share image
 

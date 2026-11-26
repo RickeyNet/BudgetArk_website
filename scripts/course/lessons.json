@@ -1,0 +1,1537 @@
+{
+  "disclaimer": "BudgetArk lessons reflect one app's approach to personal money management. The author is not a licensed financial advisor, accountant, or attorney. This is general education and opinion, not advice for your situation. For big decisions, talk to a qualified professional.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": 1,
+      "title": "Setting Sail",
+      "subtitle": "Budgeting Basics",
+      "glyph": "⛵",
+      "lessons": [
+        {
+          "id": "ch1-l1-what-is-budget",
+          "chapterId": "ch1",
+          "number": 1,
+          "title": "What a budget really is",
+          "readMin": 3,
+          "topics": [
+            "budgeting",
+            "mindset"
+          ],
+          "glyph": "🧭",
+          "summary": "A budget is not a restriction. It is a plan you write before the month spends you.",
+          "whyItMatters": "Every other lesson in this course assumes you have a plan to compare against. This is that plan.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "A budget is a plan for how you'll spend your income over a fixed period, usually a month. You start with what you expect to bring in, then decide ahead of time how much goes to rent, food, savings, debt, and everything else. The point is not to spend less. It is to spend on purpose, so the essentials are covered before the optional stuff competes for the leftovers."
+            },
+            {
+              "type": "bullet-list",
+              "title": "What a budget is",
+              "items": [
+                "A plan made by you, for your way of life",
+                "A way to spend on purpose instead of by accident",
+                "A snapshot of what you can afford this month"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "What a budget is not",
+              "items": [
+                "A punishment",
+                "A permanent contract you sign once and never revisit",
+                "The same shape someone else's budget should be"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "A budget is not a one-time setup. Income changes when a raise, a side job, or a slow month hits. Bills change when a subscription renews, insurance resets, or seasonal costs like heating or holidays show up. Priorities change too: a wedding, a move, a new baby, or simply wanting to save harder toward a specific goal. Plan to revisit the budget at the start of every month, even for ten minutes, and update the numbers to match what is actually true right now instead of what was true last month."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "Where to Start",
+              "text": "Open the Budget tab and add two kinds of recurring entries. First, your reliable monthly income: log your paycheck as a recurring entry under Salary, plus any side income you can count on every month. Second, your fixed bills: rent or mortgage under Housing, electric and water under Utilities, and insurance. Only the vital things to keep a roof over your head. The Income vs. Expenses strip at the top of the screen will show what is left after those are in. That leftover is the money you actually get to plan with for everything else."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "Next Step",
+              "text": "Build the first version from real numbers, not aspirational ones. Pull the last two or three months of spending on groceries, gas, eating out, and subscriptions, and use those amounts as your starting line. You can lower them next month if you want, but an honest starting point is what makes a budget you'll actually keep using."
+            }
+          ],
+          "keyTakeaway": "A budget is just a plan written before the spending. Nothing more, nothing less.",
+          "action": {
+            "label": "Open the Budget tab",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch1-l2-needs-wants-savings",
+          "chapterId": "ch1",
+          "number": 2,
+          "title": "Needs, Wants, Savings (50/30/20)",
+          "readMin": 4,
+          "topics": [
+            "budgeting"
+          ],
+          "glyph": "⚖️",
+          "summary": "The simplest budget framework in the world. Three buckets, three percentages.",
+          "whyItMatters": "If you only ever learn one budgeting rule, learn this one. It tells you the shape a healthy month should have.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "The 50/30/20 rule splits your take-home pay into three buckets: 50% needs, 30% wants, 20% savings or debt payoff. It is the cheapest budget framework that still works."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Needs (50%)",
+              "items": [
+                "Rent or mortgage, utilities, basic groceries",
+                "Transportation to work",
+                "Insurance and minimum debt payments",
+                "Anything you can't skip without real consequences"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Wants (30%)",
+              "items": [
+                "Restaurants, streaming, hobbies",
+                "Gym memberships you actually use",
+                "Travel, gifts, anything optional",
+                "If skipping it would feel sad but not catastrophic, it lives here"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Savings + debt payoff (20%)",
+              "items": [
+                "Emergency fund contributions",
+                "Retirement contributions",
+                "Any payment above the minimum on a debt",
+                "Sinking funds for car repair, holidays, anything future"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "USE TAKE-HOME, NOT GROSS",
+              "text": "The percentages apply to what hits your bank account, after taxes and pre-tax deductions. If your paycheck shows $4,000, that's the number to split."
+            },
+            {
+              "type": "paragraph",
+              "text": "Almost no one hits 50/30/20 on the first try. Rent in a big city alone can eat 50% before you've bought a single grocery. That's fine. The percentages are guardrails, not laws. Use them to see where you are, not where you have to be."
+            },
+            {
+              "type": "paragraph",
+              "text": "If wants are 50% and savings is 0%, the framework is telling you something. Listen, then decide what to do about it. Don't punish yourself, just move one number at a time."
+            }
+          ],
+          "keyTakeaway": "50% needs, 30% wants, 20% future. Start there. Tune later.",
+          "action": {
+            "label": "Set category limits",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch1-l3-tracking-vs-budgeting",
+          "chapterId": "ch1",
+          "number": 3,
+          "title": "Tracking vs. budgeting",
+          "readMin": 5,
+          "topics": [
+            "budgeting"
+          ],
+          "glyph": "🗒️",
+          "summary": "Two different jobs. Most apps blur them. The blur is why most budgets feel pointless.",
+          "whyItMatters": "If you've ever 'budgeted' for a year and still felt no closer to your goals, this is probably the lesson you skipped.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Tracking and budgeting sound like the same thing. They aren't. They are two different jobs, and you need both."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tracking",
+              "items": [
+                "Records what already happened",
+                "Tells you where the money went",
+                "Backward-looking by definition"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Budgeting",
+              "items": [
+                "Decides where money goes before it leaves",
+                "Sets a limit per category",
+                "Forward-looking by definition"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Tracking with no budget is just journaling. You learn that you spent too much on dining out, then you do it again next month, then you write it down again. Insight without leverage."
+            },
+            {
+              "type": "paragraph",
+              "text": "Budgeting with no tracking is just wishing. You set a $400 grocery cap, never check it, and discover at month-end that you spent $612. The cap did nothing because you never looked."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "THE PATTERN THAT WORKS",
+              "text": "Budget at the start of the month. Track during the month. Review at the end. All three, every month."
+            },
+            {
+              "type": "paragraph",
+              "text": "BudgetArk does both jobs in one place. Category limits live on the Budget tab. Entries you add as you spend are the tracking half. The Spending donut shows the gap between the two in real time, so you can react before the month is over instead of explaining it after."
+            }
+          ],
+          "keyTakeaway": "Plan, log, review. All three or none.",
+          "action": {
+            "label": "Log an expense",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch1-l4-zero-based",
+          "chapterId": "ch1",
+          "number": 4,
+          "title": "Zero-based budgeting",
+          "readMin": 6,
+          "topics": [
+            "budgeting"
+          ],
+          "glyph": "0️⃣",
+          "summary": "Every dollar gets a job before the month starts. Income minus assignments equals zero.",
+          "whyItMatters": "It is the strictest budget style. It also surfaces problems faster than any other, which is the whole point.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Zero-based budgeting (sometimes called 'every dollar' budgeting) gives every dollar of your income a job before the month begins. Income minus everything assigned equals zero. Not '$300 left over.' Zero."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "ZERO IS NOT BROKE",
+              "text": "Money assigned to savings or debt payoff still counts as assigned. Zero just means no unassigned cash, not no cash."
+            },
+            {
+              "type": "bullet-list",
+              "title": "What it looks like",
+              "items": [
+                "Take-home this month: $4,000",
+                "Rent: $1,400",
+                "Food: $500",
+                "Utilities: $300",
+                "Fuel: $400",
+                "Wants: $200",
+                "Extra debt payment: $1,000",
+                "Savings: $200",
+                "Total assigned: $4,000. Remainder: $0."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "If your income is irregular (freelance, tips, commission, side work), budget LAST month's income, not this month's hopes. You always have last month's total in hand before you assign it, so you are spending real money instead of expected money."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Why it works",
+              "items": [
+                "There is no 'leftover' to drift onto random spending",
+                "Every category has a target, so overspending is visible immediately",
+                "Forces a real conversation between you and your priorities each month"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Zero-based is more upfront work than 50/30/20. The payoff is that you stop wondering where money went, because you decided ahead of time. It is the budget style that scales best as your finances get more complicated."
+            },
+            {
+              "type": "paragraph",
+              "text": "Try it for one month before you decide if it suits your brain. Some people thrive on the structure. Others find it too rigid and prefer the percentage style. Both are real budgets."
+            }
+          ],
+          "keyTakeaway": "Income minus assigned categories should equal zero. Savings and debt payoff count as assigned.",
+          "action": {
+            "label": "Set up category limits",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch1-l5-monthly-review",
+          "chapterId": "ch1",
+          "number": 5,
+          "title": "Reading your monthly review",
+          "readMin": 4,
+          "topics": [
+            "budgeting",
+            "mindset"
+          ],
+          "glyph": "🔭",
+          "summary": "The review is the cheapest financial coach you'll ever have. Most people skip it.",
+          "whyItMatters": "A month of data with no review is just noise. The review is where you turn it into a decision.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "At the end of each month BudgetArk produces a Monthly Review. Most people open it, glance at the income total, and close it. That is leaving most of the signal on the table."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Read in this order",
+              "items": [
+                "Income vs. expenses: did you spend less than you brought in?",
+                "Top category: where did the biggest slice of the month go?",
+                "Streaks: are you staying under limits month over month?",
+                "Category changes: which category moved the most vs. last month?"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "ONE MONTH IS DATA",
+              "text": "One month is data. Three months is a pattern. Don't rewrite your whole budget after a single weird month, but do flag the weird month so you remember it next time."
+            },
+            {
+              "type": "paragraph",
+              "text": "If a category came in over, ask one question: was the limit wrong, or was the spending wrong? Both answers are valid. The wrong move is changing nothing and hoping next month will be different."
+            },
+            {
+              "type": "paragraph",
+              "text": "If a category came in under, don't sweep the difference. Move it on purpose: to savings, to debt payoff, to the next month's wants. Otherwise it leaks back into ambient spending and you lose the win."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "REVIEW AS REWARD",
+              "text": "Most months won't be dramatic. That is the goal. A boring Monthly Review means the plan is working."
+            }
+          ],
+          "keyTakeaway": "Open the review every month. Read it in order. Move the leftovers on purpose.",
+          "action": {
+            "label": "Open Monthly Review",
+            "route": "bridge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "number": 2,
+      "title": "Patching the Hull",
+      "subtitle": "Debt",
+      "glyph": "🔨",
+      "lessons": [
+        {
+          "id": "ch2-l1-good-vs-bad-debt",
+          "chapterId": "ch2",
+          "number": 1,
+          "title": "Good debt vs bad debt",
+          "readMin": 4,
+          "topics": [
+            "debt",
+            "mindset"
+          ],
+          "glyph": "⚓",
+          "summary": "Textbooks split debt into good and bad. We treat almost all consumer debt, including car loans, as bad debt worth paying down.",
+          "whyItMatters": "Treating every balance the same leads to either panic or denial. Sorting debt by type tells you what to attack first.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Debt is money you owe plus the cost of borrowing it. Personal-finance books often label some loans \"good\" (mortgage, sometimes student loans) and others \"bad\" (cards, lifestyle spending). The label is not moral judgment. It is math plus purpose. BudgetArk is stricter about cars than most books."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Often called \"good\" debt",
+              "items": [
+                "A mortgage on a home you can afford (an asset that may appreciate, often a lower rate)",
+                "Student loans only when the degree has a realistic earning path and the payment is manageable"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Bad debt in our book (pay it down)",
+              "items": [
+                "Credit cards and store cards carrying a balance month to month",
+                "Car loans - see below; we do not treat these as good debt",
+                "Medical bills, payment plans, and medical debt in collections",
+                "Buy-now-pay-later and loans for vacations, gadgets, or lifestyle you cannot cash-flow today"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "CAR LOANS ARE NOT GOOD DEBT",
+              "text": "A car loses value the day you drive it off the lot. You may need a car to get to work; that makes the loan necessary sometimes, not good. Need and good are different. Pay car loans off in your Hull phase with your other non-mortgage debt, and compare APR like any other loan."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "MEDICAL DEBT",
+              "text": "Hospital and clinic bills are unplanned bad debt, not a moral failure. Check the bill against your insurance explanation of benefits, ask about financial assistance, and know the APR: a 0% hospital plan is different from a medical credit card at 20%+. List it on the Debts tab like everything else."
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "RATE MATTERS MORE THAN THE LABEL",
+              "text": "Even a mortgage at a terrible rate or a payment you cannot afford is dangerous. Always compare APR and cash flow, not just the category someone else gave the loan."
+            },
+            {
+              "type": "paragraph",
+              "text": "BudgetArk separates debts on the Debts tab into credit/personal, car, and house so you can see what you are carrying. Hull (Build Your Ark) targets all non-mortgage balances: cards, car, medical logged as personal, and the rest."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "IN THE APP",
+              "text": "Add each real account with its current balance, APR, and minimum payment. Honest numbers beat rounded guesses. You cannot prioritize what you have not listed."
+            }
+          ],
+          "keyTakeaway": "Car loans are bad debt here, period. Attack expensive and non-mortgage debt; keep the mortgage for later unless the math says otherwise.",
+          "action": {
+            "label": "Open the Debts tab",
+            "route": "debts"
+          }
+        },
+        {
+          "id": "ch2-l2-how-interest-works",
+          "chapterId": "ch2",
+          "number": 2,
+          "title": "How interest actually works",
+          "readMin": 6,
+          "topics": [
+            "debt"
+          ],
+          "glyph": "📈",
+          "summary": "Interest is rent on borrowed money. The APR tells you how expensive that rent is per year.",
+          "whyItMatters": "Minimum payments are designed to keep you paying for years. Understanding interest is how you break that loop.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "APR (annual percentage rate) is what the lender charges per year on the balance you still owe. It is not a one-time fee. Every month, interest accrues on whatever balance is left, then your payment covers interest first and only then chips away at principal."
+            },
+            {
+              "type": "bullet-list",
+              "title": "What that means in practice",
+              "items": [
+                "Higher APR = more of each payment disappears into interest",
+                "A $5,000 card at 24% APR costs over $1,000 a year in interest if the balance never drops",
+                "Paying only the minimum often leaves the balance barely moving"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "THE MINIMUM PAYMENT TRAP",
+              "text": "Minimums are built to keep accounts profitable for the lender. They are not a payoff plan. If you only pay the minimum on high-rate debt, you are renting that balance indefinitely."
+            },
+            {
+              "type": "paragraph",
+              "text": "Compound interest works against you on debt: interest earns interest on the next cycle. That is why knocking down the highest-rate balance first (avalanche) saves real money, and why even an extra $50 above the minimum changes the timeline."
+            },
+            {
+              "type": "calculator-embed",
+              "calc": "loan-amortization"
+            },
+            {
+              "type": "paragraph",
+              "text": "On each debt in BudgetArk, set the APR from your statement (not a guess). The payoff order and projections on the Debts tab use that rate. Wrong APR means wrong priorities."
+            }
+          ],
+          "keyTakeaway": "APR is the price of waiting. Pay more than the minimum on the most expensive balance when you can.",
+          "action": {
+            "label": "Review your debt APRs",
+            "route": "debts"
+          }
+        },
+        {
+          "id": "ch2-l3-starter-emergency-fund",
+          "chapterId": "ch2",
+          "number": 3,
+          "title": "The $1,000 starter emergency fund",
+          "readMin": 5,
+          "topics": [
+            "debt",
+            "saving"
+          ],
+          "glyph": "🛡️",
+          "summary": "Before you throw every dollar at debt, keep a small cushion so the next surprise does not become new debt.",
+          "whyItMatters": "One flat tire without cash on hand undoes months of payoff progress when it lands on a card.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "A starter emergency fund is a small pile of cash reserved for true surprises: medical copays, car repair, broken appliance, sudden travel. The classic first target is $1,000. It is not your forever safety net. It is a shock absorber while you are still in debt."
+            },
+            {
+              "type": "bullet-list",
+              "title": "What counts as an emergency",
+              "items": [
+                "Unexpected, necessary, and time-sensitive",
+                "Would otherwise go on a credit card you cannot pay off this month",
+                "Not sales, vacations, or planned upgrades"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "What it is not",
+              "items": [
+                "A vacation fund (that is a sinking fund on the Budget tab)",
+                "Investment money (different job, different account)",
+                "An excuse to pause debt payoff forever"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "WHY BEFORE AGGRESSIVE PAYOFF",
+              "text": "Without a cushion, every surprise becomes new debt at credit-card rates. You pay off $400, then put $400 back on the card for brakes. The starter fund breaks that cycle so payoff sticks."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "WHERE TO KEEP IT",
+              "text": "Separate from checking, but reachable within a day or two. A high-yield savings account at an online bank like SoFi, a money market account at Fidelity or Charles Schwab, or a plain savings account at a good local credit union all do the job. Chapter 3 covers picking one in detail - for now, separate and boring beats perfect."
+            },
+            {
+              "type": "paragraph",
+              "text": "On the Debts tab, Build Your Ark tracks the Keel step: your starter cushion target. Savings-category budget entries count toward that reserve. Once Keel is funded, you pour more into the Hull step: clearing non-mortgage debt."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "START SMALL IF YOU MUST",
+              "text": "$1,000 is a target, not a gate. Saving $200, then $500, still helps. Log savings on the Budget tab under Savings so progress shows up in your milestone and on Bridge."
+            }
+          ],
+          "keyTakeaway": "A small cash cushion keeps setbacks off the card. Fund Keel, then attack expensive debt.",
+          "action": {
+            "label": "Open Build Your Ark",
+            "route": "debts"
+          }
+        },
+        {
+          "id": "ch2-l4-snowball-vs-avalanche",
+          "chapterId": "ch2",
+          "number": 4,
+          "title": "Snowball vs Avalanche",
+          "readMin": 7,
+          "topics": [
+            "debt",
+            "mindset"
+          ],
+          "glyph": "❄️",
+          "summary": "Two valid payoff orders. Avalanche saves the most interest. Snowball wins the most momentum.",
+          "whyItMatters": "The best plan is the one you will actually follow for eighteen months, not the one that looks best on a spreadsheet.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Once minimums are covered, you send every extra dollar to one target debt at a time. The only argument is which debt gets the extras first."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Avalanche (highest APR first)",
+              "items": [
+                "Mathematically cheapest: less interest paid over the whole journey",
+                "Best when you are motivated by numbers and can wait for wins",
+                "BudgetArk default strategy name on the Debts tab"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Snowball (smallest balance first)",
+              "items": [
+                "Fastest psychological wins: accounts disappear sooner",
+                "Best when you need momentum to trust the process",
+                "May cost more interest than avalanche, but still beats minimum-only"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "CUSTOM ORDER",
+              "text": "Some people mix both: knock out a tiny balance for a win, then switch to avalanche on what is left. BudgetArk supports a custom payoff order if your situation needs it (for example, a promotional 0% card deadline)."
+            },
+            {
+              "type": "calculator-embed",
+              "calc": "payoff-comparison"
+            },
+            {
+              "type": "paragraph",
+              "text": "Inside Build Your Ark, the Hull milestone is where payoff strategy lives. Compare avalanche vs snowball with your real balances, pick one, then put every extra payment toward the highlighted debt until it is gone."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "PICK ONE AND RUN",
+              "text": "Debating forever is its own form of avoidance. Choose snowball or avalanche this month, log payments as you go, and revisit only if your life changes (new debt, income shift, baby on the way)."
+            }
+          ],
+          "keyTakeaway": "Avalanche saves interest. Snowball builds momentum. Either beats paying only minimums.",
+          "action": {
+            "label": "Set payoff strategy",
+            "route": "debts"
+          }
+        },
+        {
+          "id": "ch2-l5-refinancing",
+          "chapterId": "ch2",
+          "number": 5,
+          "title": "Refinancing - when it pays",
+          "readMin": 6,
+          "topics": [
+            "debt",
+            "real_estate"
+          ],
+          "glyph": "🔄",
+          "summary": "Refinancing swaps your old loan for a new one. It only helps when the math beats the fees.",
+          "whyItMatters": "A lower monthly payment can still cost more if the term stretches longer or closing costs eat the savings.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Refinancing means replacing an existing loan with a new loan, usually to get a lower interest rate, a different term, or to consolidate several debts into one payment. The lender pays off the old balance; you start fresh with new paperwork and often new fees."
+            },
+            {
+              "type": "bullet-list",
+              "title": "When it can make sense",
+              "items": [
+                "Rates dropped meaningfully since you borrowed",
+                "Your credit score improved and you qualify for better terms",
+                "You want one payment instead of several (consolidation), and the blended rate is truly lower",
+                "You can afford the same or higher payment on a shorter term to finish sooner"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Red flags",
+              "items": [
+                "Closing costs or origination fees bigger than the interest you will save",
+                "A longer term that lowers the payment but raises total interest paid",
+                "Resetting the clock on a car or mortgage just to free up cash for lifestyle spending"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "BREAK-EVEN MONTHS",
+              "text": "Divide total closing costs by monthly payment savings. That is how many months until you are ahead. If you might sell the house or pay off the car before that date, refinancing may not be worth it."
+            },
+            {
+              "type": "calculator-embed",
+              "calc": "refinance-break-even"
+            },
+            {
+              "type": "paragraph",
+              "text": "On the Charts tab, the Refinance Break-Even tool under TOOLS pulls debts from your tracker, blends balances and rates, and shows months-to-break-even plus lifetime interest difference. Run the numbers before you sign."
+            }
+          ],
+          "keyTakeaway": "Refinance when lower interest and fees beat your break-even timeline, not when a ad promises \"easy money.\"",
+          "action": {
+            "label": "Open refinance calculator",
+            "route": "charts/tools/refinance"
+          }
+        },
+        {
+          "id": "ch2-l6-debt-snowflake",
+          "chapterId": "ch2",
+          "number": 6,
+          "title": "The debt snowflake (windfalls)",
+          "readMin": 4,
+          "topics": [
+            "debt",
+            "mindset"
+          ],
+          "glyph": "💸",
+          "summary": "Snowball and avalanche are the rivers. Snowflakes are the one-time bursts that speed the melt.",
+          "whyItMatters": "Tax refunds and bonuses are the fastest debt payoff accelerators most people already receive and routinely spend.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "The debt snowflake is any lump sum thrown at debt outside your normal monthly extra payment: a tax refund, a work bonus, selling something you do not need, a cash gift, side-gig profit, or an insurance reimbursement."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Good snowflake habits",
+              "items": [
+                "Decide the split before the money arrives (for example, 80% debt, 20% fun)",
+                "Send it to the same target debt your payoff strategy highlights",
+                "Log it as a payment so the balance and progress ring update immediately"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Common leaks",
+              "items": [
+                "Treating a refund like \"free money\" instead of money you already earned",
+                "Upgrading lifestyle the same month you promised to pay down cards",
+                "Splitting across so many small goals that nothing moves"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "KEEL VS HULL",
+              "text": "If you still owe high-rate consumer debt and have no starter cushion, consider funding Keel first, then snowflaking the rest to Hull. If Keel is done, every snowflake can hit the active payoff debt."
+            },
+            {
+              "type": "paragraph",
+              "text": "On the Debts tab, open a debt and tap Pay to record a one-time amount. The celebration and history views confirm the win. Small snowflakes matter: $75 here and $200 there change the payoff date more than they feel."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "MAKE IT VISIBLE",
+              "text": "Payments logged in BudgetArk update your progress ring and Build Your Ark milestones. Invisible extra payments are easy to forget you made. Log them."
+            }
+          ],
+          "keyTakeaway": "Windfalls are payoff fuel. Decide the split early, log the payment, and aim at one target.",
+          "action": {
+            "label": "Log a debt payment",
+            "route": "debts"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "number": 3,
+      "title": "Stocking the Galley",
+      "subtitle": "Saving",
+      "glyph": "🍞",
+      "lessons": [
+        {
+          "id": "ch3-l1-emergency-fund-full",
+          "chapterId": "ch3",
+          "number": 1,
+          "title": "Emergency fund - 3 to 6 months",
+          "readMin": 5,
+          "topics": [
+            "saving"
+          ],
+          "glyph": "🛟",
+          "summary": "The starter fund keeps a bad week off your card. The full fund keeps a bad year from sinking the ship.",
+          "whyItMatters": "Job loss, a medical event, or a big repair is a matter of when, not if. Months of expenses in cash turns a crisis into an inconvenience.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "In Chapter 2 you built the $1,000 starter cushion. That was a shock absorber for while you were paying down debt. Once the expensive debt is gone, the next job is the full emergency fund: three to six months of essential expenses, sitting in cash, doing nothing but waiting."
+            },
+            {
+              "type": "paragraph",
+              "text": "Notice the word essential. You are not saving six months of your current lifestyle. You are saving six months of the survival version: housing, utilities, groceries, insurance, minimum debt payments, transportation. If you lost your income tomorrow, subscriptions and restaurants would be the first things overboard, so they don't belong in the target."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Three months is usually enough when",
+              "items": [
+                "Your income is steady and your field rehires quickly",
+                "You have a second earner in the household",
+                "Your fixed costs are low relative to income"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Lean toward six months when",
+              "items": [
+                "Income is variable: commission, freelance, seasonal, tips",
+                "You are the only earner, or dependents rely on you",
+                "Your job is specialized and a search could run long",
+                "A health condition makes surprise costs more likely"
+              ]
+            },
+            {
+              "type": "calculator-embed",
+              "calc": "emergency-fund"
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "DON'T INVEST THIS MONEY",
+              "text": "The emergency fund's job is to exist, in full, on the worst day of your decade. Stocks can drop 30% in the same recession that costs you your job. Boring cash in a high-yield savings account is the point - the next lesson covers where to keep it."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "FUND IT LIKE A BILL",
+              "text": "Add a recurring Savings entry on the Budget tab and treat it like rent. A fixed amount on payday, every payday, until the target is hit. Progress you can see on Bridge beats intentions every time."
+            }
+          ],
+          "keyTakeaway": "Three to six months of essential expenses, in cash, before you chase returns anywhere else.",
+          "action": {
+            "label": "Open the Emergency Fund Calculator",
+            "route": "charts/tools/emergency-fund"
+          }
+        },
+        {
+          "id": "ch3-l2-hysa-basics",
+          "chapterId": "ch3",
+          "number": 2,
+          "title": "High-yield savings 101",
+          "readMin": 4,
+          "topics": [
+            "saving"
+          ],
+          "glyph": "🏦",
+          "summary": "Same insurance, same access, ten to twenty times the interest. Moving your savings is an hour of work you do once.",
+          "whyItMatters": "A big-bank savings account often pays 0.01% while online banks pay 4% or more. On a $15,000 emergency fund that gap is hundreds of dollars a year for doing nothing.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "A high-yield savings account (HYSA) is a normal savings account offered by a bank that runs online instead of on street corners. No branches means lower costs, and lower costs get passed to you as a dramatically higher interest rate. The money is just as safe: look for FDIC insurance (or NCUA at a credit union), which covers up to $250,000 per depositor, per bank."
+            },
+            {
+              "type": "bullet-list",
+              "title": "What to look for",
+              "items": [
+                "FDIC or NCUA insured - non-negotiable",
+                "No monthly fees and no minimum balance requirements",
+                "A rate near the top of the market, not necessarily the very top",
+                "Easy transfers to and from your everyday checking account"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "What to ignore",
+              "items": [
+                "Teaser rates that expire after a few months",
+                "Accounts that demand direct deposit or debit-card swipes to earn the rate",
+                "Chasing an extra 0.1% by moving banks every quarter"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "RATES FLOAT",
+              "text": "HYSA rates track the Federal Reserve's rate, so they rise and fall over time. That's fine. The goal is to be in the right neighborhood, not to hold the single best rate in the country every week."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Well-known harbors for savings",
+              "items": [
+                "SoFi - online checking + savings combo with a strong rate (the top rate requires direct deposit)",
+                "Robinhood - interest on uninvested cash, swept to FDIC-insured partner banks; the best rate needs its paid Gold tier",
+                "Fidelity - Cash Management Account with a money market fund core that earns market rates",
+                "Charles Schwab - buy a money market fund inside a free brokerage account",
+                "A good local bank or credit union - often a lower rate, but real humans, and NCUA/FDIC insured all the same"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "NOT SPONSORED",
+              "text": "Nobody on that list pays BudgetArk to be there - they're simply large, established options. Rates and terms change constantly, so compare current numbers before opening anything. One nuance: money market funds at brokerages like Fidelity and Schwab are very safe but SIPC-protected rather than FDIC-insured. If strict FDIC insurance matters to you, a bank or credit union HYSA is the cleanest choice."
+            },
+            {
+              "type": "paragraph",
+              "text": "There is a hidden benefit beyond interest: friction. Savings that live at a different bank than your debit card take a day or two to reach checking. That small delay is often exactly enough to stop an impulse raid on the emergency fund, while still being fast enough for a real emergency."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "THE ONE-HOUR MOVE",
+              "text": "Open the account, link your checking, transfer the balance, and set up the recurring deposit you budgeted last lesson. Then log the interest you receive each month as income on the Budget tab - watching the account pay you is great fuel."
+            }
+          ],
+          "keyTakeaway": "Park your emergency fund and short-term savings in an FDIC-insured high-yield account. Same safety, real interest.",
+          "action": {
+            "label": "Add a recurring savings entry",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch3-l3-sinking-funds",
+          "chapterId": "ch3",
+          "number": 3,
+          "title": "Sinking funds",
+          "readMin": 5,
+          "topics": [
+            "saving",
+            "budgeting"
+          ],
+          "glyph": "🪣",
+          "summary": "Most 'emergencies' are actually predictable. A sinking fund pays for December in July, one small deposit at a time.",
+          "whyItMatters": "Christmas is not a surprise. Neither are tires, annual insurance premiums, or your friend's wedding. Naming these costs early is how a budget survives contact with real life.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "A sinking fund is money you set aside monthly for a specific future expense you can see coming. Take the total cost, divide by the months until it lands, and save that slice every month. When the bill arrives, the money is already there - no card, no scramble, no raiding the emergency fund."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Classic sinking funds",
+              "items": [
+                "Car: registration, insurance premiums, tires, and repairs",
+                "Holidays and birthdays - the calendar publishes these in advance",
+                "Annual subscriptions and memberships",
+                "Vacation, with a number attached instead of a vibe",
+                "Home or apartment: deposits, repairs, furniture"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The math is deliberately unimpressive. A $600 holiday season saved from January is $50 a month. New tires at $800, eighteen months out, is about $45 a month. Small enough to fit in almost any budget - which is the whole trick. The same expense as a lump in December can wreck a month; as a slice, it's a rounding error."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "SINKING FUND VS EMERGENCY FUND",
+              "text": "The test is surprise. Emergency fund: unexpected and necessary (job loss, ER visit). Sinking fund: expected and scheduled (insurance premium, brake pads eventually). If you keep 'borrowing' from your emergency fund for predictable things, you're missing a sinking fund, not discipline."
+            },
+            {
+              "type": "paragraph",
+              "text": "In BudgetArk, give each sinking fund its own recurring entry on the Budget tab under Savings, named for the goal: 'Car repairs', 'Holidays', 'Vacation'. The named entries do two jobs at once - they carve the money out of your spendable balance each month, and the history shows you exactly how much each bucket holds."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "START WITH ONE",
+              "text": "Don't build eight buckets tonight. Pick the expense that most recently ambushed you, divide it by the months until it happens again, and add that one recurring entry. Add the next fund next month."
+            }
+          ],
+          "keyTakeaway": "Predictable expenses deserve a monthly slice, not a December panic. Name the bucket, automate the slice.",
+          "action": {
+            "label": "Create a sinking fund entry",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch3-l4-short-term-cash",
+          "chapterId": "ch3",
+          "number": 4,
+          "title": "Where to park short-term cash",
+          "readMin": 5,
+          "topics": [
+            "saving"
+          ],
+          "glyph": "⚓",
+          "summary": "Money you need within five years doesn't belong in the market. Match where the cash sits to when you'll need it.",
+          "whyItMatters": "A house down payment invested in stocks can drop 25% the year you find the house. Short-term money has one job: be all there, on time.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Once you're saving for real goals - a car in two years, a down payment in four - the question becomes where the money should wait. The rule of thumb: the sooner you need it, the safer and more boring the parking spot. Return is the reward for taking risk over long periods; short timelines can't absorb a bad year."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The parking lot, by timeline",
+              "items": [
+                "Needed any day (emergency fund): high-yield savings account",
+                "Under ~2 years: HYSA or money market fund - full flexibility, solid rate",
+                "2-5 years with a known date: CDs or Treasury bills laddered to mature when you need the cash",
+                "5+ years: now you're in investing territory - that's the next chapter"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "A certificate of deposit (CD) locks your money at a fixed rate for a fixed term - you give up access, you gain certainty. Treasury bills do the same job, backed by the U.S. government, with interest exempt from state income tax. Money market funds float with current rates and stay liquid. All three are fine; the differences are small compared to the difference between any of them and a checking account paying zero."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "WHERE THESE LIVE",
+              "text": "Money market funds and Treasury bills are bought inside a brokerage account - Fidelity, Charles Schwab, and Vanguard all offer them with no account fees (T-bills also sell direct at TreasuryDirect.gov). CDs come from banks and credit unions, and your local bank or credit union's CD rates are genuinely worth checking against the big names. None of these institutions sponsor this lesson - compare current rates before committing."
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "THE TEMPTATION",
+              "text": "When markets are up, cash earning 4% feels slow and someone will tell you to 'put it to work'. Remember what this money is for. A 20% market drop the year you need the down payment doesn't 'average out' - the closing date doesn't move."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "INFLATION STILL BITES",
+              "text": "Cash loses a little purchasing power every year, which is exactly why only short-term money belongs here. Parking a 30-year retirement fund in savings is as costly a mistake as gambling next year's tuition on stocks - risk has to match the timeline in both directions."
+            },
+            {
+              "type": "paragraph",
+              "text": "Track each parked goal in BudgetArk the same way as your sinking funds: a named recurring Savings entry on the Budget tab. Your growing balances feed into net worth on the Bridge, so you can watch the down payment fund climb month over month."
+            }
+          ],
+          "keyTakeaway": "Under five years, safety beats return. HYSA for flexibility, CDs or T-bills for known dates, and the market only for money that can wait.",
+          "action": {
+            "label": "Review your savings on Bridge",
+            "route": "bridge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "number": 4,
+      "title": "Catching Wind",
+      "subtitle": "Investing",
+      "glyph": "📈",
+      "lessons": [
+        {
+          "id": "ch4-l1-compounding",
+          "chapterId": "ch4",
+          "number": 1,
+          "title": "Why compounding is the whole game",
+          "readMin": 5,
+          "topics": [
+            "investing"
+          ],
+          "glyph": "🌱",
+          "summary": "Money earns returns, then the returns earn returns. Given enough years, the snowball dwarfs the snow you threw on it.",
+          "whyItMatters": "Every investing decision - when to start, what to buy, what fees to accept - is really a decision about how much compounding you'll allow to happen.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Compounding means your returns start earning their own returns. Invest $10,000 at 7% and you earn $700 the first year. But the second year you earn 7% on $10,700, the third on $11,449, and the curve keeps steepening. At 7%, money doubles roughly every ten years - so a dollar invested at 25 doubles four times by 65, while the same dollar invested at 45 doubles only twice."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The same $500/month, at 7%, until age 65",
+              "items": [
+                "Starting at 25: roughly $1.2 million (you contributed $240k)",
+                "Starting at 35: roughly $570,000 (you contributed $180k)",
+                "Starting at 45: roughly $250,000 (you contributed $120k)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Read that list again. The 25-year-old contributed only twice as much as the 45-year-old but ends with nearly five times the money. The difference isn't skill or luck - it's the extra doublings. Time in the market is the single input you can never buy back later, which is why 'start now, even small' beats 'start big, someday' every time it's tested."
+            },
+            {
+              "type": "calculator-embed",
+              "calc": "compound-interest"
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "COMPOUNDING CUTS BOTH WAYS",
+              "text": "Credit card debt is compounding running in reverse - which is why Chapter 2 came before this one. The same math also applies to fees: a 1% annual fee sounds tiny but quietly confiscates around a quarter of a 40-year portfolio. Guard your compounding from both."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "THE ORDER OF OPERATIONS",
+              "text": "Expensive debt paid off, starter fund built, emergency fund growing - if you've followed the course, you're ready. Even $50 a month invested now starts the clock, and the clock is the whole game."
+            }
+          ],
+          "keyTakeaway": "Start as early as possible, even small. Years invested matter more than dollars invested.",
+          "action": {
+            "label": "Open the Compound Interest Calculator",
+            "route": "charts/tools/compound"
+          }
+        },
+        {
+          "id": "ch4-l2-index-funds",
+          "chapterId": "ch4",
+          "number": 2,
+          "title": "Index funds in one page",
+          "readMin": 5,
+          "topics": [
+            "investing"
+          ],
+          "glyph": "🧺",
+          "summary": "Instead of guessing which companies win, buy a tiny slice of all of them for nearly free. Boring, and it beats most professionals.",
+          "whyItMatters": "Picking stocks is the hard, risky, expensive way to invest. Index funds are the easy, diversified, cheap way - and over decades, the cheap way usually finishes ahead.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "An index fund is a basket that holds every stock in a market list, automatically. An S&P 500 fund holds America's 500 biggest companies; a total-market fund holds thousands. Buy one share and you own a sliver of all of them at once. No one has to guess which company wins the next decade - you own the winners by default, because you own everything."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Why this boring idea wins",
+              "items": [
+                "Diversification: one company failing barely dents you",
+                "Cost: good index funds charge an expense ratio of 0.03-0.10% a year, versus ~1% for actively managed funds",
+                "Track record: over 15-year periods, index funds have historically beaten around 90% of professional stock pickers",
+                "Simplicity: nothing to research, monitor, or second-guess weekly"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "That annual fee has an official name: the expense ratio - the percentage of your balance the fund keeps each year, deducted automatically before you ever see it. A 1% expense ratio versus 0.05% doesn't sound like much, but compounded over 40 years it can consume a quarter of your final balance - paid to a manager who, most likely, didn't beat the basket anyway. Every fund prints its expense ratio right on its listing page, and it's the most reliable predictor of long-term performance: lower wins."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "FUND VS ETF",
+              "text": "You'll see index funds sold two ways: mutual funds and ETFs (exchange-traded funds). They hold the same stocks and both work fine for long-term investing. Don't let the acronym stall you - the fund's index and its expense ratio matter far more than the wrapper."
+            },
+            {
+              "type": "paragraph",
+              "text": "The mechanical difference: a mutual fund trades once per day - every buyer that day gets the same closing price - and it usually lives only at its home brokerage, so buying a Fidelity fund through Schwab often triggers a transaction fee. An ETF is listed on the stock exchange like any share: it has a live price all day and any brokerage can trade it. That portability is why VOO costs the same 0.03% whether you hold it at Vanguard, Fidelity, Schwab, Robinhood, or SoFi - and why ETFs are how you buy the basket at app-first brokers that don't run funds of their own. For a buy-every-month investor, neither difference changes the outcome; it only changes where you can shop."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Real funds, real expense ratios",
+              "items": [
+                "Fidelity: FXAIX (S&P 500 mutual fund, 0.015%) or FSKAX (total-market mutual fund, 0.015%) - FZROX is a 0.00% total-market mutual fund, though it can only live at Fidelity",
+                "Charles Schwab: SWPPX (S&P 500 mutual fund, 0.02%) or SWTSX (total-market mutual fund, 0.03%)",
+                "Vanguard: VOO (S&P 500 ETF, 0.03%) or VTI (total market ETF, 0.03%)",
+                "On Robinhood or SoFi: buy the ETFs - VOO, VTI, or SPLG (S&P 500, 0.02%) trade at any brokerage"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Expense ratios drift over time (usually downward - the price war works in your favor), so treat those numbers as a snapshot and check the fund's page for the current figure. The pattern to remember: anything at 0.10% or below is in the good neighborhood; anything near 1% deserves a hard question."
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "OWNING SINGLE STOCKS",
+              "text": "It's fine to hold a few individual companies with money you can afford to see cut in half - some people learn a lot that way. Just keep it a small slice, not the foundation. The foundation is the basket."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "WHERE TO BUY THE BASKET",
+              "text": "Any major brokerage sells index funds commission-free. Fidelity, Charles Schwab, and Vanguard are the long-standing trio (Vanguard invented the index fund), while Robinhood and SoFi offer app-first accounts that hold the same ETFs. All are fine - the fund's expense ratio matters far more than whose logo is on the app. Not sponsored; nobody here pays BudgetArk."
+            },
+            {
+              "type": "paragraph",
+              "text": "If you track investment accounts in BudgetArk, add your funds under Holdings and the balance flows into your net worth on the Bridge. Watching the whole-market line drift upward over years - through the dips - is the best cure for the itch to tinker."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "FROM THE BOOKSHELF",
+              "text": "Unshakeable by Tony Robbins covers this lesson's ground in book form: why low-cost index funds beat most professionals, how seemingly small fees quietly drain a portfolio over decades, and why market corrections are normal weather rather than a reason to sell. Short, plain-English, and worth the read before you invest your first dollar."
+            }
+          ],
+          "keyTakeaway": "Own the whole market through a low-cost index fund. You'll beat most professionals by refusing to compete with them.",
+          "action": {
+            "label": "Track holdings on Bridge",
+            "route": "bridge"
+          },
+          "resources": [
+            {
+              "type": "book",
+              "title": "Unshakeable: Your Financial Freedom Playbook",
+              "author": "Tony Robbins with Peter Mallouk"
+            }
+          ]
+        },
+        {
+          "id": "ch4-l3-401k-ira-roth",
+          "chapterId": "ch4",
+          "number": 3,
+          "title": "401(k), IRA, Roth - which first?",
+          "readMin": 7,
+          "topics": [
+            "investing",
+            "retirement",
+            "taxes"
+          ],
+          "glyph": "🪜",
+          "summary": "These aren't investments - they're tax shelters you put investments inside. Fill them in the right order and the same dollars retire richer.",
+          "whyItMatters": "The order you fund accounts in can be worth six figures over a career, and one step of it - the employer match - is a literal 50-100% instant return.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "A 401(k) is a retirement account through your employer; an IRA is one you open yourself - ten minutes online at any major brokerage, with Fidelity, Charles Schwab, and Vanguard the usual picks. Both are wrappers - the index funds from last lesson go inside them - and both shelter your investments from taxes while they grow. The difference is when you pay tax: Traditional accounts skip tax now and pay it in retirement; Roth accounts pay tax now and never again, with all growth withdrawn tax-free."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The funding ladder - fill each rung before the next",
+              "items": [
+                "1. 401(k) up to the employer match - free money, take all of it",
+                "2. Any high-interest debt - a guaranteed 'return' no market matches",
+                "3. IRA (Roth for most people) up to its annual limit",
+                "4. Back to the 401(k), toward its much higher annual limit",
+                "5. HSA if you have one - triple tax-advantaged; regular brokerage after that"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "NEVER SKIP THE MATCH",
+              "text": "If your employer matches 50% of contributions up to 6% of salary, that's an instant 50% return before the money is even invested. No debt payoff, no fund, no strategy anywhere in this course beats it. Contribute at least enough to capture every matching dollar."
+            },
+            {
+              "type": "paragraph",
+              "text": "Roth or Traditional? The honest answer: compare your tax rate today to your expected rate in retirement. Early in a career, when income and tax rates are low, Roth usually wins - pay the small tax now, never pay tax on decades of growth. In peak earning years, Traditional's upfront deduction often wins. If you're truly unsure, Roth is the simpler default and splitting between both is a perfectly good hedge."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "LIMITS MOVE - THE ORDER DOESN'T",
+              "text": "Contribution limits change most years (for 2026, roughly $24,500 for a 401(k) and $7,500 for an IRA - verify current numbers). Don't memorize figures; memorize the ladder. Match, expensive debt, IRA, more 401(k)."
+            },
+            {
+              "type": "paragraph",
+              "text": "One trap to avoid: money sitting in a retirement account isn't automatically invested. Plenty of people contribute for years while the cash sits in a money-market default earning almost nothing. After you set your contribution, pick the investments inside - a low-cost target-date fund or the index funds from last lesson both work."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "TEN-MINUTE WIN",
+              "text": "Log into your 401(k) portal today and check two things: are you getting the full match, and is the money actually invested in something? Those two checks are worth more than a year of market predictions."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "FROM THE BOOKSHELF",
+              "text": "Unshakeable by Tony Robbins goes deeper on the retirement side of this lesson: how to audit the fees hiding inside your 401(k) plan's fund lineup, why a fiduciary advisor answers to you while a broker answers to commissions, and how to stay invested through the crashes you'll live through between now and retirement."
+            }
+          ],
+          "keyTakeaway": "Match first, always. Then expensive debt, then IRA, then more 401(k) - and make sure the money inside is actually invested.",
+          "action": {
+            "label": "Budget your contributions",
+            "route": "budget"
+          },
+          "resources": [
+            {
+              "type": "book",
+              "title": "Unshakeable: Your Financial Freedom Playbook",
+              "author": "Tony Robbins with Peter Mallouk"
+            }
+          ]
+        },
+        {
+          "id": "ch4-l4-asset-allocation",
+          "chapterId": "ch4",
+          "number": 4,
+          "title": "Asset allocation by decade",
+          "readMin": 6,
+          "topics": [
+            "investing",
+            "retirement"
+          ],
+          "glyph": "⚖️",
+          "summary": "How much stocks versus bonds matters more than which fund you pick. The right mix is the riskiest one you can hold without selling in a panic.",
+          "whyItMatters": "The investor who holds a decent mix through a crash beats the investor who held a perfect mix and sold at the bottom. Allocation is really about designing for your own worst day.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Asset allocation is your portfolio's split between stocks and bonds. Stocks are the engine: higher returns over decades, with gut-wrenching drops along the way. Bonds are the keel: steadier, lower returns that cushion the falls. More stock means a faster boat and rougher seas; more bonds means smoother sailing that arrives later. Research consistently finds this split drives the vast majority of a portfolio's behavior - far more than fund selection."
+            },
+            {
+              "type": "bullet-list",
+              "title": "A classic starting point by age",
+              "items": [
+                "20s-30s: 90-100% stocks - decades to recover, volatility is noise",
+                "40s: ~80% stocks / 20% bonds - still growth-heavy, first shock absorbers",
+                "50s: ~70/30 to 60/40 - retirement is visible; a crash matters more",
+                "60s+: ~60/40 to 50/50 - protect what compounding built"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "These are defaults, not rules, and the honest adjustment is psychological. A 100% stock portfolio historically drops 30-50% a few times per lifetime. If a 40% drop would make you sell, a 90/10 allocation is wrong for you no matter what your birth year says - the allocation you abandon in a crash has a worse return than any allocation you keep."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "THE ONE-FUND SHORTCUT",
+              "text": "A target-date fund does this entire lesson for you: pick the fund named for your retirement year and it holds a diversified mix that automatically shifts from stocks toward bonds as the date approaches. Slightly less control, dramatically harder to get wrong. For most people it's an excellent answer."
+            },
+            {
+              "type": "paragraph",
+              "text": "If you manage the mix yourself, rebalance about once a year: when a great stock run pushes your 80/20 to 88/12, sell some stock and buy bonds to get back to plan. It feels backwards - trimming winners to buy laggards - which is exactly why it works. Rebalancing forces you to sell high and buy low on a schedule, with no forecasting required."
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "DON'T TOUCH THE DIAL IN A STORM",
+              "text": "Changing allocation during a crash is market timing wearing a disguise. Set the mix in calm weather, write down why, and change it when your life changes - new decade, retirement in sight - not when headlines scream."
+            }
+          ],
+          "keyTakeaway": "Pick a stock/bond mix that fits your age and your stomach, rebalance yearly, and only change it when life changes.",
+          "action": {
+            "label": "Review your holdings mix",
+            "route": "bridge"
+          }
+        },
+        {
+          "id": "ch4-l5-big-mistakes",
+          "chapterId": "ch4",
+          "number": 5,
+          "title": "Avoiding the big mistakes",
+          "readMin": 5,
+          "topics": [
+            "investing",
+            "mindset"
+          ],
+          "glyph": "🧯",
+          "summary": "Investing success is mostly subtraction. Avoid a handful of classic errors and the boring plan does the rest.",
+          "whyItMatters": "The gap between market returns and what investors actually earn comes almost entirely from self-inflicted wounds - buying high, selling low, and paying too much along the way.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Here's the strange truth of this chapter: you now know roughly everything you need. Compounding, index funds, tax-advantaged accounts, an allocation you can live with. From here, outcomes are decided less by what you do than by what you manage not to do. These are the classics."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The five big ones",
+              "items": [
+                "Panic selling - locking in a crash by selling at the bottom, then missing the recovery",
+                "Market timing - waiting in cash for 'the right moment' that's only visible in hindsight",
+                "Performance chasing - buying whatever fund or coin just had a hot year, right before it cools",
+                "High fees - a 1% adviser or fund fee quietly eating a quarter of a 40-year portfolio",
+                "Concentration - too much in one stock, one sector, or your own employer"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "MISSING THE BEST DAYS",
+              "text": "The market's best days cluster tightly around its worst ones. Studies repeatedly show that missing just the 10 best days over a few decades cuts final returns roughly in half - and the surest way to miss them is to be sitting out after a scary drop. Staying in IS the strategy."
+            },
+            {
+              "type": "paragraph",
+              "text": "The defense against all five mistakes is the same: automate, then ignore. A fixed contribution invests every payday regardless of headlines (dollar-cost averaging), the allocation you set in calm weather absorbs the storms, and an annual check-in replaces the daily scoreboard. Every mistake on the list requires an action - so build a system where the default action is nothing."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "EMPLOYER STOCK DESERVES ITS OWN WARNING",
+              "text": "Your paycheck already depends on your company. If your savings do too, one bad year at work can hit your income and your portfolio at once. A common rule: keep employer stock under 10% of your investments."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "CHAPTER 4, IN ONE SENTENCE",
+              "text": "Buy low-cost index funds inside tax-advantaged accounts, at an allocation you can hold through a crash, automatically, forever - and let compounding do the heavy lifting."
+            }
+          ],
+          "keyTakeaway": "You can't control returns; you can control behavior, fees, and diversification. That's enough to win.",
+          "action": {
+            "label": "See your progress on Bridge",
+            "route": "bridge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "number": 5,
+      "title": "Charting Far Waters",
+      "subtitle": "Wealth & Beyond",
+      "glyph": "🗺️",
+      "lessons": [
+        {
+          "id": "ch5-l1-net-worth",
+          "chapterId": "ch5",
+          "number": 1,
+          "title": "Net worth - the only score",
+          "readMin": 4,
+          "topics": [
+            "mindset",
+            "investing"
+          ],
+          "glyph": "🧭",
+          "summary": "Everything you own minus everything you owe. One number that tells the truth when income, spending, and appearances all lie.",
+          "whyItMatters": "A high salary can hide a sinking ship and a modest one can quietly build wealth. Net worth is the only number that can't be fooled by either.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Net worth is simple arithmetic: add up what you own (cash, savings, investments, retirement accounts, home value, vehicles), subtract what you owe (mortgage, loans, cards), and the remainder is your score. It can absolutely be negative early on - a student loan larger than your savings is a starting line, not a verdict. What matters is not today's number but its direction over quarters and years."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Why this beats every other metric",
+              "items": [
+                "Income measures what flows past you; net worth measures what stayed",
+                "It unifies the whole course: paying debt, saving, and investing all move the same number",
+                "It's immune to lifestyle theater - the car lease that looks like wealth shows up as a liability"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The magic is in the trend, not the level. A month where the market drops can push net worth down even when you did everything right - and a bonus month can flatter it while spending quietly grew. Check it monthly or quarterly, compare against a year ago, and judge yourself only on the slope. Wealth-building is a slope game."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "YOUR SHIP'S POSITION",
+              "text": "The Bridge tab computes net worth from what you track in BudgetArk - accounts, debts, and holdings - and the history card keeps monthly snapshots so the trend line draws itself. The lessons you've completed are, literally, what bends that line upward."
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "DON'T COMPARE BOATS",
+              "text": "Net worth is a private instrument, not a leaderboard. Someone else's number comes with someone else's income, city, health, and starting line. The only comparison that means anything is you versus you, a year ago."
+            }
+          ],
+          "keyTakeaway": "Track net worth monthly and judge the slope, not the level. Direction is the whole game.",
+          "action": {
+            "label": "See your net worth on Bridge",
+            "route": "bridge"
+          }
+        },
+        {
+          "id": "ch5-l2-buy-vs-rent",
+          "chapterId": "ch5",
+          "number": 2,
+          "title": "Buy vs rent the math",
+          "readMin": 6,
+          "topics": [
+            "real_estate"
+          ],
+          "glyph": "🏠",
+          "summary": "Renting is not throwing money away, and buying is not automatically winning. The honest comparison has more line items than the mortgage.",
+          "whyItMatters": "A house is most people's largest purchase and most emotional one. Running the real numbers before house-hunting keeps the biggest decision of the decade from being made by a feeling.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "The classic argument says rent is money you never see again while a mortgage 'builds equity'. But a huge share of homeownership cost is also money you never see again: mortgage interest, property taxes, insurance, maintenance, HOA fees, and the transaction costs of buying and selling. Owning is partly an investment and partly just a more expensive way to pay for shelter - the math tells you the balance for your specific case."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The costs renters never pay",
+              "items": [
+                "Mortgage interest - the majority of each payment in the early years",
+                "Property tax and homeowner's insurance, forever",
+                "Maintenance - budget roughly 1-2% of home value per year",
+                "Buying and selling costs - often 8-10% of the price round-trip"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "That last item drives the most practical rule in real estate: time horizon. Transaction costs are spread across your years in the home, so buying tends to beat renting only if you'll stay put roughly five or more years. Move after two and the closing costs alone can erase every dollar of equity you built. If your job, relationship, or city might change soon, renting is usually the mathematically stronger - and more flexible - position."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "A QUICK SCREENER",
+              "text": "Compare a home's price to the annual rent for an equivalent place. Under ~15x annual rent, buying looks attractive; over ~20x, renting and investing the difference often wins. It's a screener, not a verdict - but it instantly flags which market you're standing in."
+            },
+            {
+              "type": "calculator-embed",
+              "calc": "loan-amortization"
+            },
+            {
+              "type": "paragraph",
+              "text": "When you do buy, buy less than the bank offers. Lenders approve payments that leave no room for the rest of this course - retirement contributions, sinking funds, an emergency fund that survives a roof. A common guardrail: keep total housing costs near 28% of gross income or less, and walk into the purchase with the full emergency fund intact."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "RENTING TO WIN",
+              "text": "If the math says rent, rent proudly - and actually invest the monthly difference. A renter who invests the gap frequently ends up wealthier than the neighbor who bought. The mistake isn't renting; it's renting and spending the difference."
+            }
+          ],
+          "keyTakeaway": "Buy when you'll stay five-plus years and the payment leaves your plan intact. Otherwise rent, and invest the difference on purpose.",
+          "action": {
+            "label": "Run the mortgage numbers",
+            "route": "charts/tools/loan"
+          }
+        },
+        {
+          "id": "ch5-l3-insurance",
+          "chapterId": "ch5",
+          "number": 3,
+          "title": "Insurance - what you actually need",
+          "readMin": 6,
+          "topics": [
+            "insurance"
+          ],
+          "glyph": "☂️",
+          "summary": "Insure the catastrophes you couldn't absorb, self-insure the annoyances you could, and skip the products that are mostly commission.",
+          "whyItMatters": "One uninsured disaster - a liability lawsuit, a disability, an early death with dependents - can erase everything the rest of this course builds. Insurance is the hull integrity of the whole plan.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Insurance has one job: transfer risks you cannot afford to carry. That single sentence sorts every policy you'll ever be offered. Could the loss sink you? Insure it fully. Could you cover it from your emergency fund? Don't insure it - keep the premium. Most people have this backwards: over-insured against small stuff (phone insurance, extended warranties) and under-insured against ruin (disability, liability)."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The core policies most households need",
+              "items": [
+                "Health - a single hospitalization can outrun any budget",
+                "Auto liability - the damage you do to others is the unlimited risk",
+                "Homeowner's or renter's - renter's runs ~$15-30/month and people skip it anyway",
+                "Term life - only if someone depends on your income; ~10-12x income while they do",
+                "Disability - you're far more likely to be unable to work than to die young"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "TERM VS WHOLE LIFE",
+              "text": "Term life is pure insurance: cheap, simple, expires when the kids are grown. Whole life bundles insurance with a mediocre investment at high fees and pays the seller a large commission - which is why it's pitched so hard. Buy term, invest the difference in the accounts from Chapter 4."
+            },
+            {
+              "type": "paragraph",
+              "text": "Once your emergency fund is full, raise your deductibles. Moving from a $500 to a $1,500 deductible cuts premiums meaningfully, and Chapter 3 already built the cushion that makes the higher deductible painless. This is self-insurance: the fund absorbs small claims, the policy absorbs disasters, and you stop paying the insurer to handle risks you can carry yourself."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Usually safe to skip",
+              "items": [
+                "Extended warranties and phone insurance - the emergency fund's job",
+                "Life insurance on children or on anyone with no dependents",
+                "Rental car damage waivers your auto policy or credit card already covers",
+                "Flight, wedding, and gadget micro-policies - high margin, tiny risk"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "THE CHEAPEST UPGRADE",
+              "text": "As net worth grows, an umbrella liability policy adds $1M of coverage above your auto and home policies for a few hundred dollars a year. Once there's a ship worth protecting, it's the best insurance value on the market."
+            }
+          ],
+          "keyTakeaway": "Fully insure what could ruin you, self-insure what merely annoys you, and never mix insurance with investing.",
+          "action": {
+            "label": "Add premiums to your budget",
+            "route": "budget"
+          }
+        },
+        {
+          "id": "ch5-l4-estate-basics",
+          "chapterId": "ch5",
+          "number": 4,
+          "title": "Estate basics (will, beneficiaries, TOD)",
+          "readMin": 5,
+          "topics": [
+            "mindset"
+          ],
+          "glyph": "📜",
+          "summary": "A few forms decide whether the wealth you built lands with your people or in a yearlong court process. Most of them are free.",
+          "whyItMatters": "Without instructions, state law and a probate court decide who gets everything - slowly, publicly, and possibly not the way you'd have chosen. An afternoon of paperwork closes that gap.",
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Estate planning sounds like a mansion problem, but it's really a checklist problem, and you already have an estate: bank accounts, retirement funds, maybe a home, maybe kids. The final lesson of the Captain's Course is making sure the ship you've built reaches the right harbor without you. Three tools do most of the work."
+            },
+            {
+              "type": "bullet-list",
+              "title": "The big three",
+              "items": [
+                "Beneficiary designations - name who inherits each retirement and life-insurance account; these transfer directly, skipping court entirely",
+                "TOD/POD designations - the same idea for bank and brokerage accounts (transfer/payable on death); usually a free form at your institution",
+                "A will - covers everything else, and critically, names a guardian for minor children"
+              ]
+            },
+            {
+              "type": "callout",
+              "tone": "warn",
+              "title": "BENEFICIARIES BEAT THE WILL",
+              "text": "A beneficiary designation overrides whatever your will says. The classic disaster is an ex-spouse still named on a 401(k) from years ago. Review every account's beneficiaries after any major life event - marriage, divorce, births, deaths - or once a year on a birthday you'll remember."
+            },
+            {
+              "type": "paragraph",
+              "text": "Two documents matter while you're still alive: a financial power of attorney, naming who manages money if you're incapacitated, and a healthcare directive, naming who makes medical calls and what you'd want. Without them, your family may need a court order just to pay your mortgage from your own account. Simple wills and both documents can be done inexpensively online in most situations; see a lawyer for blended families, business ownership, or special-needs dependents."
+            },
+            {
+              "type": "callout",
+              "tone": "info",
+              "title": "LEAVE A MAP, NOT A TREASURE HUNT",
+              "text": "Your executor can't claim accounts nobody knows exist. Keep a simple list of institutions and account types (never passwords in the open) somewhere your person can find it. BudgetArk's export on the Profile tab produces a clean snapshot of accounts, debts, and holdings that works well as the backbone of that list."
+            },
+            {
+              "type": "callout",
+              "tone": "success",
+              "title": "THE COURSE, COMPLETE",
+              "text": "Budget built, debts patched, galley stocked, sails full, far waters charted. You now know more practical personal finance than most people ever learn. The habits do the rest - fair winds, Captain."
+            }
+          ],
+          "keyTakeaway": "Name beneficiaries on every account, write a will (especially with kids), and add the two incapacity documents. One afternoon protects everything the course built.",
+          "action": {
+            "label": "Export a snapshot of your accounts",
+            "route": "profile"
+          }
+        }
+      ]
+    }
+  ]
+}
