@@ -81,7 +81,7 @@ def page():
     })
     jump = ' '.join(f'<a href="#{anchor(r)}">v{r["version"]}</a>' for r in RELEASES)
     body = '\n'.join(release_html(r) for r in RELEASES)
-    return (bc.head('', 'Release Notes', html.escape(meta), path, ld) + bc.header('') + f'''
+    return (bc.head('', 'Release Notes', html.escape(meta), path, ld) + bc.header('', notes_active=True) + f'''
   <main id="main">
     <section class="page-hero">
       <div class="container">

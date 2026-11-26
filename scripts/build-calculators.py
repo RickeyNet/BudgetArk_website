@@ -250,9 +250,10 @@ def nav_dropdown(prefix, active_slug=None):
           </ul>
         </li>'''
 
-def header(prefix, active_slug=None, course_active=False):
+def header(prefix, active_slug=None, course_active=False, notes_active=False):
     home = prefix or 'index.html'
     course_cls = ' class="active"' if course_active else ''
+    notes_cls = ' class="active"' if notes_active else ''
     return f'''  <a class="skip-link" href="#main">Skip to content</a>
   <div class="ambient" aria-hidden="true"></div>
 
@@ -273,6 +274,7 @@ def header(prefix, active_slug=None, course_active=False):
         <li><a href="{home}#themes">Themes</a></li>
         <li><a href="{home}#faq">FAQ</a></li>
         <li><a href="{prefix}news.html">News</a></li>
+        <li><a href="{prefix}release-notes.html"{notes_cls}>Release Notes</a></li>
         <li><a href="{home}#download" class="btn btn-small">Get the App</a></li>
       </ul>
     </nav>
